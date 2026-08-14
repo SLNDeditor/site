@@ -1,0 +1,141 @@
+/*
+  zalia sékaï — proposition minimale noir & blanc
+  Titres : Jost (≈ Futura) · Texte courant : EB Garamond
+ */
+
+:root {
+	/* Palette strictement noir & blanc */
+	--ink: 17, 17, 17;        /* noir doux (texte) */
+	--paper: 255, 255, 255;   /* blanc (fond) */
+	--muted: 110, 110, 110;   /* gris (dates, méta) */
+	--line: 224, 224, 224;    /* filets */
+
+	--font-heading: 'Jost Variable', 'Jost', 'Futura', 'Century Gothic', sans-serif;
+	--font-body: 'EB Garamond', Garamond, Georgia, 'Times New Roman', serif;
+
+	--measure: 40rem; /* largeur de lecture confortable */
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	-webkit-text-size-adjust: 100%;
+}
+
+body {
+	font-family: var(--font-body);
+	margin: 0;
+	padding: 0;
+	background: rgb(var(--paper));
+	color: rgb(var(--ink));
+	font-size: 21px;
+	line-height: 1.7;
+	text-align: left;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	font-kerning: normal;
+	font-feature-settings: 'kern', 'liga', 'onum';
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+}
+
+main {
+	width: var(--measure);
+	max-width: calc(100% - 2em);
+	margin: auto;
+	padding: 3em 1em;
+}
+
+/* ---------- Titres : Jost / Futura ---------- */
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--font-heading);
+	margin: 0 0 0.5rem 0;
+	color: rgb(var(--ink));
+	line-height: 1.15;
+	font-weight: 500;
+	letter-spacing: 0.01em;
+}
+h1 { font-size: 2.6rem; font-weight: 600; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.3rem; }
+h5 { font-size: 1.1rem; }
+
+/* ---------- Texte courant : Garamond ---------- */
+p { margin: 0 0 1.2em 0; }
+.prose p { margin-bottom: 1.4em; }
+
+a {
+	color: rgb(var(--ink));
+	text-underline-offset: 0.15em;
+	text-decoration-thickness: 1px;
+}
+a:hover { text-decoration: none; }
+
+strong, b { font-weight: 700; }
+em, i { font-style: italic; }
+
+blockquote {
+	border-left: 2px solid rgb(var(--ink));
+	padding: 0 0 0 1.2em;
+	margin: 1.5em 0;
+	font-style: italic;
+	color: rgb(var(--ink));
+}
+
+hr {
+	border: none;
+	border-top: 1px solid rgb(var(--line));
+	margin: 2em 0;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+.prose img {
+	margin: 1.6em auto;
+}
+
+table { width: 100%; border-collapse: collapse; }
+th, td { border-bottom: 1px solid rgb(var(--line)); padding: 0.4em; text-align: left; }
+
+code {
+	font-family: ui-monospace, Menlo, Consolas, monospace;
+	font-size: 0.85em;
+	padding: 2px 5px;
+	background: rgb(245, 245, 245);
+	border-radius: 2px;
+}
+pre { padding: 1.25em; background: rgb(245, 245, 245); border-radius: 4px; overflow-x: auto; }
+pre > code { all: unset; }
+
+/* Césure française pour un texte littéraire soigné */
+.prose {
+	hyphens: auto;
+	-webkit-hyphens: auto;
+}
+
+@media (max-width: 720px) {
+	body { font-size: 19px; }
+	main { padding: 1.5em 1em; }
+	h1 { font-size: 2.1rem; }
+	h2 { font-size: 1.7rem; }
+}
+
+.sr-only {
+	border: 0;
+	padding: 0;
+	margin: 0;
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	white-space: nowrap;
+}

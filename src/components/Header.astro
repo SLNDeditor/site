@@ -1,0 +1,73 @@
+---
+import { SITE_TITLE } from '../consts';
+import HeaderLink from './HeaderLink.astro';
+import Dropdown from './Dropdown.astro';
+import { NAV } from '../lib/categories';
+---
+
+<header>
+	<nav>
+		<a class="site-title" href="/">{SITE_TITLE}</a>
+		<div class="internal-links">
+			{
+				NAV.map((item) =>
+					item.children ? (
+						<Dropdown label={item.label} items={item.children} />
+					) : (
+						<HeaderLink href={item.href!}>{item.label}</HeaderLink>
+					),
+				)
+			}
+			<HeaderLink href="/about">L’auteure</HeaderLink>
+		</div>
+	</nav>
+</header>
+<style>
+	header {
+		margin: 0;
+		padding: 0 1.5em;
+		background: rgb(var(--paper));
+		border-bottom: 1px solid rgb(var(--line));
+	}
+	nav {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		gap: 0.5em;
+		max-width: 60rem;
+		margin: 0 auto;
+	}
+	.site-title {
+		font-family: var(--font-heading);
+		font-weight: 600;
+		font-size: 1.15rem;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		text-decoration: none;
+		color: rgb(var(--ink));
+		padding: 1em 0;
+	}
+	.internal-links {
+		display: flex;
+		align-items: baseline;
+		gap: 0.25em;
+	}
+	nav :global(a) {
+		font-family: var(--font-heading);
+		font-size: 0.9rem;
+		letter-spacing: 0.04em;
+		padding: 1.2em 0.7em;
+		color: rgb(var(--ink));
+		border-bottom: 2px solid transparent;
+		text-decoration: none;
+	}
+	nav :global(a.active) {
+		border-bottom-color: rgb(var(--ink));
+		font-weight: 500;
+	}
+	@media (max-width: 520px) {
+		nav { justify-content: center; }
+		.site-title { padding-bottom: 0; }
+	}
+</style>

@@ -1,0 +1,190 @@
+---
+import { Image } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
+import BaseHead from '../components/BaseHead.astro';
+import CategoryAside from '../components/CategoryAside.astro';
+import Footer from '../components/Footer.astro';
+import FormattedDate from '../components/FormattedDate.astro';
+import Header from '../components/Header.astro';
+import { CATEGORY_LABEL, CURATED_ARTICLES, CURATED_VIDEOS, getPostsBySlugs, getTheatreGroups } from '../lib/categories';
+
+type Props = CollectionEntry<'blog'>['data'] & { id?: string };
+
+const { title, description, pubDate, showDate, updatedDate, heroImage, category, id, video } = Astro.props;
+// Les films de la sélection « Vidéos » affichent la liste des vidéos dans le menu
+// de gauche (et non la rubrique d'origine, ex. Essai).
+const isVideo = id ? CURATED_VIDEOS.includes(id) : false;
+const videoPosts = isVideo ? await getPostsBySlugs(CURATED_VIDEOS) : [];
+// Les textes de la sélection « Articles » affichent la liste des articles.
+const isArticle = id ? CURATED_ARTICLES.includes(id) : false;
+const articlePosts = isArticle ? await getPostsBySlugs(CURATED_ARTICLES) : [];
+// Théâtre : barre latérale en deux groupes (pièce + Interventions liées).
+const isTheatre = category === 'theatre';
+const theatreGroups = isTheatre ? await getTheatreGroups() : null;
+const hasAside = isVideo || isArticle || (category ? category in CATEGORY_LABEL : false);
+---
+
+<html lang="fr">
+	<head>
+		<BaseHead title={title} description={description} />
+	</head>
+	<body>
+		<Header />
+		<main class:list={['reader', { 'no-aside': !hasAside }]}>
+			{
+				isVideo ? (
+					<CategoryAside title="Vidéos" posts={videoPosts} current={id} />
+				) : isArticle ? (
+					<CategoryAside title="Articles" posts={articlePosts} current={id} />
+				) : isTheatre && theatreGroups ? (
+					<CategoryAside
+						groups={[
+							{ title: 'Théâtre', posts: theatreGroups.theatre },
+							{ title: 'Interventions', posts: theatreGroups.interventions },
+						]}
+						current={id}
+					/>
+				) : (
+					hasAside && category && <CategoryAside category={category} current={id} />
+				)
+			}
+
+			<article class="reader-main">
+				{
+					video && (
+						<div class="video-embed">
+							<iframe
+								src={`https://www.youtube-nocookie.com/embed/${video}`}
+								title={title}
+								loading="lazy"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+								referrerpolicy="strict-origin-when-cross-origin"
+								allowfullscreen
+							/>
+						</div>
+					)
+				}
+				<header class:list={['post-hero', { 'no-cover': !heroImage }]}>
+					{
+						heroImage && (
+							<div class="cover">
+								<Image src={heroImage} alt={title} widths={[400, 800]} sizes="(max-width: 860px) 90vw, 40vw" />
+							</div>
+						)
+					}
+					<div class="post-info">
+						{showDate !== false && (
+							<p class="date">
+								<FormattedDate date={pubDate} />
+								{updatedDate && <span class="upd"> · mis à jour le <FormattedDate date={updatedDate} /></span>}
+							</p>
+						)}
+						<h1>{title}</h1>
+						{description && <p class="lead">{description}</p>}
+					</div>
+				</header>
+
+				<div class="prose">
+					<slot />
+				</div>
+			</article>
+		</main>
+		<Footer />
+
+		<style>
+			.reader {
+				display: grid;
+				grid-template-columns: 15rem 1fr;
+				gap: 3.5rem;
+				width: 100%;
+				max-width: 70rem;
+				margin: 0 auto;
+				padding: 3rem 1.5rem;
+			}
+			.reader.no-aside {
+				grid-template-columns: 1fr;
+				max-width: 44rem;
+			}
+
+			/* Lecteur vidéo responsive 16:9 */
+			.video-embed {
+				position: relative;
+				aspect-ratio: 16 / 9;
+				width: 100%;
+				margin-bottom: 2.5rem;
+				background: #000;
+			}
+			.video-embed iframe {
+				position: absolute;
+				inset: 0;
+				width: 100%;
+				height: 100%;
+				border: 0;
+			}
+			.reader-main {
+				min-width: 0;
+			}
+
+			/* Héro : couverture d'un côté, infos de l'autre */
+			.post-hero {
+				display: grid;
+				grid-template-columns: 1.05fr 0.95fr;
+				gap: 2.5rem;
+				align-items: center;
+				margin-bottom: 3rem;
+			}
+			.no-aside .post-hero {
+				grid-template-columns: 1fr;
+				text-align: center;
+			}
+			.post-hero.no-cover {
+				grid-template-columns: 1fr;
+			}
+			.cover :global(img) {
+				width: 100%;
+				height: auto;
+			}
+			.date {
+				font-family: var(--font-heading);
+				font-size: 0.85rem;
+				letter-spacing: 0.04em;
+				color: rgb(var(--muted));
+				margin: 0 0 0.6em 0;
+			}
+			.post-info h1 {
+				margin: 0 0 0.5em 0;
+				line-height: 1.1;
+			}
+			.lead {
+				font-style: italic;
+				color: rgb(var(--muted));
+				font-size: 1.05rem;
+				margin: 0;
+			}
+
+			/* Lecture classique en scroll */
+			.prose {
+				max-width: 42rem;
+				margin: 0 auto;
+				hyphens: auto;
+				-webkit-hyphens: auto;
+			}
+			.no-aside .prose {
+				text-align: left;
+			}
+
+			@media (max-width: 860px) {
+				.reader {
+					grid-template-columns: 1fr;
+					gap: 0;
+					padding: 2rem 1.25rem;
+				}
+				.post-hero {
+					grid-template-columns: 1fr;
+					gap: 1.5rem;
+					text-align: left;
+				}
+			}
+		</style>
+	</body>
+</html>

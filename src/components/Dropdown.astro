@@ -1,0 +1,134 @@
+---
+interface Item {
+	href: string;
+	label: string;
+}
+interface Props {
+	label: string;
+	items: Item[];
+}
+const { label, items } = Astro.props;
+const pathname = Astro.url.pathname.replace(import.meta.env.BASE_URL, '');
+const isActive = items.some((it) => pathname === it.href || pathname === it.href + '/');
+---
+
+<div class="dropdown">
+	<button type="button" class:list={['dd-trigger', { active: isActive }]} aria-haspopup="true" aria-expanded="false">
+		{label}<span class="caret" aria-hidden="true">›</span>
+	</button>
+	<ul class="dd-menu">
+		{
+			items.map((it) => (
+				<li>
+					<a href={it.href}>{it.label}</a>
+				</li>
+			))
+		}
+	</ul>
+</div>
+
+<style>
+	.dropdown {
+		position: relative;
+		display: inline-block;
+	}
+	.dd-trigger {
+		font-family: var(--font-heading);
+		font-size: 0.9rem;
+		line-height: inherit;
+		letter-spacing: 0.04em;
+		padding: 1.2em 0.7em;
+		color: rgb(var(--ink));
+		background: none;
+		border: 0;
+		border-bottom: 2px solid transparent;
+		cursor: pointer;
+	}
+	.dd-trigger.active {
+		border-bottom-color: rgb(var(--ink));
+		font-weight: 500;
+	}
+	.caret {
+		display: inline-block;
+		margin-left: 0.35em;
+		font-size: 0.85em;
+		transform: rotate(90deg);
+		transition: transform 0.2s ease;
+	}
+	.dropdown:hover .caret,
+	.dropdown:focus-within .caret,
+	.dropdown.open .caret {
+		transform: rotate(-90deg);
+	}
+	.dd-menu {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		min-width: 11rem;
+		list-style: none;
+		margin: 0;
+		padding: 0.4em 0;
+		background: rgb(var(--paper));
+		border: 1px solid rgb(var(--line));
+		opacity: 0;
+		visibility: hidden;
+		transform: translateY(-4px);
+		transition: opacity 0.15s ease, transform 0.15s ease, visibility 0.15s;
+		z-index: 30;
+	}
+	.dropdown:hover .dd-menu,
+	.dropdown:focus-within .dd-menu,
+	.dropdown.open .dd-menu {
+		opacity: 1;
+		visibility: visible;
+		transform: translateY(0);
+	}
+	.dd-menu a {
+		display: block;
+		padding: 0.6em 1.2em;
+		font-family: var(--font-heading);
+		font-size: 0.9rem;
+		letter-spacing: 0.04em;
+		color: rgb(var(--ink));
+		text-decoration: none;
+		white-space: nowrap;
+	}
+	.dd-menu a:hover {
+		background: rgb(var(--line));
+	}
+	@media (max-width: 520px) {
+		.dropdown {
+			display: block;
+			width: 100%;
+			text-align: center;
+		}
+		.dd-menu {
+			position: static;
+			border: 0;
+			padding: 0;
+			min-width: 0;
+		}
+		.dd-menu a {
+			padding: 0.5em 0;
+			color: rgb(var(--muted));
+		}
+	}
+</style>
+
+<script>
+	document.querySelectorAll('.dropdown').forEach((dd) => {
+		const trigger = dd.querySelector('.dd-trigger');
+		trigger?.addEventListener('click', () => {
+			const open = dd.classList.toggle('open');
+			trigger.setAttribute('aria-expanded', String(open));
+		});
+	});
+	document.addEventListener('click', (e) => {
+		document.querySelectorAll('.dropdown.open').forEach((dd) => {
+			if (!dd.contains(e.target as Node)) {
+				dd.classList.remove('open');
+				dd.querySelector('.dd-trigger')?.setAttribute('aria-expanded', 'false');
+			}
+		});
+	});
+</script>

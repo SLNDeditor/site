@@ -1,0 +1,119 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+---
+
+<!doctype html>
+<html lang="fr">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body class="home">
+		<Header />
+		<section class="hero">
+			<div class="hero-inner">
+				<p class="kicker">auteure</p>
+				<h1>zalia sékaï</h1>
+				<p class="tagline">Exil, Colonisation, Algérie, Femmes, Histoire, Domination,<br />Kateb Yacine, Théâtre, Marc Garanger, Photographies</p>
+				<a class="enter" href="/essai">Lire les textes</a>
+			</div>
+		</section>
+
+		<style>
+			/* Entête transparente par-dessus le fond, sur la page d'accueil */
+			:global(body.home header) {
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				z-index: 2;
+				background: transparent;
+				border-bottom: none;
+			}
+			:global(body.home header a) {
+				color: #1a1a1a;
+			}
+			:global(body.home header a.active) {
+				border-bottom-color: #1a1a1a;
+			}
+
+			.hero {
+				position: relative;
+				min-height: 100vh;
+				min-height: 100dvh;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				overflow: hidden;
+				/* fond gris 50 % */
+				background-color: #808080;
+			}
+			/* trame visible (points type trame d'imprimerie) par-dessus le gris */
+			.hero::before {
+				content: '';
+				position: absolute;
+				inset: 0;
+				background-image: radial-gradient(
+					rgba(0, 0, 0, 0.28) 1px,
+					transparent 1.4px
+				);
+				background-size: 6px 6px;
+				z-index: 0;
+			}
+			.hero-inner {
+				position: relative;
+				z-index: 1;
+				text-align: center;
+				color: #1a1a1a;
+				padding: 2em 1.5em;
+			}
+			.kicker {
+				font-family: var(--font-body);
+				font-style: normal;
+				font-weight: 700;
+				text-transform: uppercase;
+				color: rgba(255, 255, 255, 0.7);
+				font-size: clamp(1.02rem, 2.7vw, 1.22rem);
+				letter-spacing: 5pt;
+				line-height: 1.2;
+				margin: 0 0 0.6em 0;
+			}
+			.hero-inner h1 {
+				font-family: var(--font-heading);
+				color: #fff;
+				font-weight: 300;
+				font-size: clamp(2.6rem, 9vw, 5.5rem);
+				letter-spacing: 0.14em;
+				text-transform: uppercase;
+				margin: 0;
+			}
+			.tagline {
+				font-family: var(--font-body);
+				font-weight: 700;
+				font-style: italic;
+				color: rgba(255, 255, 255, 0.7);
+				font-size: clamp(1.1rem, 3.5vw, 1.6rem);
+				letter-spacing: 0.05em;
+				line-height: 1.2;
+				margin: 0.8em 0 2em 0;
+			}
+			.enter {
+				display: inline-block;
+				font-family: var(--font-heading);
+				font-size: 0.95rem;
+				letter-spacing: 0.15em;
+				text-transform: uppercase;
+				color: #1a1a1a;
+				text-decoration: none;
+				padding: 0.8em 2em;
+				border: 1px solid rgba(26, 26, 26, 0.8);
+				transition: background 0.3s ease, color 0.3s ease;
+			}
+			.enter:hover {
+				background: #1a1a1a;
+				color: #fff;
+			}
+		</style>
+	</body>
+</html>

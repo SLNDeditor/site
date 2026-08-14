@@ -1,0 +1,109 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { Image } from 'astro:assets';
+import CategoryAside from './CategoryAside.astro';
+import FormattedDate from './FormattedDate.astro';
+
+interface Props {
+	title: string;
+	posts: CollectionEntry<'blog'>[];
+	emptyText?: string;
+}
+const { title, posts, emptyText = 'Cette sélection sera bientôt alimentée.' } = Astro.props;
+const featured = posts[0];
+---
+
+<main class="reader">
+	<CategoryAside title={title} posts={posts} current={featured?.id} />
+
+	<section class="reader-main">
+		{
+			featured ? (
+				<article class:list={['post-hero', { 'no-cover': !featured.data.heroImage }]}>
+					{featured.data.heroImage && (
+						<a class="cover" href={`/blog/${featured.id}/`}>
+							<Image src={featured.data.heroImage} alt={featured.data.title} widths={[400, 800]} sizes="(max-width: 860px) 90vw, 40vw" />
+						</a>
+					)}
+					<div class="post-info">
+						{featured.data.showDate !== false && (
+							<p class="date">
+								<FormattedDate date={featured.data.pubDate} />
+							</p>
+						)}
+						<h1>{featured.data.title}</h1>
+						{featured.data.description && <p class="lead">{featured.data.description}</p>}
+						<a class="read" href={`/blog/${featured.id}/`}>Lire le texte</a>
+					</div>
+				</article>
+			) : (
+				<div class="empty-cat">
+					<h1>{title}</h1>
+					<p>{emptyText}</p>
+				</div>
+			)
+		}
+	</section>
+</main>
+
+<style>
+	.reader {
+		display: grid;
+		grid-template-columns: 15rem 1fr;
+		gap: 3.5rem;
+		width: 100%;
+		max-width: 70rem;
+		margin: 0 auto;
+		padding: 3rem 1.5rem;
+	}
+	.reader-main { min-width: 0; }
+	.post-hero {
+		display: grid;
+		grid-template-columns: 1.05fr 0.95fr;
+		gap: 2.5rem;
+		align-items: center;
+	}
+	.post-hero.no-cover { grid-template-columns: 1fr; }
+	.post-hero.no-cover .post-info { max-width: 40rem; }
+	.cover :global(img) {
+		width: 100%;
+		height: auto;
+	}
+	.date {
+		font-family: var(--font-heading);
+		font-size: 0.85rem;
+		letter-spacing: 0.04em;
+		color: rgb(var(--muted));
+		margin: 0 0 0.6em 0;
+	}
+	.post-info h1 { margin: 0 0 0.5em 0; line-height: 1.1; }
+	.lead {
+		font-style: italic;
+		color: rgb(var(--muted));
+		font-size: 1.05rem;
+		margin: 0 0 1.5em 0;
+	}
+	.read {
+		display: inline-block;
+		font-family: var(--font-heading);
+		font-size: 0.9rem;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		color: rgb(var(--ink));
+		text-decoration: none;
+		padding: 0.7em 1.6em;
+		border: 1px solid rgb(var(--ink));
+		transition: background 0.3s ease, color 0.3s ease;
+	}
+	.read:hover { background: rgb(var(--ink)); color: #fff; }
+	.empty-cat { padding-top: 1rem; }
+
+	@media (max-width: 860px) {
+		.reader {
+			grid-template-columns: 1fr;
+			gap: 0;
+			padding: 2rem 1.25rem;
+		}
+		.post-hero { grid-template-columns: 1fr; gap: 1.5rem; }
+	}
+</style>

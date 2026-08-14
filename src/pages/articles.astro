@@ -1,0 +1,21 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import CuratedReader from '../components/CuratedReader.astro';
+import { getPostsBySlugs, CURATED_ARTICLES } from '../lib/categories';
+import { SITE_TITLE } from '../consts';
+
+const posts = await getPostsBySlugs(CURATED_ARTICLES);
+---
+
+<html lang="fr">
+	<head>
+		<BaseHead title={`Articles — ${SITE_TITLE}`} description={`Articles de ${SITE_TITLE}.`} />
+	</head>
+	<body>
+		<Header />
+		<CuratedReader title="Articles" posts={posts} />
+		<Footer />
+	</body>
+</html>

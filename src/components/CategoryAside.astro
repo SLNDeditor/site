@@ -1,0 +1,105 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { getPostsByCategory, CATEGORY_LABEL } from '../lib/categories';
+
+interface Group {
+	title: string;
+	posts: CollectionEntry<'blog'>[];
+}
+interface Props {
+	category?: string;
+	title?: string;
+	posts?: CollectionEntry<'blog'>[];
+	groups?: Group[];
+	current?: string;
+}
+const { category, title, posts: postsProp, groups: groupsProp, current } = Astro.props;
+
+let groups: Group[];
+if (groupsProp) {
+	groups = groupsProp;
+} else {
+	const posts = postsProp ?? (category ? await getPostsByCategory(category) : []);
+	const heading = title ?? (category ? CATEGORY_LABEL[category] ?? category : '');
+	groups = [{ title: heading, posts }];
+}
+---
+
+<aside class="cat-aside">
+	{
+		groups.map((g) => (
+			<div class="cat-group">
+				<h2 class="cat-title">{g.title}</h2>
+				<nav>
+					<ul>
+						{g.posts.map((p) => (
+							<li class:list={[{ active: p.id === current }]}>
+								<a href={`/blog/${p.id}/`}>{p.data.title}</a>
+							</li>
+						))}
+						{g.posts.length === 0 && <li class="empty">Bientôt…</li>}
+					</ul>
+				</nav>
+			</div>
+		))
+	}
+</aside>
+
+<style>
+	.cat-aside {
+		position: sticky;
+		top: 2rem;
+		align-self: start;
+	}
+	.cat-group + .cat-group {
+		margin-top: 2.4em;
+	}
+	.cat-title {
+		font-family: var(--font-heading);
+		font-size: 1.15rem;
+		font-weight: 600;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		margin: 0 0 1.2em 0;
+		padding-bottom: 0.6em;
+		border-bottom: 1px solid rgb(var(--ink));
+	}
+	nav ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	nav li {
+		margin: 0 0 0.9em 0;
+		line-height: 1.3;
+	}
+	nav a {
+		font-family: var(--font-body);
+		font-size: 1.05rem;
+		color: rgb(var(--muted));
+		text-decoration: none;
+		transition: color 0.2s ease;
+	}
+	nav a:hover {
+		color: rgb(var(--ink));
+	}
+	nav li.active a {
+		color: rgb(var(--ink));
+		font-weight: 600;
+		text-decoration: underline;
+		text-underline-offset: 0.15em;
+	}
+	.empty {
+		font-style: italic;
+		color: rgb(var(--muted));
+	}
+	/* Sur mobile : le menu passe au-dessus, non fixe */
+	@media (max-width: 860px) {
+		.cat-aside {
+			position: static;
+			border-bottom: 1px solid rgb(var(--line));
+			padding-bottom: 1.5em;
+			margin-bottom: 1.5em;
+		}
+	}
+</style>

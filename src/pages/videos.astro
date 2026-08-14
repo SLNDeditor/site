@@ -1,0 +1,21 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import CuratedReader from '../components/CuratedReader.astro';
+import { getPostsBySlugs, CURATED_VIDEOS } from '../lib/categories';
+import { SITE_TITLE } from '../consts';
+
+const posts = await getPostsBySlugs(CURATED_VIDEOS);
+---
+
+<html lang="fr">
+	<head>
+		<BaseHead title={`Vidéos — ${SITE_TITLE}`} description={`Vidéos de ${SITE_TITLE}.`} />
+	</head>
+	<body>
+		<Header />
+		<CuratedReader title="Vidéos" posts={posts} emptyText="Les vidéos seront bientôt en ligne." />
+		<Footer />
+	</body>
+</html>

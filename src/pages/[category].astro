@@ -1,0 +1,146 @@
+---
+import { Image } from 'astro:assets';
+import BaseHead from '../components/BaseHead.astro';
+import CategoryAside from '../components/CategoryAside.astro';
+import Footer from '../components/Footer.astro';
+import FormattedDate from '../components/FormattedDate.astro';
+import Header from '../components/Header.astro';
+import { CATEGORIES, CATEGORY_LABEL, getPostsByCategory, getTheatreGroups } from '../lib/categories';
+import { SITE_TITLE } from '../consts';
+
+export async function getStaticPaths() {
+	return CATEGORIES.map((c) => ({ params: { category: c.slug } }));
+}
+
+const { category } = Astro.params;
+const label = CATEGORY_LABEL[category] ?? category;
+
+// Théâtre : barre latérale en deux groupes (pièce + Interventions liées).
+let posts;
+let asideGroups: { title: string; posts: typeof posts }[] | undefined;
+if (category === 'theatre') {
+	const { theatre, interventions } = await getTheatreGroups();
+	posts = theatre;
+	asideGroups = [
+		{ title: 'Théâtre', posts: theatre },
+		{ title: 'Interventions', posts: interventions },
+	];
+} else {
+	posts = await getPostsByCategory(category);
+}
+const featured = posts[0];
+---
+
+<html lang="fr">
+	<head>
+		<BaseHead title={`${label} — ${SITE_TITLE}`} description={`${label} — textes de ${SITE_TITLE}.`} />
+	</head>
+	<body>
+		<Header />
+		<main class="reader">
+			{
+				asideGroups ? (
+					<CategoryAside groups={asideGroups} current={featured?.id} />
+				) : (
+					<CategoryAside category={category} current={featured?.id} />
+				)
+			}
+
+			<section class="reader-main">
+				{
+					featured ? (
+						<article class:list={['post-hero', { 'no-cover': !featured.data.heroImage }]}>
+							{featured.data.heroImage && (
+								<a class="cover" href={`/blog/${featured.id}/`}>
+									<Image src={featured.data.heroImage} alt={featured.data.title} widths={[400, 800]} sizes="(max-width: 860px) 90vw, 40vw" />
+								</a>
+							)}
+							<div class="post-info">
+								{featured.data.showDate !== false && (
+									<p class="date">
+										<FormattedDate date={featured.data.pubDate} />
+									</p>
+								)}
+								<h1>{featured.data.title}</h1>
+								{featured.data.description && <p class="lead">{featured.data.description}</p>}
+								<a class="read" href={`/blog/${featured.id}/`}>Lire le texte</a>
+							</div>
+						</article>
+					) : (
+						<div class="empty-cat">
+							<h1>{label}</h1>
+							<p>Cette rubrique sera bientôt alimentée.</p>
+						</div>
+					)
+				}
+			</section>
+		</main>
+		<Footer />
+
+		<style>
+			.reader {
+				display: grid;
+				grid-template-columns: 15rem 1fr;
+				gap: 3.5rem;
+				width: 100%;
+				max-width: 70rem;
+				margin: 0 auto;
+				padding: 3rem 1.5rem;
+			}
+			.reader-main { min-width: 0; }
+			.post-hero {
+				display: grid;
+				grid-template-columns: 1.05fr 0.95fr;
+				gap: 2.5rem;
+				align-items: center;
+			}
+			.post-hero.no-cover {
+				grid-template-columns: 1fr;
+			}
+			.post-hero.no-cover .post-info {
+				max-width: 40rem;
+			}
+			.cover :global(img) {
+				width: 100%;
+				height: auto;
+			}
+			.date {
+				font-family: var(--font-heading);
+				font-size: 0.85rem;
+				letter-spacing: 0.04em;
+				color: rgb(var(--muted));
+				margin: 0 0 0.6em 0;
+			}
+			.post-info h1 { margin: 0 0 0.5em 0; line-height: 1.1; }
+			.lead {
+				font-style: italic;
+				color: rgb(var(--muted));
+				font-size: 1.05rem;
+				margin: 0 0 1.5em 0;
+			}
+			.read {
+				display: inline-block;
+				font-family: var(--font-heading);
+				font-size: 0.9rem;
+				letter-spacing: 0.1em;
+				text-transform: uppercase;
+				color: rgb(var(--ink));
+				text-decoration: none;
+				padding: 0.7em 1.6em;
+				border: 1px solid rgb(var(--ink));
+				transition: background 0.3s ease, color 0.3s ease;
+			}
+			.read:hover { background: rgb(var(--ink)); color: #fff; }
+			.empty-cat { padding-top: 1rem; }
+
+			@media (max-width: 860px) {
+				.reader {
+					grid-template-columns: 1fr;
+					gap: 0;
+					padding: 2rem 1.25rem;
+				}
+				.post-hero { grid-template-columns: 1fr; gap: 1.5rem; }
+			}
+		</style>
+	</body>
+</html>
