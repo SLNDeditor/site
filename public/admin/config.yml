@@ -1,11 +1,12 @@
 # --- Configuration Sveltia CMS (éditeur en ligne façon WordPress) ---
-# À COMPLÉTER une fois le dépôt GitHub créé : remplacer OWNER/REPO ci-dessous
-# par le nom réel du dépôt (ex. zaliasekai/site). C'est la seule ligne à changer
-# pour activer l'édition en ligne.
+#
+# Connexion : sur /admin/, Zalia clique « Sign In with Token » et colle son
+# token GitHub personnel (généré avec accès en lecture/écriture sur ce seul
+# dépôt) — ce token fait office de mot de passe. Pas de serveur OAuth requis.
 
 backend:
   name: github
-  repo: OWNER/REPO
+  repo: SLNDeditor/zalia_sekai
   branch: main
 
 # Tester l'admin EN LOCAL sans GitHub :
