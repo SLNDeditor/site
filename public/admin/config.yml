@@ -6,7 +6,7 @@
 
 backend:
   name: github
-  repo: SLNDeditor/zalia_sekai
+  repo: SLNDeditor/site
   branch: main
 
 # Tester l'admin EN LOCAL sans GitHub :
