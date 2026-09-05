@@ -15,11 +15,33 @@ const blog = defineCollection({
 			// Afficher ou non la date sur l'article (par défaut : affichée)
 			showDate: z.boolean().optional().default(true),
 			updatedDate: z.coerce.date().optional(),
-			heroImage: z.optional(image()),
-			// Rubrique : essai | litterature | actualites | videos | interventions | page
+			// Soit une image locale optimisée (chemin relatif « ./images/… »,
+			// convention historique), soit un chemin absolu vers /public
+			// (« /blog-media/… », images téléversées depuis le CMS).
+			heroImage: z.union([image(), z.string()]).optional(),
+			// Rubrique : essai | theatre | recit | actualites | interventions |
+			// revue-de-presse | article | videos | page
 			category: z.string().optional(),
 			// Identifiant YouTube de la vidéo (ex. "5DxPb8X4Z5s"), affichée en haut de l'article.
 			video: z.string().optional(),
+			// Numéro de la revue NADA associée : la couverture (héro) devient un
+			// lien vers le PDF `public/nada/nada-<n>.pdf` (lecture + téléchargement).
+			nada: z.coerce.number().optional(),
+			// Emplacement dans le menu latéral (rubrique Théâtre uniquement).
+			//   group  = intitulé du sous-menu de 1er niveau (ex. « En Attendant
+			//            l'algérie ») ; vide = item de 1er niveau (comme Guelma/Selma).
+			//   parent = identifiant (slug) d'un article parent, pour imbriquer plus
+			//            profond (ex. les interventions sous « principe-des-interventions »).
+			//   order  = ordre croissant dans le groupe / sous le parent.
+			//   label  = libellé court affiché dans le menu (défaut : le titre).
+			menu: z
+				.object({
+					group: z.string().optional(),
+					parent: z.string().optional(),
+					order: z.coerce.number().optional(),
+					label: z.string().optional(),
+				})
+				.optional(),
 		}),
 });
 

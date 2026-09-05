@@ -3,6 +3,9 @@ title: "Principe de mise en scène"
 description: "ELEMENTS ESSENTIELS du DECOR Un bureau, des chaises, une poursuite, un lit, un tapis, un carnet,un magnétophone, le Coran, les œuvres complètes de Karl Marx, la photo de sa mère, la valise : symbole d’un pays qui n’existe pas et qui se cherche. Le personnage..."
 pubDate: 2000-01-15
 category: theatre
+menu:
+  group: "En Attendant l'algérie"
+  order: 2
 source: https://www.zaliasekai.net/article-26811390.html
 ---
 

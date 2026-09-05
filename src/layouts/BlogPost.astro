@@ -1,16 +1,17 @@
 ---
-import { Image } from 'astro:assets';
 import type { CollectionEntry } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
 import CategoryAside from '../components/CategoryAside.astro';
+import TheatreAside from '../components/TheatreAside.astro';
+import HeroCover from '../components/HeroCover.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/Header.astro';
-import { CATEGORY_LABEL, CURATED_ARTICLES, CURATED_VIDEOS, getPostsBySlugs, getTheatreGroups } from '../lib/categories';
+import { CATEGORY_LABEL, CURATED_ARTICLES, CURATED_VIDEOS, getPostsBySlugs, getTheatreTree } from '../lib/categories';
 
 type Props = CollectionEntry<'blog'>['data'] & { id?: string };
 
-const { title, description, pubDate, showDate, updatedDate, heroImage, category, id, video } = Astro.props;
+const { title, description, pubDate, showDate, updatedDate, heroImage, category, id, video, nada } = Astro.props;
 // Les films de la sélection « Vidéos » affichent la liste des vidéos dans le menu
 // de gauche (et non la rubrique d'origine, ex. Essai).
 const isVideo = id ? CURATED_VIDEOS.includes(id) : false;
@@ -18,9 +19,9 @@ const videoPosts = isVideo ? await getPostsBySlugs(CURATED_VIDEOS) : [];
 // Les textes de la sélection « Articles » affichent la liste des articles.
 const isArticle = id ? CURATED_ARTICLES.includes(id) : false;
 const articlePosts = isArticle ? await getPostsBySlugs(CURATED_ARTICLES) : [];
-// Théâtre : barre latérale en deux groupes (pièce + Interventions liées).
+// Théâtre : barre latérale en arborescence (pièce + interventions + Guelma/Selma).
 const isTheatre = category === 'theatre';
-const theatreGroups = isTheatre ? await getTheatreGroups() : null;
+const theatreNodes = isTheatre ? await getTheatreTree() : null;
 const hasAside = isVideo || isArticle || (category ? category in CATEGORY_LABEL : false);
 ---
 
@@ -36,14 +37,8 @@ const hasAside = isVideo || isArticle || (category ? category in CATEGORY_LABEL 
 					<CategoryAside title="Vidéos" posts={videoPosts} current={id} />
 				) : isArticle ? (
 					<CategoryAside title="Articles" posts={articlePosts} current={id} />
-				) : isTheatre && theatreGroups ? (
-					<CategoryAside
-						groups={[
-							{ title: 'Théâtre', posts: theatreGroups.theatre },
-							{ title: 'Interventions', posts: theatreGroups.interventions },
-						]}
-						current={id}
-					/>
+				) : isTheatre && theatreNodes ? (
+					<TheatreAside nodes={theatreNodes} current={id} />
 				) : (
 					hasAside && category && <CategoryAside category={category} current={id} />
 				)
@@ -65,13 +60,7 @@ const hasAside = isVideo || isArticle || (category ? category in CATEGORY_LABEL 
 					)
 				}
 				<header class:list={['post-hero', { 'no-cover': !heroImage }]}>
-					{
-						heroImage && (
-							<div class="cover">
-								<Image src={heroImage} alt={title} widths={[400, 800]} sizes="(max-width: 860px) 90vw, 40vw" />
-							</div>
-						)
-					}
+					{heroImage && <HeroCover image={heroImage} alt={title} nada={nada} />}
 					<div class="post-info">
 						{showDate !== false && (
 							<p class="date">

@@ -40,7 +40,6 @@ export const NAV: NavItem[] = [
 export const CURATED_ARTICLES: string[] = [
 	'algeria-on-my-mind',
 	'kateb-yacine-martin-luther-king',
-	'guelma-selma-une-prosopopee-entre-kateb-yacine-et-martin-luther-king',
 	'l-algerie-marche-dans-nos-reves',
 	'algeriennes-surexposees-article',
 	'l-identite-en-fragments',
@@ -55,24 +54,69 @@ export const CURATED_VIDEOS: string[] = [
 	'french-dream-is-a-dream-1',
 ];
 
-// Rubrique Théâtre : sous-groupe « Interventions » (liées à la pièce « En
-// Attendant l'algérie »), affiché comme second bloc dans la barre latérale.
-// Ordre imposé par l'autrice.
-export const THEATRE_INTERVENTIONS: string[] = [
-	'intervention-de-gilbert-grandguillaume',
-	'intervention-de-djilali-hadjadj',
-	'intervention-de-said-bouamama',
-	'principe-des-interventions',
-];
+// --- Rubrique Théâtre : arborescence de la barre latérale --------------------
+// L'arbre est reconstruit à partir du frontmatter des articles `category:
+// theatre` (aucune liste à tenir à jour ici) — bloc `menu:` de chaque article :
+//   • `menu.group`  = intitulé du sous-menu de 1er niveau (ex. « En Attendant
+//     l'algérie »). Vide → l'article est lui-même un item de 1er niveau.
+//   • `menu.parent` = slug d'un article parent, pour imbriquer plus profond
+//     (ex. les interventions sous « principe-des-interventions »).
+//   • `menu.order`  = ordre croissant dans le groupe / sous le parent.
+//   • `menu.label`  = libellé court affiché dans le menu (défaut : le titre).
+// Un groupe est placé selon le plus petit `order` de ses membres.
 
-// Théâtre découpé en deux groupes pour la barre latérale : les textes de la
-// pièce, puis les « Interventions » liées.
-export async function getTheatreGroups() {
-	const all = await getPostsByCategory('theatre');
-	const set = new Set(THEATRE_INTERVENTIONS);
-	const theatre = all.filter((p) => !set.has(p.id));
-	const interventions = await getPostsBySlugs(THEATRE_INTERVENTIONS);
-	return { theatre, interventions };
+export type TheatreNode = {
+	label: string;
+	href?: string;
+	id?: string;
+	children?: TheatreNode[];
+};
+
+export async function getTheatreTree(): Promise<TheatreNode[]> {
+	const all = await getCollection('blog');
+	const posts = all.filter((p) => p.data.category === 'theatre');
+	const ord = (p: (typeof posts)[number]) => p.data.menu?.order ?? 999;
+	const lbl = (p: (typeof posts)[number]) => p.data.menu?.label || p.data.title;
+
+	const nodeFor = (p: (typeof posts)[number]): TheatreNode => {
+		const kids = posts
+			.filter((c) => c.data.menu?.parent === p.id)
+			.sort((a, b) => ord(a) - ord(b))
+			.map(nodeFor);
+		return {
+			label: lbl(p),
+			href: `/blog/${p.id}/`,
+			id: p.id,
+			children: kids.length ? kids : undefined,
+		};
+	};
+
+	// Items de 1er niveau : ceux sans `menu.parent`.
+	const top = posts.filter((p) => !p.data.menu?.parent);
+	const groups = new Map<string, (typeof posts)[number][]>();
+	const standalone: (typeof posts)[number][] = [];
+	for (const p of top) {
+		const g = p.data.menu?.group;
+		if (g) (groups.get(g) ?? groups.set(g, []).get(g)!).push(p);
+		else standalone.push(p);
+	}
+
+	const entries: { order: number; node: TheatreNode }[] = [];
+	for (const [name, members] of groups) {
+		members.sort((a, b) => ord(a) - ord(b));
+		entries.push({
+			order: Math.min(...members.map(ord)),
+			node: { label: name, children: members.map(nodeFor) },
+		});
+	}
+	for (const p of standalone) entries.push({ order: ord(p), node: nodeFor(p) });
+	entries.sort((a, b) => a.order - b.order);
+	return entries.map((e) => e.node);
+}
+
+// Parcours à plat de l'arborescence Théâtre, dans l'ordre d'affichage.
+export function flattenTheatre(nodes: TheatreNode[]): TheatreNode[] {
+	return nodes.flatMap((n) => [n, ...(n.children ? flattenTheatre(n.children) : [])]);
 }
 
 // Articles d'une rubrique, triés du plus récent au plus ancien

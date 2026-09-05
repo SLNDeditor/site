@@ -8,42 +8,122 @@ backend:
   repo: OWNER/REPO
   branch: main
 
-# Permet de tester l'admin EN LOCAL sans GitHub :
-#   1) lancer le site :        npx astro dev
-#   2) lancer le proxy local : npx @sveltia/cms-proxy-server
-#   3) ouvrir : http://localhost:4321/admin/
-local_backend: true
+# Tester l'admin EN LOCAL sans GitHub :
+#   1) npx astro dev
+#   2) http://localhost:4321/admin/index.html
+#   3) « Travailler avec un dépôt local » → choisir le dossier `site/`
+# (Sveltia gère le mode local nativement : ni `local_backend` ni proxy.
+#  L'interface est en français automatiquement selon le navigateur.)
 
-# Langue de l'interface
-locale: fr
-
-# Où sont rangées les images téléversées, et comment elles sont écrites dans les
-# articles (chemin relatif attendu par Astro : ./images/mon-image.jpg)
-media_folder: "src/content/blog/images"
-public_folder: "/src/content/blog/images"
+# Images téléversées depuis le CMS (image de héro ET images insérées dans le
+# corps du texte) : rangées dans public/blog-media/ et référencées en chemin
+# absolu « /blog-media/nom.jpg ». (Les anciennes images de héro « ./images/… »
+# ajoutées à la main restent optimisées par Astro et continuent de marcher.)
+media_folder: "/public/blog-media"
+public_folder: "/blog-media"
 
 collections:
-  - name: blog
+  # =========================================================================
+  # UN SEUL endroit pour tous les textes (principe WordPress).
+  # La liste se replie par rubrique (bouton « Grouper par » → Rubrique).
+  # « Créer » → choisir la rubrique ; pour le théâtre, ouvrir « Emplacement
+  # (menu Théâtre) » et renseigner le sous-menu.
+  # =========================================================================
+  - name: articles
     label: "Articles"
     label_singular: "Article"
-    description: "Ajouter, modifier ou supprimer un texte. Choisir la rubrique (placement) et l'ordre."
+    description: >
+      Tous les textes du site. Le champ « Rubrique » commande où l'article
+      apparaît dans le menu. Le titre apparaît ensuite tout seul dans la barre
+      latérale de la rubrique.
     folder: "src/content/blog"
     create: true
     delete: true
     extension: md
     format: frontmatter
     slug: "{{slug}}"
-    # Tri par défaut dans la liste
-    sortable_fields: [pubDate, title]
+    # Liste groupée par rubrique. NB : si la liste se vide après avoir activé
+    # « Grouper par », retirer ce bloc `view_groups`.
+    view_groups:
+      - { label: "Rubrique", field: category }
+    sortable_fields: [pubDate, title, category]
     fields:
-      # ---------- HÉRO ----------
-      - { name: title, label: "Titre (héro)", widget: string, hint: "Grand titre affiché en haut de l'article." }
+      - name: title
+        label: "Titre"
+        widget: string
+        hint: "Grand titre affiché en haut de l'article."
 
+      - name: category
+        label: "Rubrique"
+        widget: select
+        default: essai
+        hint: "Où l'article apparaît dans le menu et la barre latérale."
+        options:
+          - { label: "Essai", value: essai }
+          - { label: "Théâtre", value: theatre }
+          - { label: "Récit", value: recit }
+          - { label: "Actualités", value: actualites }
+          - { label: "Interventions", value: interventions }
+          - { label: "Revue de presse", value: revue-de-presse }
+          - { label: "Articles (sélection mise en avant)", value: article }
+          - { label: "Vidéos (sélection)", value: videos }
+          - { label: "Page (hors menu)", value: page }
+
+      # --- Sous-menu : replié, à ne remplir que pour la rubrique Théâtre ---
+      - name: menu
+        label: "Emplacement (menu Théâtre)"
+        widget: object
+        collapsed: true
+        required: false
+        hint: >
+          À remplir UNIQUEMENT pour la rubrique « Théâtre ». Sinon, laisser
+          fermé.
+        fields:
+          - name: group
+            label: "Sous-menu"
+            widget: string
+            required: false
+            hint: >
+              Nom du sous-menu de 1er niveau (sous-menu existant : « En Attendant
+              l'algérie »). Taper un nom inédit crée un nouveau sous-menu.
+              Laisser vide = l'article est lui-même un item de 1er niveau.
+          - name: order
+            label: "Ordre dans le menu"
+            widget: number
+            required: false
+            value_type: int
+            min: 0
+            hint: "Petit nombre = plus haut. Vide = à la fin."
+          - name: parent
+            label: "Rattaché à l'article (identifiant)"
+            widget: string
+            required: false
+            hint: >
+              Facultatif, pour imbriquer SOUS un autre article. Mettre son
+              identifiant, ex. « principe-des-interventions ».
+          - name: label
+            label: "Libellé court (menu)"
+            widget: string
+            required: false
+            hint: "Facultatif. Texte affiché dans la barre latérale si le titre est trop long."
+
+      # --- Héro ---
       - name: heroImage
         label: "Image (héro)"
         widget: image
         required: false
         hint: "Facultatif. Image de couverture affichée à côté du titre."
+
+      - name: nada
+        label: "Numéro de revue NADA"
+        widget: number
+        required: false
+        value_type: int
+        min: 1
+        hint: >
+          Facultatif. Si renseigné, la couverture (héro) devient un lien vers le
+          PDF de ce numéro (lecture + téléchargement). Le PDF doit exister dans
+          public/nada/nada-<n>.pdf.
 
       - name: pubDate
         label: "Date"
@@ -58,30 +138,13 @@ collections:
         default: true
         hint: "Décocher pour masquer la date sur l'article."
 
-      # ---------- PLACEMENT ----------
-      - name: category
-        label: "Rubrique (placement)"
-        widget: select
-        default: essai
-        hint: "Détermine où l'article apparaît dans le menu et la barre latérale."
-        options:
-          - { label: "Essai", value: essai }
-          - { label: "Théâtre", value: theatre }
-          - { label: "Récit", value: recit }
-          - { label: "Actualités", value: actualites }
-          - { label: "Interventions", value: interventions }
-          - { label: "Revue de presse", value: revue-de-presse }
-          - { label: "Articles (sélection)", value: article }
-          - { label: "Vidéos (sélection)", value: videos }
-          - { label: "Page (hors menu)", value: page }
-
       - name: video
         label: "Vidéo YouTube (identifiant)"
         widget: string
         required: false
         hint: "Facultatif. Ex. : 2swt5PT8a5U (l'identifiant après ?v= dans l'URL YouTube)."
 
-      # ---------- CHAPEAU ----------
+      # --- Chapeau ---
       - name: description
         label: "Chapeau (résumé en tête)"
         widget: markdown
@@ -91,9 +154,9 @@ collections:
         editor_components: []
         hint: "Court paragraphe d'introduction, affiché en italique sous le titre."
 
-      # ---------- CORPS DU TEXTE ----------
+      # --- Corps du texte ---
       - name: body
         label: "Corps du texte"
         widget: markdown
-        hint: "Le texte complet de l'article. Barre d'outils : gras, italique, titres, listes, citation, lien, image."
-        buttons: [bold, italic, heading-two, heading-three, quote, bulleted-list, numbered-list, link, image]
+        hint: "Le texte complet. Bouton image pour insérer une image où l'on veut."
+        buttons: [bold, italic, heading-two, heading-three, quote, bulleted-list, numbered-list, link]

@@ -1,0 +1,83 @@
+---
+// Liste récursive de l'arborescence Théâtre. Rendu du wrapper + styles : voir
+// TheatreAside.astro.
+import type { TheatreNode } from '../lib/categories';
+
+interface Props {
+	nodes: TheatreNode[];
+	current?: string;
+	level?: number;
+}
+const { nodes, current, level = 0 } = Astro.props;
+---
+
+<ul class:list={['tree', { root: level === 0 }]}>
+	{
+		nodes.map((n) => (
+			<li class:list={[{ active: n.id != null && n.id === current, group: !n.href, bullet: level === 0 }]}>
+				{n.href ? <a href={n.href}>{n.label}</a> : <span class="group-label">{n.label}</span>}
+				{n.children && n.children.length > 0 && (
+					<Astro.self nodes={n.children} current={current} level={level + 1} />
+				)}
+			</li>
+		))
+	}
+</ul>
+
+<style>
+	.tree {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	/* Indentation + filet des niveaux imbriqués */
+	.tree:not(.root) {
+		margin: 0.6em 0 0.2em 0;
+		padding-left: 1em;
+		border-left: 1px solid rgb(var(--line));
+	}
+	li {
+		margin: 0 0 0.75em 0;
+		line-height: 1.14;
+	}
+	.tree:not(.root) li {
+		margin-bottom: 0.6em;
+	}
+	/* Puce sur les éléments du sous-menu (niveau 0) uniquement */
+	li.bullet {
+		padding-left: 1.1em;
+		position: relative;
+	}
+	li.bullet::before {
+		content: '•';
+		position: absolute;
+		left: 0;
+		top: 0;
+		color: rgb(var(--muted));
+	}
+	/* Intitulé de groupe (« En Attendant l'algérie ») : non cliquable, pas gras */
+	.group-label {
+		display: block;
+		font-family: var(--font-heading);
+		font-size: 0.95rem;
+		font-weight: 400;
+		letter-spacing: 0.03em;
+		line-height: 1.14;
+		color: rgb(var(--ink));
+	}
+	a {
+		font-family: var(--font-body);
+		font-size: 1.02rem;
+		color: rgb(var(--muted));
+		text-decoration: none;
+		transition: color 0.2s ease;
+	}
+	a:hover {
+		color: rgb(var(--ink));
+	}
+	/* Page ouverte : gras, non souligné */
+	li.active > a {
+		color: rgb(var(--ink));
+		font-weight: 700;
+	}
+</style>

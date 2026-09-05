@@ -14,13 +14,18 @@ const isActive = items.some((it) => pathname === it.href || pathname === it.href
 
 <div class="dropdown">
 	<button type="button" class:list={['dd-trigger', { active: isActive }]} aria-haspopup="true" aria-expanded="false">
-		{label}<span class="caret" aria-hidden="true">›</span>
+		<span class="mark">{label}</span><span class="caret" aria-hidden="true">›</span>
 	</button>
 	<ul class="dd-menu">
 		{
 			items.map((it) => (
 				<li>
-					<a href={it.href}>{it.label}</a>
+					<a
+						href={it.href}
+						class:list={{ active: pathname === it.href || pathname === it.href + '/' }}
+					>
+						{it.label}
+					</a>
 				</li>
 			))
 		}
@@ -34,19 +39,18 @@ const isActive = items.some((it) => pathname === it.href || pathname === it.href
 	}
 	.dd-trigger {
 		font-family: var(--font-heading);
-		font-size: 0.9rem;
+		font-size: calc(0.9rem + 3pt);
 		line-height: inherit;
 		letter-spacing: 0.04em;
 		padding: 1.2em 0.7em;
-		color: rgb(var(--ink));
+		color: #cccccc;
 		background: none;
 		border: 0;
 		border-bottom: 2px solid transparent;
 		cursor: pointer;
 	}
 	.dd-trigger.active {
-		border-bottom-color: rgb(var(--ink));
-		font-weight: 500;
+		font-weight: 700;
 	}
 	.caret {
 		display: inline-block;
@@ -95,6 +99,9 @@ const isActive = items.some((it) => pathname === it.href || pathname === it.href
 	}
 	.dd-menu a:hover {
 		background: rgb(var(--line));
+	}
+	.dd-menu a.active {
+		font-weight: 700;
 	}
 	@media (max-width: 520px) {
 		.dropdown {

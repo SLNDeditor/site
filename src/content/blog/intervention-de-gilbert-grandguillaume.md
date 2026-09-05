@@ -3,6 +3,9 @@ title: "Intervention de Gilbert Grandguillaume"
 description: "Durant la pièce \"En Attendant l'algérie\", un invité prend la parole (Voir Principe des interventions) Gilbert Grandguillaume, sociologue \"La langue c’est la base du pouvoir\" Intervention du jeudi 15 février 2001 à la Ferme du Bonheur C’est vrai qu’il..."
 pubDate: 2009-03-26
 category: theatre
+menu:
+  parent: principe-des-interventions
+  order: 1
 source: https://www.zaliasekai.net/article-29508637.html
 ---
 

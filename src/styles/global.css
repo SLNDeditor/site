@@ -9,6 +9,7 @@
 	--paper: 255, 255, 255;   /* blanc (fond) */
 	--muted: 110, 110, 110;   /* gris (dates, méta) */
 	--line: 224, 224, 224;    /* filets */
+	--brand: 122, 20, 35;     /* rouge du header (#7a1423) */
 
 	--font-heading: 'Jost Variable', 'Jost', 'Futura', 'Century Gothic', sans-serif;
 	--font-body: 'EB Garamond', Garamond, Georgia, 'Times New Roman', serif;
@@ -99,6 +100,10 @@ img {
 
 .prose img {
 	margin: 1.6em auto;
+}
+.prose audio {
+	width: 100%;
+	margin: 1.5em 0;
 }
 
 table { width: 100%; border-collapse: collapse; }

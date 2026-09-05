@@ -37,11 +37,18 @@ const MAP = {
   'guelma-selma': 'interventions', // « GUELMA / SELMA »
   'festival-non-aligne': 'interventions',
   'conference-debat-algeriennes-surexposees': 'interventions', // « Conférence-débat » (Lyon 2, 28/11/2025)
+  'podcast-voix-au-chapitre': 'interventions', // « Podcast, Voix au chapitre » (Beur FM, 16/11/2025)
   // ---- ACTUALITÉS ----
   'rencontres-avec-l-auteure': 'actualites',
   // ---- REVUE DE PRESSE ----
   'algerie-la-desossee': 'revue-de-presse',
   'les-exiles-n-ont-pas-realise-leurs-reves-ils-sont-dans-une-quete-sans-fin': 'revue-de-presse',
+  // presse sur le livre « Algériennes surexposées »
+  'rp-le-provincial-memoire-en-images': 'revue-de-presse',
+  'rp-le-matin-visages-oublies': 'revue-de-presse',
+  'rp-le-matin-memoire-coloniale': 'revue-de-presse',
+  'rp-oeil-de-la-photographie': 'revue-de-presse',
+  'rp-histoirecoloniale-pheline': 'revue-de-presse',
   // ---- PAGES hors menu ----
   'presentation-de-l-auteure': 'page',
   'contact': 'page',

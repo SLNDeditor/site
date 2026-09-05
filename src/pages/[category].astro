@@ -1,11 +1,13 @@
 ---
-import { Image } from 'astro:assets';
+import { getCollection, render } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
 import CategoryAside from '../components/CategoryAside.astro';
+import TheatreAside from '../components/TheatreAside.astro';
+import HeroCover from '../components/HeroCover.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/Header.astro';
-import { CATEGORIES, CATEGORY_LABEL, getPostsByCategory, getTheatreGroups } from '../lib/categories';
+import { CATEGORIES, CATEGORY_LABEL, getPostsByCategory, getTheatreTree, flattenTheatre } from '../lib/categories';
 import { SITE_TITLE } from '../consts';
 
 export async function getStaticPaths() {
@@ -15,20 +17,20 @@ export async function getStaticPaths() {
 const { category } = Astro.params;
 const label = CATEGORY_LABEL[category] ?? category;
 
-// Théâtre : barre latérale en deux groupes (pièce + Interventions liées).
-let posts;
-let asideGroups: { title: string; posts: typeof posts }[] | undefined;
+// Théâtre : barre latérale en arborescence (pièce « En Attendant l'algérie »
+// puis « Guelma / Selma »). L'article mis en avant est le premier de l'arbre.
+let featured;
+let theatreNodes;
 if (category === 'theatre') {
-	const { theatre, interventions } = await getTheatreGroups();
-	posts = theatre;
-	asideGroups = [
-		{ title: 'Théâtre', posts: theatre },
-		{ title: 'Interventions', posts: interventions },
-	];
+	theatreNodes = await getTheatreTree();
+	const firstId = flattenTheatre(theatreNodes).find((n) => n.id)?.id;
+	const all = await getCollection('blog');
+	featured = all.find((p) => p.id === firstId);
 } else {
-	posts = await getPostsByCategory(category);
+	const posts = await getPostsByCategory(category);
+	featured = posts[0];
 }
-const featured = posts[0];
+const { Content } = featured ? await render(featured) : { Content: null };
 ---
 
 <html lang="fr">
@@ -39,8 +41,8 @@ const featured = posts[0];
 		<Header />
 		<main class="reader">
 			{
-				asideGroups ? (
-					<CategoryAside groups={asideGroups} current={featured?.id} />
+				theatreNodes ? (
+					<TheatreAside nodes={theatreNodes} current={featured?.id} />
 				) : (
 					<CategoryAside category={category} current={featured?.id} />
 				)
@@ -49,23 +51,25 @@ const featured = posts[0];
 			<section class="reader-main">
 				{
 					featured ? (
-						<article class:list={['post-hero', { 'no-cover': !featured.data.heroImage }]}>
-							{featured.data.heroImage && (
-								<a class="cover" href={`/blog/${featured.id}/`}>
-									<Image src={featured.data.heroImage} alt={featured.data.title} widths={[400, 800]} sizes="(max-width: 860px) 90vw, 40vw" />
-								</a>
-							)}
-							<div class="post-info">
-								{featured.data.showDate !== false && (
-									<p class="date">
-										<FormattedDate date={featured.data.pubDate} />
-									</p>
+						<>
+							<article class:list={['post-hero', { 'no-cover': !featured.data.heroImage }]}>
+								{featured.data.heroImage && (
+									<HeroCover image={featured.data.heroImage} alt={featured.data.title} nada={featured.data.nada} />
 								)}
-								<h1>{featured.data.title}</h1>
-								{featured.data.description && <p class="lead">{featured.data.description}</p>}
-								<a class="read" href={`/blog/${featured.id}/`}>Lire le texte</a>
+								<div class="post-info">
+									{featured.data.showDate !== false && (
+										<p class="date">
+											<FormattedDate date={featured.data.pubDate} />
+										</p>
+									)}
+									<h1>{featured.data.title}</h1>
+									{featured.data.description && <p class="lead">{featured.data.description}</p>}
+								</div>
+							</article>
+							<div class="prose">
+								<Content />
 							</div>
-						</article>
+						</>
 					) : (
 						<div class="empty-cat">
 							<h1>{label}</h1>
@@ -118,19 +122,16 @@ const featured = posts[0];
 				font-size: 1.05rem;
 				margin: 0 0 1.5em 0;
 			}
-			.read {
-				display: inline-block;
-				font-family: var(--font-heading);
-				font-size: 0.9rem;
-				letter-spacing: 0.1em;
-				text-transform: uppercase;
-				color: rgb(var(--ink));
-				text-decoration: none;
-				padding: 0.7em 1.6em;
-				border: 1px solid rgb(var(--ink));
-				transition: background 0.3s ease, color 0.3s ease;
+			.prose {
+				max-width: 42rem;
+				margin: 2.5rem 0 0 0;
+				hyphens: auto;
+				-webkit-hyphens: auto;
 			}
-			.read:hover { background: rgb(var(--ink)); color: #fff; }
+			.prose :global(audio) {
+				width: 100%;
+				margin: 1.5em 0;
+			}
 			.empty-cat { padding-top: 1rem; }
 
 			@media (max-width: 860px) {

@@ -1,0 +1,77 @@
+---
+import { Image } from 'astro:assets';
+
+interface Props {
+	image: ImageMetadata | string;
+	alt: string;
+	// Numéro de revue NADA : la couverture devient un lien vers le PDF.
+	nada?: number;
+}
+const { image, alt, nada } = Astro.props;
+const pdf = nada ? `/nada/nada-${nada}.pdf` : null;
+// Image téléversée depuis le CMS = chemin absolu (string) → <img> simple ;
+// image locale = objet ImageMetadata → <Image> optimisé.
+const isPath = typeof image === 'string';
+---
+
+<figure class="hero-cover">
+	{
+		pdf ? (
+			<a
+				class="hero-cover-link"
+				href={pdf}
+				target="_blank"
+				rel="noopener noreferrer"
+				aria-label={`Lire le n° ${nada} de la revue NADA (PDF)`}
+			>
+				{isPath ? (
+					<img src={image as string} alt={alt} loading="lazy" />
+				) : (
+					<Image src={image} alt={alt} widths={[400, 800]} sizes="(max-width: 860px) 90vw, 40vw" />
+				)}
+			</a>
+		) : isPath ? (
+			<img src={image as string} alt={alt} loading="lazy" />
+		) : (
+			<Image src={image} alt={alt} widths={[400, 800]} sizes="(max-width: 860px) 90vw, 40vw" />
+		)
+	}
+	{
+		pdf && (
+			<figcaption>
+				<a href={pdf} target="_blank" rel="noopener noreferrer">
+					Lire / télécharger le n°&nbsp;{nada} de la revue NADA (PDF)
+				</a>
+			</figcaption>
+		)
+	}
+</figure>
+
+<style>
+	.hero-cover {
+		margin: 0;
+	}
+	.hero-cover :global(img) {
+		width: 100%;
+		height: auto;
+		display: block;
+	}
+	.hero-cover-link {
+		display: block;
+	}
+	figcaption {
+		margin-top: 0.7em;
+		font-family: var(--font-heading);
+		font-size: 0.82rem;
+		letter-spacing: 0.03em;
+		line-height: 1.3;
+	}
+	figcaption a {
+		color: rgb(var(--muted));
+		text-decoration: none;
+		border-bottom: 1px solid currentColor;
+	}
+	figcaption a:hover {
+		color: rgb(var(--ink));
+	}
+</style>

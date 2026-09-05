@@ -22,7 +22,11 @@ const featured = posts[0];
 				<article class:list={['post-hero', { 'no-cover': !featured.data.heroImage }]}>
 					{featured.data.heroImage && (
 						<a class="cover" href={`/blog/${featured.id}/`}>
-							<Image src={featured.data.heroImage} alt={featured.data.title} widths={[400, 800]} sizes="(max-width: 860px) 90vw, 40vw" />
+							{typeof featured.data.heroImage === 'string' ? (
+								<img src={featured.data.heroImage} alt={featured.data.title} loading="lazy" />
+							) : (
+								<Image src={featured.data.heroImage} alt={featured.data.title} widths={[400, 800]} sizes="(max-width: 860px) 90vw, 40vw" />
+							)}
 						</a>
 					)}
 					<div class="post-info">
@@ -33,7 +37,6 @@ const featured = posts[0];
 						)}
 						<h1>{featured.data.title}</h1>
 						{featured.data.description && <p class="lead">{featured.data.description}</p>}
-						<a class="read" href={`/blog/${featured.id}/`}>Lire le texte</a>
 					</div>
 				</article>
 			) : (
@@ -83,19 +86,6 @@ const featured = posts[0];
 		font-size: 1.05rem;
 		margin: 0 0 1.5em 0;
 	}
-	.read {
-		display: inline-block;
-		font-family: var(--font-heading);
-		font-size: 0.9rem;
-		letter-spacing: 0.1em;
-		text-transform: uppercase;
-		color: rgb(var(--ink));
-		text-decoration: none;
-		padding: 0.7em 1.6em;
-		border: 1px solid rgb(var(--ink));
-		transition: background 0.3s ease, color 0.3s ease;
-	}
-	.read:hover { background: rgb(var(--ink)); color: #fff; }
 	.empty-cat { padding-top: 1rem; }
 
 	@media (max-width: 860px) {

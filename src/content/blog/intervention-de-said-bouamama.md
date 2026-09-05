@@ -3,6 +3,9 @@ title: "Intervention de Saïd Bouamama"
 description: "Durant la pièce \"En Attendant l'algérie\", un invité prend la parole (Voir Principe des interventions) Saïd Bouamama, sociologue \"L'alliance entre l’intégrisme économique et le fascisme islamiste\" (intervention-improvisation du 16 mars 2001 à la Ferme..."
 pubDate: 2009-02-07
 category: theatre
+menu:
+  parent: principe-des-interventions
+  order: 3
 source: https://www.zaliasekai.net/article-27658337.html
 ---
 

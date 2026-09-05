@@ -1,0 +1,46 @@
+---
+import type { TheatreNode } from '../lib/categories';
+import TheatreTree from './TheatreTree.astro';
+
+interface Props {
+	nodes: TheatreNode[];
+	current?: string;
+}
+const { nodes, current } = Astro.props;
+---
+
+<aside class="cat-aside">
+	<div class="cat-group">
+		<h2 class="cat-title">Théâtre</h2>
+		<nav>
+			<TheatreTree nodes={nodes} current={current} />
+		</nav>
+	</div>
+</aside>
+
+<style>
+	.cat-aside {
+		position: sticky;
+		top: 2rem;
+		align-self: start;
+	}
+	.cat-title {
+		font-family: var(--font-heading);
+		font-size: 1.15rem;
+		font-weight: 600;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		margin: 0 0 1.2em 0;
+		padding-bottom: 0.6em;
+		color: rgb(var(--brand));
+		border-bottom: 1px solid rgb(var(--brand));
+	}
+	@media (max-width: 860px) {
+		.cat-aside {
+			position: static;
+			border-bottom: 1px solid rgb(var(--line));
+			padding-bottom: 1.5em;
+			margin-bottom: 1.5em;
+		}
+	}
+</style>

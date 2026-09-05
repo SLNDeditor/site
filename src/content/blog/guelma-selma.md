@@ -1,5 +1,5 @@
 ---
-title: "GUELMA / SELMA"
+title: "Guelma / Selma"
 description: "Hommage à Kateb Yacine et Martin-Luther King présentation d'un disque (version sonore de la pièce En Attendant l'algérie et de la revue NADA consacrée aux évènements de Guelma et de Selma, à la galerie michèle Didier, le v endredi 3 mai 2019 , 66 rue..."
 pubDate: 2019-04-10
 category: interventions
