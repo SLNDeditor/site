@@ -41,6 +41,7 @@ const blog = defineCollection({
 					order: z.coerce.number().optional(),
 					label: z.string().optional(),
 				})
+				.nullable()
 				.optional(),
 		}),
 });
