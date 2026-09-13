@@ -12,90 +12,72 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 	<body class="home">
 		<Header />
 		<section class="hero">
-			<div class="hero-inner">
-				<p class="tagline"><span class="hl">Exil</span>, <span class="hl">Colonisation</span>, <span class="hl">Algérie</span>, <span class="hl">Femmes</span>, <span class="hl">Histoire</span>, <span class="hl">Domination</span>,<br /><span class="hl">Kateb Yacine</span>, <span class="hl">Théâtre</span>, <span class="hl">Marc Garanger</span>, <span class="hl">Photographies</span><br /><br /></p>
-				<p class="construction">site en construction</p>
+			<div class="hero-margin">
+				<ul class="keywords">
+					<li>Exil</li>
+					<li>Colonisation</li>
+					<li>Algérie</li>
+					<li>Femmes</li>
+					<li>Histoire</li>
+					<li>Domination</li>
+					<li>Kateb Yacine</li>
+					<li>Théâtre</li>
+					<li>Marc Garanger</li>
+					<li>Photographies</li>
+				</ul>
 			</div>
+			<img src="/home-bg.jpg" alt="" class="hero-image" />
 		</section>
 
 		<style>
 			.hero {
 				position: relative;
-				min-height: calc(100vh - 3.6rem);
-				min-height: calc(100dvh - 3.6rem);
+				height: calc(100vh - 3.6rem);
+				height: calc(100dvh - 3.6rem);
 				display: flex;
-				align-items: flex-start;
-				justify-content: center;
+				align-items: stretch;
 				overflow: hidden;
-				/* fond noir */
 				background-color: #000;
 			}
-			.hero-inner {
+			.hero-margin {
+				flex: 1 1 auto;
+				min-width: 0;
 				position: relative;
-				z-index: 1;
-				text-align: left;
-				color: #fff;
-				padding: 3rem 1.5em 2em 1.5em;
 			}
-			.kicker {
-				font-family: var(--font-body);
-				font-style: normal;
-				font-weight: 700;
-				text-transform: uppercase;
-				color: rgba(255, 255, 255, 0.7);
-				font-size: clamp(1.02rem, 2.7vw, 1.22rem);
-				letter-spacing: 5pt;
-				line-height: 1.2;
-				margin: 0 0 0.6em 0;
+			.hero-image {
+				flex: 0 0 auto;
+				height: 100%;
+				width: auto;
+				max-width: none;
+				display: block;
+				filter: grayscale(100%);
 			}
-			.hero-inner h1 {
-				font-family: var(--font-heading);
-				color: #fff;
-				font-weight: 300;
-				font-size: clamp(2.6rem, 9vw, 5.5rem);
-				letter-spacing: 0.14em;
-				text-transform: uppercase;
+			/* sous cette largeur, une image pleine hauteur déborderait et effacerait la marge : on la limite en largeur pour garder la marge et la liste visibles */
+			@media (max-width: 700px) {
+				.hero-image {
+					height: auto;
+					width: 55%;
+					max-width: 55%;
+					align-self: flex-start;
+				}
+			}
+			/* ---------- mots-clés : liste en drapeau à droite, dans la marge noire ---------- */
+			.keywords {
+				position: absolute;
+				top: 2rem;
+				right: 15px;
+				list-style: none;
 				margin: 0;
+				padding: 0;
+				text-align: right;
 			}
-			.tagline {
-				font-family: var(--font-body);
-				font-weight: 700;
-				font-style: italic;
-				color: #cccccc;
-				font-size: clamp(1.1rem, 3.5vw, 1.6rem);
-				letter-spacing: 0.05em;
-				line-height: 1.2;
-				margin: 0.8em 0 2em 0;
-			}
-			/* mots-clés en gris 20 % (sans surlignage) */
-			.tagline .hl {
-				color: #cccccc;
-			}
-			.construction {
-				font-family: var(--font-body);
-				font-weight: 700;
-				font-style: normal;
-				color: #ffd700;
-				font-size: 30pt;
-				text-align: center;
-				width: 100%;
-				margin: 0;
-			}
-			.enter {
-				display: inline-block;
+			.keywords li {
 				font-family: var(--font-heading);
-				font-size: 0.95rem;
-				letter-spacing: 0.15em;
-				text-transform: uppercase;
-				color: #fff;
-				text-decoration: none;
-				padding: 0.8em 2em;
-				border: 1px solid rgba(255, 255, 255, 0.8);
-				transition: background 0.3s ease, color 0.3s ease;
-			}
-			.enter:hover {
-				background: #fff;
-				color: #111;
+				color: #e0e0e0;
+				font-size: clamp(0.85rem, 1.6vw, 1.05rem);
+				letter-spacing: 0.03em;
+				line-height: 1.9;
+				white-space: nowrap;
 			}
 		</style>
 	</body>
