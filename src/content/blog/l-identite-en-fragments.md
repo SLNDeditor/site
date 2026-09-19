@@ -7,7 +7,7 @@ nada: null
 pubDate: 2003-12-12
 showDate: true
 video: ''
-description: L’IDENTITÉ EN FRAGMENTS (Article publié dans UBU scènes d’Europe N° 27/28 juin 2003) Les Franco-algériens ne sont pas les représentants d'une seule culture, ils ne sont ni même dans l'entre-deux. Ils prennent part dans les deux ensembles et ne prennent...
+description: L’IDENTITÉ EN FRAGMENTS (Article publié dans UBU scènes d’Europe N° 27/28 juin 2003)
 source: https://www.zaliasekai.net/article-25735971.html
 ---
 
