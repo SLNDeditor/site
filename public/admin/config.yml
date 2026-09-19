@@ -46,10 +46,10 @@ collections:
         hint: "Titre de la page (ex. « L'auteure »)."
 
       - name: description
-        label: "Description (SEO)"
+        label: "Description SEO"
         widget: text
         required: false
-        hint: "Court résumé pour les moteurs de recherche et les réseaux sociaux."
+        hint: "Pour Google et réseaux sociaux. Ne s'affiche PAS sur la page."
 
       - name: heroImage
         label: "Image (héro)"
