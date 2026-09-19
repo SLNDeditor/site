@@ -1,0 +1,70 @@
+---
+// Composant pour activer les tooltips des notes de bas de page
+// À insérer dans le layout après le contenu .prose
+---
+
+<script>
+	/**
+	 * Initialise les tooltips pour les notes de bas de page
+	 * Associe le texte de chaque note à l'attribut data-footnote-text du lien
+	 */
+	function initializeFootnoteTooltips() {
+		// Trouver tous les liens vers les notes de bas de page
+		const footnoteAnchors = document.querySelectorAll('.footnote-anchor');
+
+		if (footnoteAnchors.length === 0) {
+			return; // Pas de notes de bas de page
+		}
+
+		// Trouver la section des notes de bas de page
+		const footnoteSection = document.querySelector('.footnote-section');
+		if (!footnoteSection) {
+			return; // Pas de section de notes trouvée
+		}
+
+		// Parcourir chaque lien de note de bas de page
+		footnoteAnchors.forEach((anchor) => {
+			// Extraire l'ID de la note (ex: user-content-fn-1 → 1)
+			const href = anchor.getAttribute('href');
+			if (!href) return;
+
+			const match = href.match(/user-content-fn-(\d+)/);
+			if (!match) return;
+
+			const footnoteNum = match[1];
+
+			// Chercher le texte de la note dans la section de notes
+			const footnoteItem = footnoteSection.querySelector(`li#user-content-fn-${footnoteNum}`);
+			if (!footnoteItem) return;
+
+			// Extraire le texte de la note (sans le lien de retour)
+			const clonedItem = footnoteItem.cloneNode(true);
+
+			// Supprimer le lien de retour (backref)
+			const backref = clonedItem.querySelector('a[href^="#user-content-fnref-"]');
+			if (backref) {
+				backref.remove();
+			}
+
+			// Nettoyer le texte
+			let footnoteText = clonedItem.textContent
+				?.trim()
+				.replace(/\s+/g, ' ') || '';
+
+			// Limiter à 200 caractères pour le tooltip
+			if (footnoteText.length > 200) {
+				footnoteText = footnoteText.substring(0, 200).trim() + '…';
+			}
+
+			// Ajouter le texte comme attribut data
+			anchor.setAttribute('data-footnote-text', footnoteText);
+		});
+	}
+
+	// Initialiser au chargement du DOM
+	if (document.readyState === 'loading') {
+		document.addEventListener('DOMContentLoaded', initializeFootnoteTooltips);
+	} else {
+		initializeFootnoteTooltips();
+	}
+</script>

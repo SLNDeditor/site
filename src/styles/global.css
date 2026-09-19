@@ -132,6 +132,135 @@ pre > code { all: unset; }
 	h2 { font-size: 1.7rem; }
 }
 
+/* ---------- Notes de bas de page ---------- */
+
+/* Liens vers les notes de bas de page (exposants interactifs) */
+.footnote-anchor {
+	/* Exposant : légèrement plus petit et surlevé */
+	font-size: 0.75em;
+	vertical-align: super;
+	line-height: 0;
+	position: relative;
+
+	/* Style du lien : légèrement surlignés */
+	color: rgb(var(--ink));
+	text-decoration: underline;
+	text-decoration-color: rgba(var(--brand), 0.5);
+	text-decoration-thickness: 1px;
+	text-underline-offset: 2px;
+
+	/* État hover */
+	cursor: pointer;
+	transition: all 150ms ease-in-out;
+}
+
+.footnote-anchor:hover {
+	text-decoration-color: rgb(var(--brand));
+	color: rgb(var(--brand));
+}
+
+/* Tooltip : affiche au survol du lien de note */
+.footnote-anchor::before {
+	content: attr(data-footnote-text);
+	position: absolute;
+	bottom: 120%;
+	left: 50%;
+	transform: translateX(-50%);
+
+	/* Dimensions et spacing */
+	max-width: 200px;
+	padding: 0.5rem 0.75rem;
+	margin-bottom: 8px;
+
+	/* Style tooltip */
+	background: rgb(var(--ink));
+	color: rgb(var(--paper));
+	font-size: 0.85rem;
+	font-family: var(--font-body);
+	font-weight: normal;
+	vertical-align: baseline;
+	border-radius: 2px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+
+	/* Texte */
+	line-height: 1.4;
+	text-align: left;
+	white-space: normal;
+	word-wrap: break-word;
+
+	/* Animation et visibilité */
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 150ms ease-in-out;
+	z-index: 1000;
+}
+
+.footnote-anchor::after {
+	/* Triangle sous le tooltip */
+	content: '';
+	position: absolute;
+	bottom: 116%;
+	left: 50%;
+	transform: translateX(-50%);
+
+	width: 0;
+	height: 0;
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+	border-top: 4px solid rgb(var(--ink));
+
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 150ms ease-in-out;
+	z-index: 1000;
+}
+
+.footnote-anchor:hover::before,
+.footnote-anchor:hover::after {
+	opacity: 1;
+}
+
+/* Section des notes de bas de page */
+.footnote-section {
+	margin-top: 3rem;
+	padding-top: 1.5rem;
+	border-top: 1px solid rgb(var(--line));
+	font-size: 0.95rem;
+	line-height: 1.6;
+}
+
+.footnote-section ol {
+	margin: 0;
+	padding-left: 1.5rem;
+}
+
+.footnote-section li {
+	margin-bottom: 0.8rem;
+}
+
+/* Lien de retour vers le texte (backref) */
+.footnote-section a[href^="#user-content-fnref-"] {
+	font-size: 0.9em;
+	margin-left: 0.3em;
+	vertical-align: super;
+	text-decoration: none;
+	color: rgb(var(--muted));
+	transition: color 150ms ease-in-out;
+}
+
+.footnote-section a[href^="#user-content-fnref-"]:hover {
+	color: rgb(var(--brand));
+}
+
+@media (max-width: 720px) {
+	/* Tooltip moins large sur mobile */
+	.footnote-anchor::before {
+		max-width: 160px;
+		padding: 0.4rem 0.6rem;
+		font-size: 0.8rem;
+	}
+}
+
 .sr-only {
 	border: 0;
 	padding: 0;
