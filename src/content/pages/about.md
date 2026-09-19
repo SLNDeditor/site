@@ -7,7 +7,7 @@ heroImage: ''
 **Zalia SEKAÏ**
 
 -   **Juriste**
--   C**hercheuse indépendante. Auteure d'articles de recherche, d'articles journalistiques, de pièces de théâtre, de clips vidéo, de romans.**
+-   **Chercheuse indépendante. Auteure d'articles de recherche, d'articles journalistiques, de pièces de théâtre, de clips vidéo, de romans.**
 
     **J'explore différents moyens d'expression dans le dessein d'interroger les multiples formes de domination.**
 
