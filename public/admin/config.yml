@@ -25,7 +25,46 @@ public_folder: "/blog-media"
 
 collections:
   # =========================================================================
-  # UN SEUL endroit pour tous les textes (principe WordPress).
+  # Pages statiques (L'auteure, etc.)
+  # =========================================================================
+  - name: pages
+    label: "Pages"
+    label_singular: "Page"
+    description: >
+      Pages statiques du site (« L'auteure », etc.). Une URL fixe, pas de date,
+      pas de rubrique.
+    folder: "src/content/pages"
+    create: true
+    delete: true
+    extension: md
+    format: frontmatter
+    slug: "{{slug}}"
+    fields:
+      - name: title
+        label: "Titre"
+        widget: string
+        hint: "Titre de la page (ex. « L'auteure »)."
+
+      - name: description
+        label: "Description (SEO)"
+        widget: text
+        required: false
+        hint: "Court résumé pour les moteurs de recherche et les réseaux sociaux."
+
+      - name: heroImage
+        label: "Image (héro)"
+        widget: image
+        required: false
+        hint: "Facultatif. Image affichée en haut de la page."
+
+      - name: body
+        label: "Contenu"
+        widget: markdown
+        hint: "Le texte complet de la page."
+        buttons: [bold, italic, heading-two, heading-three, quote, bulleted-list, numbered-list, link]
+
+  # =========================================================================
+  # UN SEUL endroit pour tous les articles (principe WordPress).
   # La liste se replie par rubrique (bouton « Grouper par » → Rubrique).
   # « Créer » → choisir la rubrique ; pour le théâtre, ouvrir « Emplacement
   # (menu Théâtre) » et renseigner le sous-menu.

@@ -1,31 +1,18 @@
 ---
-import Layout from '../layouts/BlogPost.astro';
+import { getEntry, render } from ‘astro:content’;
+import Layout from ‘../layouts/BlogPost.astro’;
+
+const page = await getEntry(‘pages’, ‘about’);
+if (!page) {
+	return Astro.redirect(‘/’);
+}
+
+const { Content } = await render(page);
 ---
 
 <Layout
-	title="L’auteure"
-	description="Zalia Sékaï — juriste et auteure. Recherche, journalisme, théâtre, clips vidéo, romans."
-	pubDate={new Date('December 04 2006')}
+	title={page.data.title}
+	description={page.data.description || ‘Zalia Sékaï — juriste et auteure.’}
 >
-	<p><strong>Zalia Sékaï</strong></p>
-
-	<ul>
-		<li>Juriste</li>
-		<li>Auteure d’articles de recherche, d’articles journalistiques, de pièces de théâtre, de clips vidéo, de romans.</li>
-	</ul>
-
-	<p>
-		J’explore différents moyens d’expression dans le dessein d’interroger les multiples formes de
-		domination.
-	</p>
-
-	<p>J’interroge, entre autres :</p>
-
-	<ul>
-		<li>les systèmes de domination linguistique à partir de l’œuvre de Kateb Yacine&nbsp;;</li>
-		<li>les systèmes de domination des femmes à partir de l’œuvre de Marc Garanger&nbsp;;</li>
-		<li>les systèmes de domination des étrangers…</li>
-	</ul>
-
-	<p><em>Vous pouvez librement télécharger et citer mes textes, à condition d’en indiquer les sources.</em></p>
+	<Content />
 </Layout>
