@@ -1,13 +1,13 @@
 ---
 title: L'auteure
-description: "Zalia SEKAÏ – Juriste et chercheuse indépendante. Auteure. Explore différents moyens d'expression pour interroger les formes de domination : systèmes linguistiques, domination des femmes, des étrangers."
+description: ''
 heroImage: ''
 ---
 
 **Zalia SEKAÏ**
 
 -   **Juriste**
--   **Auteure d'articles de recherche, d'articles journalistiques, de pièces de théâtre, de clips vidéo, de romans.**
+-   C**hercheuse indépendante. Auteure d'articles de recherche, d'articles journalistiques, de pièces de théâtre, de clips vidéo, de romans.**
 
     **J'explore différents moyens d'expression dans le dessein d'interroger les multiples formes de domination.**
 
