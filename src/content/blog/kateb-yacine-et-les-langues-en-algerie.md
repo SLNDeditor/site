@@ -11,23 +11,17 @@ description: ''
 source: https://www.zaliasekai.net/article-25896676.html
 ---
 
-**KATEB YACINE ET LES LANGUES EN ALGÉRIE**
-
 **Revalorisation des langues populaires algériennes à travers le théâtre**
 
-_(Article publié dans Etudes et documents berbères n° 17, 1999, La boîte à documents, Edisud)_  
-
-* \* \*
+_Article publié dans Études et documents berbères n° 17, 1999, La boîte à documents, Edisud_
 
 **Résumé**  
 
-\*\*Depuis l'indépendance, l'Algérie connaît une situation linguistique à plusieurs vitesses. La production théâtrale de Kateb Yacine dans les langues populaires s'inscrit dans une perspective de rupture avec le schéma diglossique qui impose la langue de l'idéologie dominante sur le marché linguistique.  
+Depuis l'indépendance, l'Algérie connaît une situation linguistique à plusieurs vitesses. La production théâtrale de Kateb Yacine dans les langues populaires s'inscrit dans une perspective de rupture avec le schéma diglossique qui impose la langue de l'idéologie dominante sur le marché linguistique.  
     D'une part, il investit le champ théâtral en utilisant les langues populaires, démystifiant ainsi l'écriture et par là même la langue arabe classique en tant que pouvoirs. D'autre part, il exprime les préoccupations d'un peuple sans voix, il fait du théâtre un combat d'idées collectif et permanent qui dépasse le seul cadre de la littérature. Enfin, il réorganise l'espace du théâtre de manière à assurer une interactivité optimale entre le public, le comédien et l'auteur.  
-    L'utilisation des langues populaires, son combat d'idées, sa gestion de l'espace sont autant d'éléments qui visent à dénoncer fanatismes et exploiteurs de tous bords et qui militent pour une culture libre et vivante.\*\*  
+    L'utilisation des langues populaires, son combat d'idées, sa gestion de l'espace sont autant d'éléments qui visent à dénoncer fanatismes et exploiteurs de tous bords et qui militent pour une culture libre et vivante. 
 
-* \* \*
-
-\*\*A partir des années 70,  Kateb Yacine s’engage à utiliser les langues populaires algériennes dans le théâtre. De cette manière, en les réhabilitant, il répond au phénomène de diglossie, phénomène de communication que l’on peut appréhender ainsi :  
+A partir des années 70,  Kateb Yacine s’engage à utiliser les langues populaires algériennes dans le théâtre. De cette manière, en les réhabilitant, il répond au phénomène de diglossie, phénomène de communication que l’on peut appréhender ainsi :  
 
 _"Ici en Algérie, si j’écrivais encore un Nedjma ou un Polygone étoilé, ça n’aurait aucune signification."_ 1  
 
@@ -42,11 +36,11 @@ C’est précisément là que réside tout le combat de Kateb Yacine : utiliser 
 
 Dans cette perspective, il investit le champ théâtral (I), s'évertuant à lutter contre la représentation, l’image figée en théâtre (II), pour s’engager dans la notion d’espace, d’action, de réalité, de révolution, de justice.  
 Face à l’impérialisme linguistique de l’arabe classique, Kateb Yacine produit un théâtre destiné à réhabiliter les dialectes, l’oralité, le peuple. Il réactive la tradition populaire dans le dessein de la révolution, de l’autre libération, de la réconciliation des Algériens avec eux-mêmes, leur histoire, leur langue, leur pluralité.  
-En allant au-devant du peuple, c’est lui qui s’adapte au peuple et non l’inverse.\*\*  
+En allant au-devant du peuple, c’est lui qui s’adapte au peuple et non l’inverse.
 
 **Remise en question de l’écriture en tant que représentation de la parole**
 
-\*\*_Démystification et démythification de l’écriture et de l’arabe classique_  
+_Démystification et démythification de l’écriture et de l’arabe classique_  
 
 L’écriture est devenue nécessaire car _«les comptages notés maintenaient l’ordre social. Ils situaient chacun à sa place - celui qui apportait une récolte, celui qui la stockait, la redistribuait et le fonctionnaire responsable - ils donnaient à voir la relation entre les hommes, puis, au-delà, la relation des hommes aux dieux»._ 6  En d’autres termes, l’écriture rendait visibles et consolidait les relations préexistantes de dépendance et de hiérarchie entre les hommes.  
 L’écriture est étroitement associée au pouvoir, d’une part parce qu’elle en est directement issue (l’écriture a d’abord été la propriété des classes sociales au pouvoir) et d’autre part parce qu’elle continue à évoluer dans les strictes limites de celui-ci. Dès lors, la suprématie de l’écriture sur les coutumes, l’habitus est sans cesse réaffirmée.  
@@ -74,15 +68,15 @@ En revanche, _Mohammed, prends ta valise_ jouée en arabe populaire a été un f
 Ce qui nous fait dire que le choix de la langue, du modèle de communication est fondamental. Kateb Yacine, à partir des années 70, dans _Mohammed, prends ta valise_ (1971) ou _La guerre de 2000 ans_ (1974), tente de démystifier l’arabe classique au profit du dialectal, de la langue maternelle.  
 Afin d’éviter que ses nouvelles pièces soient montées en arabe littéraire, d’une part, il n’écrit plus ses pièces (elles sont enregistrées), d’autre part il y mêle arabe dialectal, français et berbère (car traduire ces trois langues par la seule langue arabe littéraire éliminerait les nuances introduites entre le dialectal, le français et le berbère).  
 
-_«Il est nécessaire de démythifier la culture, l’acte d’écrire. Prenons l’exemple de grands révolutionnaires comme Lénine ou Hô Chi Minh. Voyons ce que signifie pour eux la culture. Quand Lénine créa L’Étincelle, le journal qui fut le précurseur de la révolution d’Octobre, il y fit s’exprimer des analphabètes. Ces gens qui ne savaient pas écrire, ou qui faisaient des fautes d’orthographes avaient quelque chose à dire. Peu importe la forme, le contenu seul est important. Donc pour faire un journal, il faut saisir la réalité, sans chercher la perfection et sans attendre la bénédiction d’en haut.  
+«Il est nécessaire de démythifier la culture, l’acte d’écrire. Prenons l’exemple de grands révolutionnaires comme Lénine ou Hô Chi Minh. Voyons ce que signifie pour eux la culture. Quand Lénine créa L’Étincelle, le journal qui fut le précurseur de la révolution d’Octobre, il y fit s’exprimer des analphabètes. Ces gens qui ne savaient pas écrire, ou qui faisaient des fautes d’orthographes avaient quelque chose à dire. Peu importe la forme, le contenu seul est important. Donc pour faire un journal, il faut saisir la réalité, sans chercher la perfection et sans attendre la bénédiction d’en haut.  
 
-... L’acte de penser, d’écrire, ne doit pas être réservé à une catégorie de gens, cela doit être le fait de tous. Il faut faire circuler les idées par n’importe quel moyen... et en faisant participer le maximum de gens.» 12_  
+... L’acte de penser, d’écrire, ne doit pas être réservé à une catégorie de gens, cela doit être le fait de tous. Il faut faire circuler les idées par n’importe quel moyen... et en faisant participer le maximum de gens.» 12 
 
-Dans cette continuité de désacralisation de l’arabe classique et de l’écriture, il s’accorde une liberté d’expression, en s’affranchissant de certains codes linguistiques écrits, en créant par exemple des néologismes (ex. : La Gandourie : pays dont les habitants sont en gandouras), en introduisant de l’arabe, du français et du berbère. Cette recherche de revalorisation de la langue orale ne doit pas occulter le fait qu’il a eu recours à l’écriture, se servant abondamment de documents historiques et journalistiques, évitant ainsi de s’enfermer dans le ghetto des langues populaires, de l’oralité.\*\*  
+Dans cette continuité de désacralisation de l’arabe classique et de l’écriture, il s’accorde une liberté d’expression, en s’affranchissant de certains codes linguistiques écrits, en créant par exemple des néologismes (ex. : La Gandourie : pays dont les habitants sont en gandouras), en introduisant de l’arabe, du français et du berbère. Cette recherche de revalorisation de la langue orale ne doit pas occulter le fait qu’il a eu recours à l’écriture, se servant abondamment de documents historiques et journalistiques, évitant ainsi de s’enfermer dans le ghetto des langues populaires, de l’oralité.
 
 **_Les limites de cet engagement_**
 
-\*\*Après la libération, l’engagement est d’autant plus lourd à assumer  que la classification entre langues écrites et langues orales est d’une certaine manière officialisée par la politique d’arabisation menée à partir de 1962 qui privilégie au grand jour la langue arabe écrite à l’exclusion de tout autre. Le pouvoir poursuit comme objectif l’intériorisation de cette distinction, en discréditant et muselant l’oralité, et par là même tous ceux qui contribuent à la défendre, avec une plus grande acuité à la mort de Boumediene en 1978.  
+Après la libération, l’engagement est d’autant plus lourd à assumer  que la classification entre langues écrites et langues orales est d’une certaine manière officialisée par la politique d’arabisation menée à partir de 1962 qui privilégie au grand jour la langue arabe écrite à l’exclusion de tout autre. Le pouvoir poursuit comme objectif l’intériorisation de cette distinction, en discréditant et muselant l’oralité, et par là même tous ceux qui contribuent à la défendre, avec une plus grande acuité à la mort de Boumediene en 1978.  
 
 Sur le plan culturel, cette politique d’arabisation a eu pour effet de limiter sinon de suspendre les subventions et aides accordées par les institutions à Kateb Yacine et à sa troupe (entre autres). Cette situation matérielle indigente impose de travailler différemment : l’acteur joue plusieurs personnages, les décors sont limités à l’extrême,... On peut y voir un renvoi au statut social du public auquel il s’adresse.  
 Cette contrainte correspond d’autre part à une nécessité de mobilité. Mais ce combat matériel révèle avant tout un véritable combat politique. La troupe de Kateb Yacine ACT (Action culturelle des travailleurs) est expulsée de son lieu de travail pour y être expédiée à Sidi Bel Abbès où tout est fait pour les empêcher de travailler. Les problèmes de logement, d’argent se posent avec acuité aux comédiens.  
@@ -98,11 +92,11 @@ Kateb Yacine utilise la parole comme un acte politique comme il l’a déjà fai
 
 L’écrivain algérien Tahar Djaout assassiné en 1993 à Alger rapporte que Kateb Yacine a vécu au Centre Familial de Ben-Aknoun, un lieu réservé aux réfugiés politiques, aux apatrides et aux cas sociaux, comme si son pays, ajoute-t-il, refusant de le reconnaître, avait décidé de le cantonner dans la marge. 13  Il fut maintes fois accusé de traîtrise pour ses positions favorables aux langues populaires.  
 
-A sa mort en 1989, l’imam égyptien Mohamed El Ghazali déclarait à la radio algérienne : «Il ne doit pas être enterré dans un cimetière musulman», ce qui n’a pas empêché le peuple d’accompagner le poète jusqu'au cimetière d’Alger. 14\*\*  
+A sa mort en 1989, l’imam égyptien Mohamed El Ghazali déclarait à la radio algérienne : «Il ne doit pas être enterré dans un cimetière musulman», ce qui n’a pas empêché le peuple d’accompagner le poète jusqu'au cimetière d’Alger. 14
 
 **Remise en question de la représentation en théâtre**
 
-\*\*_Le théâtre : un combat d’idées collectif et permanent_  
+_Le théâtre : un combat d’idées collectif et permanent_  
 
 _«Faire de la littérature, le révolver en poche. Comprendre une fois pour toutes, qu’on n’a le droit d’avoir des idées que lorsqu’on les applique dans la vie.» 15_  
 
@@ -116,7 +110,7 @@ Dans cette optique, il exprime les préoccupations d’un peuple sans voix, l’
 Il veut rester imprégné et impliqué dans l’actualité, dans le réel, sortir de la représentation et impliquer le peuple dans le fonctionnement de la société. Il choisit de se dissoudre dans le peuple, de disparaître, de devenir anonyme, et de mener son combat d’idées : femmes, langues, obscurantisme religieux, pouvoir militaire.  
 
 Pour … _faire que ce théâtre sache frapper dans les  tibias_...19, il va mener un combat sur la base d’un travail collectif et non solitaire, en travaillant forme et fond avec sa troupe.  
-Ce travail collectif s’accompagne d’un travail de longue haleine, de durée, un travail permanent de profondeur toujours prêt à être remodelé, restructuré, traduit, dans le dessein d’être écouté et vu par le plus grand nombre de spectateurs et le plus divers. En effet, aucune version de ses textes n’est définitive. Son théâtre est en perpétuel mouvement et recommencement de fond et de forme : les titres se modifiant, les pièces s’incorporant au fil du temps et de l’histoire les unes aux autres répondant à un devoir d’information. Chacune de ses pièces ne doit pas être appréhendée dans son individualité mais bien dans l’ensemble de son oeuvre qui offre des interactions, ramifications entre elles.\*\*  
+Ce travail collectif s’accompagne d’un travail de longue haleine, de durée, un travail permanent de profondeur toujours prêt à être remodelé, restructuré, traduit, dans le dessein d’être écouté et vu par le plus grand nombre de spectateurs et le plus divers. En effet, aucune version de ses textes n’est définitive. Son théâtre est en perpétuel mouvement et recommencement de fond et de forme : les titres se modifiant, les pièces s’incorporant au fil du temps et de l’histoire les unes aux autres répondant à un devoir d’information. Chacune de ses pièces ne doit pas être appréhendée dans son individualité mais bien dans l’ensemble de son oeuvre qui offre des interactions, ramifications entre elles.
 
 **_Réappropriation des moyens de production théâtrale_**
 
@@ -150,15 +144,13 @@ D’autre part, on peut se demander si l’intérêt des autorités politiques n
 
 En tout état de cause, le phénomène de diglossie révèle la difficulté de concilier la volonté de créer un État unitaire et la situation du plurilinguisme. Il est issu de l’échec de la politique d’arabisation, d’uniformisation, de résistance des particularités, à l’image même du mythe de Babel (Dieu a dispersé les hommes rassemblés autour de Babel parce qu’ils allaient se contraindre à l’uniformité).  
 
-Il marque la tendance à faire de la diversité une division et soulève la question des relations particulier/universel. Il s’avère par conséquent nécessaire d’établir une politique linguistique capable avant tout de marquer le respect et la valorisation des différences afin d’éviter ou de limiter une hiérarchisation des idiomes linguistiques et donc une classification sociale des locuteurs. Même si l’on sait que  la ou les langues officielles seront toujours celles de la classe dominante parce qu’elle est l’unique détentrice des moyens de la diffuser et que «_les armes du faible seront toujours de faibles armes_».  
+Il marque la tendance à faire de la diversité une division et soulève la question des relations particulier/universel. Il s’avère par conséquent nécessaire d’établir une politique linguistique capable avant tout de marquer le respect et la valorisation des différences afin d’éviter ou de limiter une hiérarchisation des idiomes linguistiques et donc une classification sociale des locuteurs. Même si l’on sait que  la ou les langues officielles seront toujours celles de la classe dominante parce qu’elle est l’unique détentrice des moyens de la diffuser et que « les armes du faible seront toujours de faibles armes ».  
 
-Par ailleurs, une autre question peut être soulevée. Aujourd’hui que l’on envisage l’écriture berbère pour que le degré de reconnaissance de cette langue se rapproche de son degré d’usage, on peut se demander si le passage à l’écrit ne va pas faire naître une situation comparable à celle que connaît la langue arabe. D’autant plus que le processus de passage à l’écrit de la langue berbère réaffirme les rapports de subordination écriture/oralité car il s’impose pour la  reconnaissance et la survie d’une langue. Autrement dit l’écriture en tant que pouvoir est garante d’une reconnaissance d’une langue sans pouvoir.\*\*  
+Par ailleurs, une autre question peut être soulevée. Aujourd’hui que l’on envisage l’écriture berbère pour que le degré de reconnaissance de cette langue se rapproche de son degré d’usage, on peut se demander si le passage à l’écrit ne va pas faire naître une situation comparable à celle que connaît la langue arabe. D’autant plus que le processus de passage à l’écrit de la langue berbère réaffirme les rapports de subordination écriture/oralité car il s’impose pour la  reconnaissance et la survie d’une langue. Autrement dit l’écriture en tant que pouvoir est garante d’une reconnaissance d’une langue sans pouvoir.
 
-* \* \*
+BIBLIOGRAPHIE  
 
-\*\*BIBLIOGRAPHIE  
-
-  1) Kateb Yacine, Eclats de Mémoires, Imec 1994, p. 67  
+  1) Kateb Yacine, Éclats de Mémoires, Imec 1994, p. 67  
   2) La notion de corpus est définie par Chaudenson comme volume de production linguistique réalisé dans la langue et la nature de la compétence des locuteurs, cité par Louis-Jean Calvet, Les politiques linguistiques, PUF Que sais-je ?, 1996, p. 34  
   3) Awal n° 2, Une science et une politique pour Babel, Domenico Canciani, p. 27 s.  
   4) Jack Goody, Entre l’oralité et l’écriture , PUF Ethnologies, 1993, p.175  
@@ -169,18 +161,18 @@ Par ailleurs, une autre question peut être soulevée. Aujourd’hui que l’on 
   9) Problématique également abordée par Augusto Boal, Théâtre de l’opprimé, La Découverte/Poche Essais, Paris, 1996  
  10) Nadia Anghelescu, Langage et Culture dans la civilisation Arabe, L’Harmattan, 1995, p. 45 s.  
  11) Voir réf. Supra, note 10.  
- 12) Kateb Yacine, Minuit passé de douze heures, Ecrits journalistiques 1947-1989, Seuil,1999, p. 300  
- 13) Kateb Yacine, Eclats de Mémoires, Imec, 1994, p. 5  
+ 12) Kateb Yacine, Minuit passé de douze heures, Écrits journalistiques 1947-1989, Seuil,1999, p. 300  
+ 13) Kateb Yacine, Éclats de Mémoires, Imec, 1994, p. 5  
  14) Mohamed Benrabah, Langue et pouvoir en Algérie. Histoire d’un traumatisme linguistique. Seguier, 1999, p. 257.  
  15) D’après Richard Huelsenbeck, En avant DADA, Paris, 1983, p.16-19  
- 16) Kateb Yacine, Eclats de mémoires, Imec, 1994, p. 58  
- 17) Kateb Yacine, Minuit passé de douze heures (Ecrits journalistiques 1947-1989) ,Seuil, 1999, p.299  
- 18) Kateb Yacine, Eclats de Mémoires, Imec, 1994, p. 71  
+ 16) Kateb Yacine, Éclats de mémoires, Imec, 1994, p. 58  
+ 17) Kateb Yacine, Minuit passé de douze heures (Écrits journalistiques 1947-1989) ,Seuil, 1999, p.299  
+ 18) Kateb Yacine, Éclats de Mémoires, Imec, 1994, p. 71  
  19) Kateb Yacine, Boucherie  de l’espérance, oeuvres théâtrales recueillies par Zebeida Chergui, Seuil, 1999, p. 20, Déclaration à la République d’Oran, mars 1973, p. 263  
   20) V. dans ce sens Augusto Boal, Théâtre de l’opprimé, La Découverte / Poche Essais, Paris 1996  
   21) Awal n° 9, Spécial  Kateb Yacine,1992.  
   22) Sur ce point voir notamment L’oeuvre de Claude Rutault, Définitions/Méthodes, Intelligence Service Productions, Paris 1979  
-  23)  Kateb Yacine, Eclats de Mémoires, Imec, 1994, p. 8  
+  23)  Kateb Yacine, Éclats de Mémoires, Imec, 1994, p. 8  
   24) Mohamed Aziza, L’image et l’Islam, Albin Michel, 1978, p. 100  
   25) Kateb Yacine, Le poète comme un boxeur,  Entretiens 1958-1989, Seuil, p. 41  
-  26) Cité dans Pierre  Bourdieu, La domination  masculine, Seuil, sept. 1998, p. 38\*\*
+  26) Cité dans Pierre  Bourdieu, La domination  masculine, Seuil, sept. 1998, p. 38
