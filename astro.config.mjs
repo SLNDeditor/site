@@ -52,12 +52,33 @@ function rehypeFootnotesCustom() {
 			}
 
 			// Ajoute la classe 'footnote-section' à la section de notes de bas de page
-			if (node.type === 'element' && node.tagName === 'section' && node.properties && node.properties.dataFootnotes) {
+			// remark-footnotes génère une section qui contient une ol avec des li id="user-content-fn-*"
+			if (
+				node.type === 'element' &&
+				node.tagName === 'section' &&
+				node.children &&
+				node.children.some(child =>
+					child.type === 'element' &&
+					child.tagName === 'ol' &&
+					child.children &&
+					child.children.some(li =>
+						li.type === 'element' &&
+						li.tagName === 'li' &&
+						li.properties &&
+						li.properties.id &&
+						typeof li.properties.id === 'string' &&
+						li.properties.id.startsWith('user-content-fn-')
+					)
+				)
+			) {
+				node.properties = node.properties || {};
 				node.properties.className = node.properties.className || [];
 				if (!Array.isArray(node.properties.className)) {
 					node.properties.className = [node.properties.className];
 				}
-				node.properties.className.push('footnote-section');
+				if (!node.properties.className.includes('footnote-section')) {
+					node.properties.className.push('footnote-section');
+				}
 			}
 
 			if (node.children) node.children.forEach(walk);
