@@ -1,5 +1,5 @@
 ---
-title: L'auteure Zalia SEKAï
+title: L'auteure
 description: ''
 heroImage: ''
 ---
