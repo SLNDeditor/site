@@ -7,10 +7,7 @@ nada: null
 pubDate: 2003-12-12
 showDate: true
 video: ''
-description: |-
-  L’IDENTITÉ EN FRAGMENTS 
-
-  Article publié dans UBU scènes d’Europe N° 27/28 juin 2003
+description: Article publié dans UBU scènes d’Europe n° 27/28 juin 2003
 source: https://www.zaliasekai.net/article-25735971.html
 ---
 
