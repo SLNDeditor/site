@@ -1,9 +1,13 @@
 ---
-title: "Kateb Yacine / Martin Luther King"
-description: "La revue ATTAQUES#3 organisée par Laurent Cauwet est une revue de poésie critique qui croise des interventions (poétiques, artistiques, théoriques) d'auteur.e.s d'Europe, du continent africain et d'Amérique latine. Elle se réfléchit et se construit sur..."
-pubDate: 2021-06-26
+title: Kateb Yacine / Martin Luther King
 category: article
-heroImage: "./images/ob_49e8d4_chien-attaque.jpg"
+menu: null
+heroImage: ./images/ob_49e8d4_chien-attaque.jpg
+nada: null
+pubDate: 2021-06-26
+showDate: true
+video: ''
+description: ''
 source: https://www.zaliasekai.net/2021/06/kateb-yacine/martin-luther-king.html
 ---
 
