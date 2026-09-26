@@ -1,111 +1,81 @@
 ---
-title: "La langue à deux têtes : le cas algérien"
-description: "LA LANGUE A DEUX TÊTES LE CAS ALGÉRIEN (Article publié dans AWAL n° 15, 1997) Résumé Le discours entre oralité et écriture (précisément les difficultés de transcription de l'oral dans le processus de passage à l'écrit) qui reflète en Algérie un problème..."
-pubDate: 1997-01-02
+title: 'La langue à deux têtes : le cas algérien'
 category: article
-heroImage: "./images/images-copie-2.jpg"
+menu: null
+heroImage: ./images/images-copie-2.jpg
+nada: null
+pubDate: 1997-01-02
+showDate: true
+video: ''
+description: |-
+  LA LANGUE A DEUX TÊTES : LE CAS ALGÉRIEN 
+
+  Article publié dans AWAL n° 15, 1997
 source: https://www.zaliasekai.net/article-26351742.html
 ---
 
-**LA LANGUE A DEUX TÊTES  
-LE CAS ALGÉRIEN  
-  
-  
-![](./images/images-copie-2.jpg)**  
- 
-
-  
- 
-
-_(Article publié dans AWAL n° 15, 1997)_
-
-  
-  
- 
-
-* * *
-
 **Résumé**
 
-  
-  
-**Le discours entre  oralité et  écriture (précisément les difficultés de transcription de l'oral dans le processus de passage à l'écrit) qui reflète en Algérie un problème de définition de l'identité nationale, est ici abordé à travers le théâtre populaire oral militant de Kateb Yacine. Son œuvre théâtrale revalorise la culture de groupe par la langue parlée. Il met ainsi en place un ensemble de procédés théâtraux qui se proposent de se rapprocher de l'espace non structurel du langage parlé, procédés nécessaires à la transmission de son message politique.  
-Par la "structure" de ses pièces qui constitue un obstacle à la transcription scripturale, il est ainsi montré qu'une langue écrite n'est pas une langue orale transcrite, qu'il existe une spécificité fonctionnelle et discursive de l'écriture et une autre spécificité de l'oralité.**  
-  
- 
+Le discours entre  oralité et  écriture (précisément les difficultés de transcription de l'oral dans le processus de passage à l'écrit) qui reflète en Algérie un problème de définition de l'identité nationale, est ici abordé à travers le théâtre populaire oral militant de Kateb Yacine. Son œuvre théâtrale revalorise la culture de groupe par la langue parlée. Il met ainsi en place un ensemble de procédés théâtraux qui se proposent de se rapprocher de l'espace non structurel du langage parlé, procédés nécessaires à la transmission de son message politique. 
+**Par la "structure" de ses pièces qui constitue un obstacle à la transcription scripturale, il est ainsi montré qu'une langue écrite n'est pas une langue orale transcrite, qu'il existe une spécificité fonctionnelle et discursive de l'écriture et une autre spécificité de l'oralité.** 
 
-* * *
+L'objet de cet article est  de montrer les difficultés qu'il y a à insérer l'écriture dans un environnement à tradition orale sans toutefois tomber dans la dichotomie oralité/écriture qui appelle souvent la distinction entre primitifs et civilisés. Les éléments de réflexion  ici apportés ne constituent pas une critique dépréciative de l'écriture mais révèlent plutôt la complexité des rapports entre l'écriture et l'oralité qui se traduisent entre autres par les difficultés de transcription de l'oral dans le processus de passage à l'écrit par-delà le phénomène de diglossie qui en résulte.  
 
-  
-  
-  
-**L'objet de cet article est  de montrer les difficultés qu'il y a à insérer l'écriture dans un environnement à tradition orale sans toutefois tomber dans la dichotomie oralité/écriture qui appelle souvent la distinction entre primitifs et civilisés. Les éléments de réflexion  ici apportés ne constituent pas une critique dépréciative de l'écriture mais révèlent plutôt la complexité des rapports entre l'écriture et l'oralité qui se traduisent entre autres par les difficultés de transcription de l'oral dans le processus de passage à l'écrit par-delà le phénomène de diglossie qui en résulte.  
-  
 La problématique de la représentativité de l'oralité est liée à celle de la représentativité de la communauté car l'oralité et la langue parlée (éléments socialisants) sont une référence essentielle à la collectivité. Mais, si la transcription n'est pas représentative de l'oralité, (donc de la communauté), il est probable que la distinction entre langue parlée et langue écrite soit perçue en terme de hiérarchie.  
 Quand elle résulte d'une opération de transfert concerté et non d'un développement spontané (comme c'est le cas de l'écriture berbère), l'introduction de l'écriture impose quelque questionnement. Car elle est un phénomène linguistique et culturel qui ouvre des perspectives et des difficultés nouvelles.  
-  
-L'écriture apparaît comme une voie nécessaire à la préservation et à l'affirmation d'une identité qui se démantèle. Mais elle-même n'est-elle pas une menace à l'ordre traditionnel établi ? Et peut-on parler de sauvegarde effective d'une identité au regard de toutes les mutations que l'écriture est susceptible d'engendrer ? Peut-on introduire l'écriture dans l'intérêt de la sauvegarde culturelle sans en supporter les vicissitudes ? Car en principe, la naissance de l'écriture s'accompagne d'une transformation de la parole.1 Tout changement dans le système de communication a des effets sur les contenus transmis.2 Cette situation pour le moins ambiguë et paradoxale soulève des difficultés dans la codification de la langue orale. La dimension berbère dans le cas algérien est d'actualité, mais ces considérations peuvent s'appliquer à d'autres parlers, langues évolutives, étroitement dépendantes de la diversité et de la mobilité culturelle, du vécu, du quotidien populaire, en "opposition" aux langues écrites.**  
-  
-  
- 
+
+L'écriture apparaît comme une voie nécessaire à la préservation et à l'affirmation d'une identité qui se démantèle. Mais elle-même n'est-elle pas une menace à l'ordre traditionnel établi ? Et peut-on parler de sauvegarde effective d'une identité au regard de toutes les mutations que l'écriture est susceptible d'engendrer ? Peut-on introduire l'écriture dans l'intérêt de la sauvegarde culturelle sans en supporter les vicissitudes ? Car en principe, la naissance de l'écriture s'accompagne d'une transformation de la parole.1 Tout changement dans le système de communication a des effets sur les contenus transmis.2 Cette situation pour le moins ambiguë et paradoxale soulève des difficultés dans la codification de la langue orale. La dimension berbère dans le cas algérien est d'actualité, mais ces considérations peuvent s'appliquer à d'autres parlers, langues évolutives, étroitement dépendantes de la diversité et de la mobilité culturelle, du vécu, du quotidien populaire, en "opposition" aux langues écrites.
 
 **LE PASSAGE A L’ÉCRIT ET L'UNE DE SES IMPLICATIONS**
 
-  
-  
-**La déculturation qui a suivi la décolonisation algérienne a soulevé avec une certaine acuité la question de la revalorisation et de la sauvegarde culturelle. Une des réponses à ce phénomène est l'introduction de l'écriture. Mais ce processus de passage à l'écrit pose le problème de la représentativité de l'oralité dans l'écriture, en d'autres termes comment reproduire la substance et le souffle de l'oralité dans la transcription, passer du mode oral à celui de l'écrit sans encourir une perte d'identité ?  
-Les auteurs de poésie et de théâtre en berbère ou en arabe dialectal par exemple (cf. Mohia pour le théâtre en kabyle ou Kateb Yacine pour le théâtre en arabe populaire et en Kayle) sont confrontés à ce type de difficulté dès lors qu'il faut transcrire les œuvres pour les faire circuler et les transmettre. Beaucoup se sont essayé à les résoudre à leur manière : Nabile Farès et Rabah Bélamri par exemple pour lesquels le rythme de l'oralité s'exprime par un travail sur la ponctuation ou l'introduction de chants, de poèmes populaires, de la mythologie orale dans ses romans. A travers ce travail sur la langue est mis en œuvre un travail de définition de l'identité nationale.  
-  
+La déculturation qui a suivi la décolonisation algérienne a soulevé avec une certaine acuité la question de la revalorisation et de la sauvegarde culturelle. Une des réponses à ce phénomène est l'introduction de l'écriture. Mais ce processus de passage à l'écrit pose le problème de la représentativité de l'oralité dans l'écriture, en d'autres termes comment reproduire la substance et le souffle de l'oralité dans la transcription, passer du mode oral à celui de l'écrit sans encourir une perte d'identité ?  
+Les auteurs de poésie et de théâtre en berbère ou en arabe dialectal par exemple (cf. Mohia pour le théâtre en kabyle ou Kateb Yacine pour le théâtre en arabe populaire et en Kabyle) sont confrontés à ce type de difficulté dès lors qu'il faut transcrire les œuvres pour les faire circuler et les transmettre. Beaucoup se sont essayé à les résoudre à leur manière : Nabile Farès et Rabah Bélamri par exemple pour lesquels le rythme de l'oralité s'exprime par un travail sur la ponctuation ou l'introduction de chants, de poèmes populaires, de la mythologie orale dans ses romans. A travers ce travail sur la langue est mis en œuvre un travail de définition de l'identité nationale.  
+
 La langue française représente un moyen symbolique utilisé, pendant la colonisation, contre l’ennemi. Le roman de Kateb Yacine, Nedjma, en est une parfaite illustration. Après la décolonisation en 1962, un certain nombre d'Algériens dont Kateb Yacine vont continuer à produire des œuvres écrites en français ou en arabe : elles traduiront pour la plupart une crise d'identité post-coloniale. Mais elles marqueront une césure entre l'élite et les analphabètes dans un pays à dominante orale.  
-  
+
 L’œuvre de Kateb Yacine est intéressante à plusieurs titres. Il passe de la langue française à l'arabe (dialectal), de l'écriture à l'oralité. L'année 1970 marque celle de sa dernière publication : _L'Homme aux sandales de caoutchouc_. Il refusera l'isolement de l'homme de lettres, le ghetto intellectuel, de se couper de son propre débat selon ses propres termes. Mesurant les caractères non représentatif et élitiste de l'écriture dans une société à tradition orale, il s'engage (à partir de 1971 avec _Mohammed, prends ta valise,_ puis _La guerre de 2000 ans_ en 1974, _La Palestine et Le Roi de l'Ouest_ en 1977,...), en laissant derrière lui le roman et la poésie écrite, dans le théâtre populaire oral militant bien qu'il y ait une continuité sur le plan thématique : oppression,.... Après 70, le choix qu'il opère est un choix d'ordre politique et identitaire. Son engagement ouvre la problématique existant autour de l'écrit et de l'oral.  
 "_Le théâtre n'est pas fait pour être lu, il est fait pour être vu_." 3  
 Il revalorise la culture de groupe par la langue parlée, référence essentielle à la collectivité, à un moment où la culture communautaire s'amenuise avec la généralisation de l'écriture et provoque un éloignement culturel.  
-  
+
 Les techniques théâtrales qu'il met en œuvre, techniques représentatives de l'espace oral, de l'action constituent un obstacle quant à la transcription scripturale d'autant plus qu'il sort des règles d'organisation formalistes. Sa stratégie est axée sur l'action, l'écriture n'étant plus directement liée au réel, se détachant de la parole.  
 Sa démarche consiste à reproduire la situation dialogale et dialectale du quotidien, par souci de réalisme. Son objectif est de parvenir à une compréhension par le public, des informations et des idées qu'il émet, de parvenir à une prise de conscience et de position politiques et d'atteindre la population dans son ensemble, de se rapprocher de la condition du travailleur. Certains des procédés qu'il utilise sont intéressants pour notre propos. _Mohammed, prends ta valise_ est une pièce populaire contestataire qui emploie les moyens suivants. Remaniant ses textes d'après les événements, les circonstances politiques et sociales, il exprime un refus de figer le texte et de désinformer le public. Cette ponctualité est une constante de l'oralité. De même, sa conception du travail théâtral (notamment avec _Mohammed, prends ta valise_) repose sur un travail collectif : Kateb Yacine lance des idées et, ensemble, les acteurs et lui élaborent le texte, phrase par phrase dans leur langue maternelle.  
 On retrouve cette spontanéité dans la structure non linéaire du déroulement de la pièce, qui n'obéit pas à une logique didactique mais se rapproche au contraire de l'environnement  "non structurel " et non contrôlé du langage parlé.  
 Les chants et farces populaires (en prélude au spectacle), le chœur et le coryphée (qui chantent ou psalmodient), le débat après le spectacle (très fréquent dans le théâtre militant en Algérie) ont un même intérêt : parvenir à réduire les distances qui séparent les comédiens du public. 4  C'est une pièce dite ouverte : on tient compte de ce que le public dit pendant la pièce en même temps que les acteurs.  
 Ces procédés tentent de reproduire la ponctualité de la situation dialogale, les mouvements incessants de la réalité, que l 'édition ne peut suivre. On comprend que la transcription d'une pièce d'une telle envergure puisse amenuiser indubitablement et considérablement son poids et son caractère, du moins avec les moyens de transcription existants. Car nous n'ignorons pas que le recours à l'écriture risque de spolier la langue de son essence spontanée et produire un artifice.  
-  
+
 Le passage à l'écriture présente le danger de créer une langue dévitalisée non représentative des variations des intonations, des rythmes, bref de la prosodie, comme pour toutes les langues écrites aujourd'hui. L'art oratoire (théâtre, poésie) pose le problème du transfert dans la transcription, des éléments prosodiques que sont les bruitages, les accentuations, les silences... Déjà en son temps, Jean-Jacques Rousseau s'était interrogé :  
-  
+
 " (...) Les sons, les accents, les inflexions de toute espèce, (...) font la plus grande énergie du langage, et rendent une phrase, d'ailleurs commune, propre seulement au lieu où elle est. (Alors) Pourquoi, par exemple n'avons-nous pas de point vocatif ? Le point interrogeant, que nous avons, était beaucoup moins nécessaire ; car, par la seule construction, on voit si l'on interroge ou si l'on n'interroge pas, au moins dans notre langue. Venez-vous et vous venez ne sont pas la même chose. Mais comment distinguer par écrit un homme qu'on nomme d'un homme qu'on appelle ? C'est là vraiment une équivoque qu'eût levée le point vocatif. La même équivoque se trouve dans l'ironie,quand l'accent ne la fait pas sentir ." 5  
-  
+
 Rousseau, comme Platon ou Descartes avant lui pensent l'écriture comme un sous-produit de la parole.  
 À cette difficulté de rendu de la prosodie s'ajoute celle du geste et de l'expression du visage, des mimiques et de l'expression corporelle essentielles dans le théâtre.  
-  
+
 "Ainsi, pour essentielle qu'elle soit dans le destin des hommes, ou de la partie d'entre eux qu'elle concerne, l'invention de l'écriture a contribué à occulter l'exercice vivant de la parole. Les pictogrammes, les idéogrammes, les phonogrammes, les syllabaires, les alphabets demeurent des projections graphiques défuntes, et insuffisantes, de la gestuelle articulatoire et des sémiotiques expressives comme celle du visage." 6  
-  
+
 Rousseau pensait que l'écriture figeait la langue, substituant l'exactitude à l'expression, à la vivacité. Il distinguait les sentiments rendus par la parole, des idées rendues par l'écriture. L'écriture annihile les variations prosodique et gestuelle qui renforcent la compréhension d'un message. Kateb Yacine lui, associe à son message militant un ensemble de méthodes d'exécution orales qui ont pour finalité de renforcer la compréhension et l'adhésion à ses idées. 7  
 Faute de moyens, certaines de ses pièces ne sont pas transcrites ou plus exactement éditées (car elles sont écrites, ne serait-ce que pour apprendre le texte ; c'est dans ce seul cas que la parole est réduite à l'écrit). _Mohammed, prends ta valise_ n'a jamais été publiée. Elle est une véritable pièce parlée, pour trois quarts en arabe (dialectal) et un quart en français.  
 Mais il semble que cette situation fait plutôt partie de sa démarche car l'édition ne peut répondre aux évolutions suivies et rapides du théâtre politique. Car elle les fixe en l'état. Le discours écrit ne dépend plus d'une circonstance, il devient intemporel, abstrait... Platon disait qu'une fois figés par l'écriture, les mots du philosophe sont comme détachés de la recherche active et réfléchie qui fondait leur rapport avec la vérité. Même problématique pour les contes que l'on veut conserver par écrit.  
 Les textes établis sont des textes approximatifs. Ils continuent à être travaillés même après que la pièce a déjà été jouée. La mobilité linguistique et matérielle (les acteurs jouent simultanément plusieurs rôles,...) définissent le cadre d'un théâtre non officiel.  
 Pour partie, ses pièces sont donc enregistrées et circulent sous cette forme. Si cette situation présente un intérêt du point de vue du réalisme et de la justesse, l'absence de texte en est incontestablement défavorable aux chercheurs et comédiens.  
-  
+
 "Qu'elle (l'oeuvre) soit écrite en français ou qu'elle soit traduite en arabe, pour les Kabyles et les Chaouias, c'est sans doute un problème. Mais l'essentiel n'est pas là. Pour ma part, je suis convaincu qu'un public algérien même totalement analphabète serait capable d'ores et déjà, non seulement de comprendre l'oeuvre, de la saisir à sa racine, simplement avec ses oreilles et ses yeux ouverts, mais encore de l'enrichir, en lui versant sa soif, en lui communiquant son impatience... " 8  
-  
+
 Dans une culture orale, la vie est dominée par la parole/ouïe. Le sociologue canadien Marshall McLuhan montre dans _D'oeil à oreille_ comment la parole est une extériorisation de tous nos sens à la fois alors que l'écriture est une forme visuelle qui ne permet pas de retranscrire tout le domaine des sens. Il s'ensuit qu'en introduisant l'alphabet phonétique dans une culture à tradition orale,la fonction visuelle est intensifiée et le rôle du toucher, de l'ouïe, du goût et de l'odorat réduit.  
-  
+
 "Il (l'alphabet phonétique) s'est insinué dans la culture discontinue de l'homme tribal et a transformé son harmonie organique et son équilibre complexe en cette manière de vivre uniforme, logique et visuelle que nous continuons à considérer comme la norme de l'existence rationnelle. L'homme total est devenu l'homme fragmenté,dissocié. L'alphabet a brisé le cercle enchanté, la magie sonore du monde tribal ; il a fait voler l'homme en éclats, le réduisant à cet assemblage "d'individus" spécialisés et psychiquement appauvris, simples unités fonctionnant dans un monde asservi à la notion linéaire du temps et de l'espace euclidiens." 9  
-  
+
 L'alphabet phonétique détribalise l'homme en ce sens qu'il brise un système de relations réciproques fondé sur l'oralité c'est-à-dire la diversité et l'interaction des sens. Les déséquilibres psycho-affectifs y afférents sont provoqués par la perte du sentiment d'appartenance à une communauté entière (et non divisée par la spécialisation), par une vie sensorielle appauvrie et par un nouveau mode de raisonnement sur un plan linéaire et spécialisé.  
 Tous les moyens que Kateb Yacine déploie (costumes, accessoires, expression corporelle, mimique, rythmes, lumières, bruitages, décor, musique) sont destinés au "spectacle", en d'autres termes à tous les sens.  
 Tous ces éléments nous amènent finalement à constater qu'"une langue écrite n'est pas une langue orale transcrite." 10 que l'écriture n'est pas une représentation du langage de même que l'oralité n'est pas l'absence d'écriture, et que le passage de la parole à sa représentation graphique n'est pas sans problèmes. Cela veut-il signifier qu'il existe une spécificité fonctionnelle et discursive de l'écriture et une autre spécificité de l'oralité ? Oui car la représentation graphique de la parole est un discours nouveau. Elle fragmente le flux oral : elle sépare les mots, permet d'en manipuler l'ordre et de développer ainsi les formes syllogistiques de raisonnement, ainsi que l'explique Jack Goody (op. cit.). Le raisonnement et la philosophie naissent tant, dit-il, de la formalisation des messages inhérente à la pensée réflexive que par le manque d'outils appropriés à cet exercice de rumination constructive. Cette répartition fonctionnelle qui différencie la langue parlée de la langue écrite s'observe depuis les origines de l'écriture à travers de nombreux exemples : les Akkadiens écrivant en babylonien, les Syriaques écrivant en akkadien,... Mais le problème réside et reste dans les rapports d'opposition qui ont été créés et entretenus et qui introduisent une situation de diglossie.  
-  
+
 Mais la dynamique autour de l'intérêt du recours à l'écriture, de la représentativité de l'oralité et de la suprématie de l'écriture n'est-elle pas à certains égards modifiée ? Car le contexte actuel dans lequel est envisagée l'écriture privilégie les médias et de ce fait concurrence le livre.  
 Ainsi l'arrivée de la radio mais aussi des moyens de communication audiovisuelle intensifient la culture orale sans développer l'écriture. L'engouement de la population algérienne d'Algérie ou immigrée, pour les cassettes audio, vidéo, antennes paraboliques illustre ce phénomène. Le cas de l'Algérie n'est pas unique. Il en est de même en Inde, Chine ou Russie par exemple.  
-C'est ainsi que l'on peut passer sans transition du stade préalphabétique au stade postalphabétique. Comme cela a été le cas en Russie. Dans de telles circonstances, l'organisation selon le mode scriptural semble compromis et l'attribut oral préservé.  
-Marshall McLuhan exalte l'ère électronique dans laquelle l'homme de l'électronique et de la simultanéité retrouve les attitudes fondamentales de l'homme préalphabétique. Retribalisation ? Certes le sens acoustique est recouvré : "le verbe dit ou chanté". Toutefois, il ne s'agit là que d'un emprunt de surface à la forme orale et tribale. Le contexte et l'esprit authentique d'une vie tribale ne peuvent trouver écho dans un espace électronisé.  
-Mais n’est-ce pas là encore un phénomène nouveau où la nature de l'oralité est modifiée et la puissance scripturale ébranlée ?**  
-  
- 
+C'est ainsi que l'on peut passer sans transition du stade pré-alphabétique au stade post-alphabétique. Comme cela a été le cas en Russie. Dans de telles circonstances, l'organisation selon le mode scriptural semble compromis et l'attribut oral préservé.  
+Marshall McLuhan exalte l'ère électronique dans laquelle l'homme de l'électronique et de la simultanéité retrouve les attitudes fondamentales de l'homme pré-alphabétique. Retribalisation ? Certes le sens acoustique est recouvré : "le verbe dit ou chanté". Toutefois, il ne s'agit là que d'un emprunt de surface à la forme orale et tribale. Le contexte et l'esprit authentique d'une vie tribale ne peuvent trouver écho dans un espace électronisé.  
+Mais n’est-ce pas là encore un phénomène nouveau où la nature de l'oralité est modifiée et la puissance scripturale ébranlée ?
 
-* * *
+Bibliographie  
 
-  
-**Bibliographie  
-  
 1)  Raphaël Pividal, _La maison de l'écriture_, Paris, Seuil, 1976, cité in J. Goody, _La raison graphique_, trad. de l’anglais, Paris, Editions de minuit, 1979  
 2) Jack Goody, _La raison graphique, op. cit._ p. 46  
 3) « _Entretien avec Abdelkader Djeghloul_ », Awal n° 9, spécial Kateb Yacine, 1992, p. 78  
@@ -115,4 +85,4 @@ Mais n’est-ce pas là encore un phénomène nouveau où la nature de l'oralit�
 7) Pour une information linguistique des difficultés de transcription de l'oral, consulter entre autres _Etudes et documents berbères, Awal, Bulletin des études africaines,_...  
 8) « _Entretien avec Djamal Amrani_ », Awal n° 9, 1992, p. 94  
 9) Marshall McLuhan, _D’œil à oreille_, trad. de l’anglais, Paris, Denoël, 1977  
-10) Claude Hagège, _L'homme de paroles_, op. cit. p. 92**
+10) Claude Hagège, _L'homme de paroles_, op. cit. p. 92\*\*
