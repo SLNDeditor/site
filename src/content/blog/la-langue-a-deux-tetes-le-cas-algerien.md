@@ -7,10 +7,7 @@ nada: null
 pubDate: 1997-01-02
 showDate: true
 video: ''
-description: |-
-  LA LANGUE A DEUX TÊTES : LE CAS ALGÉRIEN 
-
-  Article publié dans AWAL n° 15, 1997
+description: ''
 source: https://www.zaliasekai.net/article-26351742.html
 ---
 
