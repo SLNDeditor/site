@@ -1,63 +1,50 @@
-# Astro Starter Kit: Blog
+# zalia sékaï — site
+
+Code source du site de l'écrivaine **zalia sékaï** : <https://zaliasekai.netlify.app>
+
+Essais, théâtre, récits et vidéos autour de l'exil, de l'Algérie, de la
+colonisation et de l'œuvre de Kateb Yacine.
+
+## Droits sur les textes
+
+Les textes, images et enregistrements publiés ici sont l'œuvre de zalia sékaï.
+Le site en précise les conditions d'usage :
+
+> Vous pouvez librement télécharger, citer mes textes,
+> à condition d'en indiquer les sources.
+
+Le dépôt est public pour des raisons techniques d'hébergement ; cela ne vaut
+pas cession de droits sur les œuvres qu'il contient.
+
+## Comment le site est publié
+
+L'autrice écrit depuis une interface d'administration en ligne (Sveltia CMS).
+Chaque publication commite sur `main`, et Netlify reconstruit le site.
+
+```
+/admin/ → commit sur main → build Netlify → site en ligne
+```
+
+**La mise à jour ne va que dans ce sens.** Ce qui est en ligne fait foi : une
+copie locale ne doit jamais être republiée par-dessus. Voir `AGENTS.md`.
+
+| document | pour qui |
+|---|---|
+| [`PUBLIER.md`](PUBLIER.md) | l'autrice — publier, et quoi faire si ça coince |
+| [`ADMIN.md`](ADMIN.md) | les champs du CMS, l'éditeur, le dépannage |
+| [`AGENTS.md`](AGENTS.md) | règles de travail sur le dépôt (sens unique, interdits) |
+
+## Technique
+
+[Astro](https://astro.build) 7, contenu en Markdown dans `src/content/`,
+images optimisées à la compilation, polices auto-hébergées. Hébergement Netlify.
 
 ```sh
-npm create astro@latest -- --template blog
+npm install
+npm run dev     # http://localhost:4321
+npm run build   # → dist/
+./sync.sh       # récupérer ce qui a été publié en ligne
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-Features:
-
-- ✅ Minimal styling (make it your own!)
-- ✅ 100/100 Lighthouse performance
-- ✅ SEO-friendly with canonical URLs and Open Graph data
-- ✅ Sitemap support
-- ✅ RSS Feed support
-- ✅ Markdown & MDX support
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-├── public/
-├── src/
-│   ├── assets/
-│   ├── components/
-│   ├── content/
-│   ├── layouts/
-│   └── pages/
-├── astro.config.mjs
-├── README.md
-├── package.json
-└── tsconfig.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-The `src/content/` directory contains "collections" of related Markdown and MDX documents. Use `getCollection()` to retrieve posts from `src/content/blog/`, and type-check your frontmatter using an optional schema. See [Astro's Content Collections docs](https://docs.astro.build/en/guides/content-collections/) to learn more.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
-
-## Credit
-
-This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).
+La configuration de build (version de Node, en-têtes, cache) est dans
+`netlify.toml`, versionnée — pas dans l'interface Netlify.
