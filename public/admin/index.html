@@ -33,5 +33,52 @@
 			integrity="sha384-QAQzGwQRNWlCXEzHZ3+vg02kLIopQVLbS271gmQWo8QQtCKfi8Hwt4pamrnFyj24"
 			crossorigin="anonymous"
 		></script>
+
+		<!-- ================================================================
+		     Masque le bouton « Se connecter avec GitHub ».
+
+		     POURQUOI : ce bouton délègue la connexion au service OAuth de
+		     Netlify, et aucun fournisseur GitHub n'y est installé pour ce
+		     site — https://api.netlify.com/auth?provider=github&site_id=…
+		     répond 404. Le bouton est le plus visible des deux (bleu plein),
+		     et cliquer dessus laisse la page figée sur « Connexion… »
+		     indéfiniment. Zalia en conclut que l'admin est cassée.
+
+		     Tant que l'OAuth n'est pas installé, on ne laisse que le chemin
+		     qui fonctionne : la connexion par jeton d'accès.
+
+		     POUR LE RÉTABLIR (après avoir installé le fournisseur OAuth dans
+		     Netlify → Site configuration → Access & security → OAuth) :
+		     supprimer tout ce bloc <script>.
+
+		     Le repli est sûr : si la structure de Sveltia change et que rien
+		     ne correspond, on ne masque rien et les deux boutons restent.
+		     ============================================================= -->
+		<script>
+			(() => {
+				const estJeton = (b) => /jeton|token/i.test(b.textContent || '');
+
+				const nettoyer = () => {
+					for (const groupe of document.querySelectorAll('div')) {
+						const boutons = [...groupe.children].filter((e) => e.tagName === 'BUTTON');
+						// On n'agit que sur l'écran de connexion : exactement deux
+						// boutons côte à côte, dont celui du jeton.
+						if (boutons.length !== 2 || !boutons.some(estJeton)) continue;
+						for (const b of boutons) {
+							if (estJeton(b)) continue;
+							if (b.dataset.masque) continue;
+							b.dataset.masque = '1';
+							b.hidden = true;
+						}
+					}
+				};
+
+				nettoyer();
+				new MutationObserver(nettoyer).observe(document.body, {
+					childList: true,
+					subtree: true,
+				});
+			})();
+		</script>
 	</body>
 </html>

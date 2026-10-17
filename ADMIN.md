@@ -79,6 +79,51 @@ Si `description` est vide, `BlogPost.astro` retombe sur le chapeau en texte
 brut, puis sur `SITE_DESCRIPTION` : le site ne peut plus produire de balise
 `<meta name="description" content="">`.
 
+## Connexion de Zalia : le jeton
+
+Sur `/admin/`, **un seul bouton** : « Se connecter avec un jeton d'accès ».
+Elle colle son jeton, et c'est tout — le navigateur le conserve, elle n'a pas
+à recommencer à chaque fois.
+
+### Pourquoi il n'y a qu'un bouton
+
+Sveltia en propose deux. Le second, « Se connecter avec GitHub », **ne
+fonctionne pas sur ce site** : il délègue au service OAuth de Netlify, et
+aucun fournisseur GitHub n'y est installé —
+`https://api.netlify.com/auth?provider=github&site_id=…` répond **404**.
+C'était le bouton le plus visible (bleu plein) : cliquer dessus laissait la
+page figée sur « Connexion… » indéfiniment, de quoi croire que l'admin est
+cassée. Il est donc masqué par un petit script en bas de
+`public/admin/index.html`.
+
+Pour le rétablir : installer le fournisseur dans Netlify → *Site
+configuration* → *Access & security* → *OAuth* → *Install provider* → GitHub
+(il faut créer une OAuth App côté GitHub), puis supprimer ce script.
+
+### Fabriquer le jeton
+
+Deux formules. Le dépôt étant **public** depuis le 17/10/2026, la portée
+nécessaire est plus étroite qu'avant : un jeton limité aux dépôts publics
+suffit, il ne peut plus rien toucher de privé.
+
+| | portée | expiration | pour qui |
+|---|---|---|---|
+| **Classique** `public_repo` | les 2 dépôts publics du compte | réglable sur **aucune** | ✅ le plus simple pour Zalia |
+| **Fine-grained** | ce seul dépôt, `Contents: Read and write` | obligatoire (1 an max) | plus étroit, mais à refaire chaque année |
+
+**Recommandé ici** : <https://github.com/settings/tokens> → *Generate new
+token (classic)* → cocher **`public_repo` uniquement** (surtout pas `repo`
+entier, ni `delete_repo`, ni `admin:*`) → *Expiration : No expiration*.
+
+Le compromis est assumé : un jeton sans expiration évite à Zalia une panne
+annoncée le jour où il expirerait, et sa portée réduite limite les dégâts en
+cas de fuite. S'il fuite, le révoquer sur la même page et en générer un autre.
+
+⚠️ Ce jeton authentifie **comme `SLNDeditor`**, qui est le propriétaire du
+dépôt — ses écritures apparaissent donc sous ce nom. Lui donner son propre
+compte GitHub en collaborateur signerait ses textes de son nom, mais ajoute un
+compte à gérer.
+
 ## Si l'admin ne s'ouvre plus
 
 La version de Sveltia est **épinglée** dans `public/admin/index.html`

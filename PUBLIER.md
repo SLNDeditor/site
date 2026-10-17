@@ -5,9 +5,11 @@
 **Il n'y a rien à faire d'autre qu'écrire et cliquer « Publier ».**
 
 1. Aller sur <https://zaliasekai.netlify.app/admin/>
-2. Écrire ou modifier un texte
-3. Cliquer **« Publier »**
-4. Attendre **2 à 3 minutes**, puis recharger la page du site (`Cmd-R` / `F5`)
+2. Se connecter : **« Se connecter avec un jeton d'accès »**, coller le jeton
+   (une seule fois — le navigateur s'en souvient ensuite)
+3. Écrire ou modifier un texte
+4. Cliquer **« Publier »**
+5. Attendre **2 à 3 minutes**, puis recharger la page du site (`Cmd-R` / `F5`)
 
 Le site se reconstruit tout seul. Pas de bouton à aller chercher ailleurs, pas
 de tableau de bord à ouvrir, pas de ligne de commande.
@@ -44,8 +46,8 @@ Dans l'ordre :
    apparaissent sur <https://github.com/SLNDeditor/site/commits/main>.
    Si le texte y est, c'est que le site est simplement en train de se
    reconstruire — attendre.
-3. **Si le texte n'y est pas** : le jeton GitHub a probablement expiré.
-   Se reconnecter sur `/admin/` avec un jeton neuf.
+3. **Si le texte n'y est pas** : le jeton GitHub ne fonctionne plus.
+   Se reconnecter sur `/admin/` avec un jeton neuf (voir `ADMIN.md`).
 4. **Si la page `/admin/` reste blanche** : voir `ADMIN.md`, section
    « Si l'admin ne s'ouvre plus ».
 
