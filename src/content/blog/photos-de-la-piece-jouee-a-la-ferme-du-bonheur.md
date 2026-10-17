@@ -1,6 +1,7 @@
 ---
 title: "Photos de la pièce jouée à la Ferme du Bonheur"
 description: "Algérie, identité, colonisation, langues, domination, ségrégation, Martin Luther King, exil, Guelma, Selma, arabisation, femmes algériennes, Marc Garanger"
+lead: "Algérie, identité, colonisation, langues, domination, ségrégation, Martin Luther King, exil, Guelma, Selma, arabisation, femmes algériennes, Marc Garanger"
 pubDate: 2009-01-28
 category: theatre
 menu:

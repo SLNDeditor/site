@@ -1,6 +1,7 @@
 ---
 title: "Podcast, Voix au chapitre"
 description: "Podcast, Voix au chapitre, une conversation entre Samia Messaoudi & Zalia Sékaï."
+lead: "Podcast, Voix au chapitre, une conversation entre Samia Messaoudi & Zalia Sékaï."
 pubDate: 2025-11-16
 category: interventions
 ---

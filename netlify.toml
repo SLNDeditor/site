@@ -1,0 +1,69 @@
+# Configuration de build Netlify, versionnée dans le dépôt.
+#
+# Avant ce fichier, tout vivait dans l'interface Netlify (« publishOrigin = ui »).
+# Conséquence : la version de Node n'était pas fixée, alors que package.json
+# exige >= 22.12 et Astro 7 impose Node ^20.3 || >= 22. Le jour où Netlify
+# change son défaut, le build cassait sans qu'une seule ligne ait bougé.
+#
+# Ce fichier a priorité sur les réglages de l'interface.
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  # Version figée volontairement. Pour en changer : modifier ici, pousser,
+  # et vérifier que le déploiement passe.
+  NODE_VERSION = "22.12.0"
+
+# ---------------------------------------------------------------------------
+# En-têtes de sécurité (le site n'en servait aucun)
+# ---------------------------------------------------------------------------
+# Pas de Content-Security-Policy ici, et c'est délibéré : Astro émet des
+# <style> et <script type="module"> en ligne, le site intègre des iframes
+# YouTube et /admin charge Sveltia depuis unpkg. Une CSP correcte demanderait
+# 'unsafe-inline' (donc peu de bénéfice réel) et une erreur casserait l'admin
+# en silence. L'intégrité du script d'admin est assurée autrement, par SRI
+# (voir public/admin/index.html).
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    # On ne restreint que les capacités qu'aucune page n'utilise. Les
+    # permissions demandées par le lecteur YouTube (accelerometer, autoplay,
+    # gyroscope, picture-in-picture…) ne sont pas touchées, sinon la vidéo
+    # perdrait ces fonctions.
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=()"
+
+# ---------------------------------------------------------------------------
+# Cache
+# ---------------------------------------------------------------------------
+# Tout ce qu'Astro produit porte une empreinte dans son nom (fichier.A1b2C3.webp) :
+# un changement de contenu change l'URL, donc on peut cacher pour toujours.
+[[headers]]
+  for = "/_astro/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Fichiers lourds à nom stable (PDF des revues NADA, podcast). Sans règle, ils
+# étaient servis en max-age=0 et retéléchargés intégralement à chaque visite :
+# 16 Mo pour nada-54.pdf, 35 Mo pour le podcast.
+[[headers]]
+  for = "/nada/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400, stale-while-revalidate=604800"
+
+[[headers]]
+  for = "/audio/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400, stale-while-revalidate=604800"
+
+# L'admin ne doit jamais être servie depuis un cache : une correction de
+# config.yml doit être visible par Zalia au rechargement suivant.
+[[headers]]
+  for = "/admin/*"
+  [headers.values]
+    Cache-Control = "no-cache, no-store, must-revalidate"
+    X-Robots-Tag = "noindex, nofollow"

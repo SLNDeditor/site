@@ -8,6 +8,7 @@ pubDate: 2006-12-04
 showDate: true
 video: ''
 description: Zalia SEKAÏ Juriste Auteure d'articles de recherche, d'articles journalistiques, de pièces de théâtre, de clips vidéo, de romans. J'explore différents moyens d'expression dans le dessein d'interroger les multiples formes de domination. J'interroge, entre...
+lead: Zalia SEKAÏ Juriste Auteure d'articles de recherche, d'articles journalistiques, de pièces de théâtre, de clips vidéo, de romans. J'explore différents moyens d'expression dans le dessein d'interroger les multiples formes de domination. J'interroge, entre...
 source: https://www.zaliasekai.net/article-presentation-de-l-auteure-121430264.html
 ---
 

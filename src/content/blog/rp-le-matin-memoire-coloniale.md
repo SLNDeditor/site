@@ -1,6 +1,7 @@
 ---
 title: "Zalia Sékaï et Marc Garanger : quand les visages algériens racontent la mémoire coloniale"
 description: "Le Matin d'Algérie · La Rédaction · 26 septembre 2025"
+lead: "Le Matin d'Algérie · La Rédaction · 26 septembre 2025"
 pubDate: 2025-09-26
 category: revue-de-presse
 showDate: false

@@ -1,6 +1,7 @@
 ---
 title: "Algériennes surexposées (article)"
 description: "ALGERIENNES SUREXPOSEES (Article publié dans AWAL 2008, n° 37 sous le titre : « Derrière l’objectif ou qu’est-ce que photographier en période de guerre ». Cet article se fonde sur l'ouvrage de Marc Garanger, Femmes algérien nes 1960, Contrejour, Biarritz,..."
+lead: "ALGERIENNES SUREXPOSEES (Article publié dans AWAL 2008, n° 37 sous le titre : « Derrière l’objectif ou qu’est-ce que photographier en période de guerre ». Cet article se fonde sur l'ouvrage de Marc Garanger, Femmes algérien nes 1960, Contrejour, Biarritz,..."
 pubDate: 2008-11-27
 category: article
 heroImage: "./images/images.jpg"

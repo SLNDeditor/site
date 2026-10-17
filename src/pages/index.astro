@@ -1,6 +1,8 @@
 ---
+import { Image } from 'astro:assets';
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
+import homeBg from '../assets/home-bg.jpg';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 ---
 
@@ -26,7 +28,15 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 					<li>Photographies</li>
 				</ul>
 			</div>
-			<img src="/home-bg.jpg" alt="" class="hero-image" />
+			<Image
+				src={homeBg}
+				alt=""
+				class="hero-image"
+				widths={[700, 1100, 1600, 2200]}
+				sizes="(max-width: 700px) 55vw, 75vw"
+				loading="eager"
+				fetchpriority="high"
+			/>
 		</section>
 
 		<style>

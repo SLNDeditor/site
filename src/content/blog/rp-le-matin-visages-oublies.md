@@ -1,6 +1,7 @@
 ---
 title: "« Algériennes surexposées », les visages oubliés de la guerre d'Algérie"
 description: "Le Matin d'Algérie · Djamal Guettala · 11 juin 2025"
+lead: "Le Matin d'Algérie · Djamal Guettala · 11 juin 2025"
 pubDate: 2025-06-11
 category: revue-de-presse
 showDate: false

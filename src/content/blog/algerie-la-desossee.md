@@ -1,6 +1,7 @@
 ---
 title: "Algérie la désossée"
 description: "Article de Patrick Sourd à propos de la pièce En Attendant l'algérie paru dans Les Inrockuptibles n°279, hiver 2001 Proche dans sa forme d'une réunion de cellule, le théâtre de Zalia Sékaï est celui du combat des purs. ALGERIE la désossée EN ATTENDANT..."
+lead: "Article de Patrick Sourd à propos de la pièce En Attendant l'algérie paru dans Les Inrockuptibles n°279, hiver 2001 Proche dans sa forme d'une réunion de cellule, le théâtre de Zalia Sékaï est celui du combat des purs. ALGERIE la désossée EN ATTENDANT..."
 pubDate: 2002-03-13
 category: revue-de-presse
 heroImage: "./images/inrockzalia.jpg"

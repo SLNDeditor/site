@@ -1,0 +1,6 @@
+# zalia sékaï — https://zaliasekai.netlify.app
+User-agent: *
+Allow: /
+Disallow: /admin/
+
+Sitemap: https://zaliasekai.netlify.app/sitemap-index.xml

@@ -1,6 +1,7 @@
 ---
 title: "Festival non aligné"
 description: "25-26 novembre 2017 / Festival Non-Aligné(e)s, AN 0 : cellule(s) dormante(s) / Exposition, happening, salon à la Générale, Coopérative artistique, politique et sociale 14, av. Parmentier Paris XIe – M° Voltaire L’AN 0 du festival non-aligné(e)s [FNA]..."
+lead: "25-26 novembre 2017 / Festival Non-Aligné(e)s, AN 0 : cellule(s) dormante(s) / Exposition, happening, salon à la Générale, Coopérative artistique, politique et sociale 14, av. Parmentier Paris XIe – M° Voltaire L’AN 0 du festival non-aligné(e)s [FNA]..."
 pubDate: 2018-01-19
 category: interventions
 heroImage: "./images/ob_b8b32f_fna-lettrine-red.jpg"

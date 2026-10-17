@@ -1,6 +1,7 @@
 ---
 title: "« Algériennes surexposées » de Zalia Sékaï : La mémoire en images"
 description: "Le Provincial · Aly D · 27 septembre 2025"
+lead: "Le Provincial · Aly D · 27 septembre 2025"
 pubDate: 2025-09-27
 category: revue-de-presse
 showDate: false

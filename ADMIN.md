@@ -21,7 +21,8 @@ La liste se replie **par rubrique** (bouton « Grouper par » → Rubrique).
 | **Numéro de revue NADA** | facultatif — si renseigné, la couverture devient un lien vers `public/nada/nada-<n>.pdf` (lecture + téléchargement, sans restriction) |
 | **Date** + **Afficher la date** | |
 | **Vidéo YouTube** | identifiant, facultatif |
-| **Chapeau** | résumé en italique sous le titre |
+| **Chapeau** | résumé en italique sous le titre — **visible**, aucun effet sur Google |
+| **Description Google** | résumé affiché par Google et dans les aperçus de partage — **invisible** sur la page |
 | **Corps du texte** | éditeur riche ; **bouton image** pour insérer une image n'importe où dans le texte |
 
 Le titre d'un nouvel article apparaît **automatiquement** dans la barre latérale
@@ -60,11 +61,51 @@ L'arbre du menu Théâtre est reconstruit à partir de ces champs
    Chrome demande « Afficher les fichiers » puis « Enregistrer les modifications ».
    (Sveltia gère ce mode nativement : pas de `local_backend`, pas de proxy.)
 
-## Point encore ouvert
+## Les deux champs « chapeau » et « description Google »
 
-**Édition en ligne** — dans `config.yml`, remplacer `OWNER/REPO` par le vrai
-dépôt GitHub (ex. `zaliasekai/site`). Ensuite : ouvrir `https://<le-site>/admin/`,
-se connecter avec GitHub, écrire, Publier — le site se met à jour seul.
+Longtemps, un **seul** champ `description` servait à la fois de chapeau visible
+et de balise `<meta name="description">`. Vider le chapeau parce qu'il faisait
+doublon à l'écran effaçait donc aussi le résumé Google, sans aucun signal.
+C'est arrivé sur quatre articles en septembre 2026.
+
+Depuis, deux champs distincts :
+
+| frontmatter | rôle | rendu |
+|---|---|---|
+| `lead` | chapeau visible | markdown restreint, rendu par `src/lib/inline-markdown.ts` |
+| `description` | SEO seul | `<meta name="description">` via `BaseHead` |
+
+Si `description` est vide, `BlogPost.astro` retombe sur le chapeau en texte
+brut, puis sur `SITE_DESCRIPTION` : le site ne peut plus produire de balise
+`<meta name="description" content="">`.
+
+## Si l'admin ne s'ouvre plus
+
+La version de Sveltia est **épinglée** dans `public/admin/index.html`
+(`@sveltia/cms@0.221.4`), avec un contrôle d'intégrité `integrity`.
+
+Avant, l'URL ne portait aucun numéro de version : le navigateur récupérait la
+dernière publiée. Sveltia est en 0.x et sort plusieurs versions par semaine
+(743 à ce jour) — Zalia changeait donc de version d'éditeur sans le savoir, ce
+qui explique les pannes d'admin sans modification du dépôt.
+
+- **Page blanche + erreur `integrity` dans la console** : le fichier servi par
+  unpkg ne correspond plus à l'empreinte. Ne pas retirer l'attribut : vérifier
+  d'abord, c'est précisément ce contre quoi il protège (ce script manipule le
+  jeton GitHub en écriture).
+- **Pour changer de version** : la marche à suivre, avec la commande de calcul
+  de l'empreinte, est en commentaire dans `public/admin/index.html`.
+
+## Déploiement
+
+Voir `PUBLIER.md`. En résumé : publier depuis `/admin/` suffit, Netlify
+reconstruit tout seul en 2-3 minutes.
+
+⚠️ **Netlify gratuit n'autorise qu'un seul contributeur Git sur un dépôt
+privé.** Aucun `Co-Authored-By:` dans les messages de commit de ce dépôt : un
+second contributeur suspend toutes les reconstructions, et l'admin continue
+d'afficher « publié » comme si de rien n'était. Rendre le dépôt public lève
+définitivement cette limite.
 
 Les menus du header et les sélections curatées (`NAV`, `CURATED_*` dans
-`src/lib/categories.ts`) ne sont pas encore éditables depuis le CMS.
+`src/lib/categories.ts`) ne sont pas éditables depuis le CMS.

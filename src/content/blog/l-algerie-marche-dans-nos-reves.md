@@ -1,6 +1,7 @@
 ---
 title: "L'algérie marche dans nos rêves"
 description: "Cet article a été publié en 2003 dans la revue Passerelles n° 25. Il reste profondément d'actualité. À l'aube de l'année 2003, Année de l'Algérie, et 40 ans après la Libération, le peuple algérien s'interroge sur sa propre libération. Parce qu'une nation..."
+lead: "Cet article a été publié en 2003 dans la revue Passerelles n° 25. Il reste profondément d'actualité. À l'aube de l'année 2003, Année de l'Algérie, et 40 ans après la Libération, le peuple algérien s'interroge sur sa propre libération. Parce qu'une nation..."
 pubDate: 2011-02-12
 category: article
 source: https://www.zaliasekai.net/article-l-algerie-marche-dans-nos-reves-67010036.html

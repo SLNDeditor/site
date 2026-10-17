@@ -11,7 +11,8 @@ nada: null
 pubDate: 2009-01-21
 showDate: true
 video: ''
-description: ''
+description: '« En Attendant l''algérie », pièce de zalia sékaï en hommage à Kateb Yacine, jouée à la Ferme du bonheur, à l''Épée de bois et à la Laiterie de Strasbourg.'
+lead: ''
 source: https://www.zaliasekai.net/article-27026589.html
 ---
 

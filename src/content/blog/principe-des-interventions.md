@@ -1,6 +1,7 @@
 ---
 title: "Principe des interventions"
 description: "\"En Attendant l'algérie\" de Zalia Sékai d'après l'oeuvre de Kateb Yacine s’est jouée en particulier à Nanterre du 1er février au 18 mars 2001, à la Ferme du Bonheur. La participation était libre, à la discrétion du public. Elle a également été jouée à..."
+lead: "\"En Attendant l'algérie\" de Zalia Sékai d'après l'oeuvre de Kateb Yacine s’est jouée en particulier à Nanterre du 1er février au 18 mars 2001, à la Ferme du Bonheur. La participation était libre, à la discrétion du public. Elle a également été jouée à..."
 pubDate: 2009-01-24
 category: theatre
 menu:

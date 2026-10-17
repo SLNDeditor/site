@@ -12,6 +12,8 @@ const { Content } = await render(page);
 
 <Layout
 	title={page.data.title}
+	description={page.data.description}
+	lead={page.data.lead}
 	showDate={false}
 >
 	<Content />

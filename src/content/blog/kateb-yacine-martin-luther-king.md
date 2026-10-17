@@ -7,7 +7,8 @@ nada: null
 pubDate: 2021-06-26
 showDate: true
 video: ''
-description: ''
+description: 'Intervention de zalia sékaï dans ATTAQUES#3, revue de poésie critique décoloniale dirigée par Laurent Cauwet (Les presses du réel, juin 2021).'
+lead: ''
 source: https://www.zaliasekai.net/2021/06/kateb-yacine/martin-luther-king.html
 ---
 

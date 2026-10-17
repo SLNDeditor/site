@@ -1,6 +1,7 @@
 ---
 title: "Répété ad nauseaum : en Attendant l'algérie"
 description: "Revue NADA n° 20\nNada n° 20 met en scène la pièce jouée à la Ferme du Bonheur en 2001 (et à la Cartoucherie entre autres), reprise en 2015, pour la contre fêt'nat'… Attendre, toujours, l’algérie. A n'importe quel moment de la représentation, le public..."
+lead: "Revue NADA n° 20\nNada n° 20 met en scène la pièce jouée à la Ferme du Bonheur en 2001 (et à la Cartoucherie entre autres), reprise en 2015, pour la contre fêt'nat'… Attendre, toujours, l’algérie. A n'importe quel moment de la représentation, le public..."
 pubDate: 2015-12-29
 category: theatre
 menu:

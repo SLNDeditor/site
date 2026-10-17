@@ -1,0 +1,83 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE } from '../consts';
+import { CATEGORY_LABEL } from '../lib/categories';
+
+// Le site n'avait pas de page 404 : les visiteurs tombaient sur l'écran
+// générique de Netlify, hors charte et sans aucun moyen de repartir.
+const rubriques = Object.entries(CATEGORY_LABEL);
+---
+
+<html lang="fr">
+	<head>
+		<BaseHead
+			title={`Page introuvable — ${SITE_TITLE}`}
+			description="Cette page n'existe pas ou a été déplacée."
+		/>
+		<meta name="robots" content="noindex, follow" />
+	</head>
+	<body>
+		<Header />
+		<main class="notfound">
+			<p class="code">404</p>
+			<h1>Cette page n'existe pas</h1>
+			<p class="say">
+				Elle a peut-être été déplacée, ou l'adresse comporte une erreur.
+			</p>
+			<nav aria-label="Rubriques du site">
+				<ul>
+					<li><a href="/">Accueil</a></li>
+					{rubriques.map(([slug, label]) => (
+						<li><a href={`/${slug}/`}>{label}</a></li>
+					))}
+				</ul>
+			</nav>
+		</main>
+		<Footer />
+
+		<style>
+			.notfound {
+				width: 100%;
+				max-width: 38rem;
+				margin: 0 auto;
+				padding: 5rem 1.5rem 7rem;
+			}
+			.code {
+				font-family: var(--font-heading);
+				font-size: 0.82rem;
+				letter-spacing: 0.18em;
+				color: rgb(var(--muted));
+				margin: 0 0 1.2rem;
+			}
+			h1 {
+				margin: 0 0 1rem;
+				line-height: 1.1;
+			}
+			.say {
+				font-style: italic;
+				color: rgb(var(--muted));
+				margin: 0 0 2.5rem;
+			}
+			nav ul {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.4rem 1.4rem;
+				font-family: var(--font-heading);
+				font-size: 0.9rem;
+			}
+			nav a {
+				color: rgb(var(--ink));
+				text-decoration: none;
+				border-bottom: 1px solid rgb(var(--muted));
+			}
+			nav a:hover {
+				border-bottom-color: rgb(var(--ink));
+			}
+		</style>
+	</body>
+</html>

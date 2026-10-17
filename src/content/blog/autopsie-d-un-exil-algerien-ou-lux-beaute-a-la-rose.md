@@ -1,6 +1,7 @@
 ---
 title: "Autopsie d'un exil algérien ou Lux Beauté à la rose"
 description: "Une auto-fiction parue aux éditions du Cygne, collection Traces, 2010 : La narratrice est une Parisienne. Ses parents, arrivés de Kabylie dans les années 1960 et confrontés aux réalités de l’exil, l’imprègnent de leurs souffrances et humiliations. Une..."
+lead: "Une auto-fiction parue aux éditions du Cygne, collection Traces, 2010 : La narratrice est une Parisienne. Ses parents, arrivés de Kabylie dans les années 1960 et confrontés aux réalités de l’exil, l’imprègnent de leurs souffrances et humiliations. Une..."
 pubDate: 2010-01-09
 category: recit
 heroImage: "./images/zalia_sekai-2.jpg"

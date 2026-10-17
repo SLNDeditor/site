@@ -1,6 +1,7 @@
 ---
 title: "«Les exilés n'ont pas réalisé leurs rêves, ils sont dans une quête sans fin»"
 description: "Le Soir des Livres : INTERVIEW DE ZALIA SÉKAÏ : «Les exilés n'ont pas réalisé leurs rêves, ils sont dans une quête sans fin» Le Soir d'Algérie : Votre roman est une double balade. Balade du corps, balade dans le corps. Quelle est la fonction du corps..."
+lead: "Le Soir des Livres : INTERVIEW DE ZALIA SÉKAÏ : «Les exilés n'ont pas réalisé leurs rêves, ils sont dans une quête sans fin» Le Soir d'Algérie : Votre roman est une double balade. Balade du corps, balade dans le corps. Quelle est la fonction du corps..."
 pubDate: 2011-02-24
 category: revue-de-presse
 source: https://www.zaliasekai.net/article-les-exiles-n-ont-pas-realise-leurs-reves-ils-sont-dans-leur-quete-sans-fin-67996436.html

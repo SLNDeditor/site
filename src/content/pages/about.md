@@ -1,6 +1,7 @@
 ---
 title: L'auteure
-description: ''
+description: 'Zalia sékaï, juriste et chercheuse indépendante : articles de recherche, théâtre, récits et clips vidéo autour de l''exil, de l''Algérie et de la colonisation.'
+lead: ''
 heroImage: ''
 ---
 

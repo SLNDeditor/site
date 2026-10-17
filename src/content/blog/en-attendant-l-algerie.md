@@ -9,6 +9,7 @@ menu:
   order: 3
 video: ''
 description: En Attendant l’algérie Pièce de théâtre publiée aux éditions clandestines s.l.n.d et dans la revue Passerelles n° 25, automne-hiver 2002, Revue d'Etudes Interculturelles. Jouée notamment à la ferme du Bonheur à Nanterre, à l'Epée de bois (Cartoucherie...
+lead: En Attendant l’algérie Pièce de théâtre publiée aux éditions clandestines s.l.n.d et dans la revue Passerelles n° 25, automne-hiver 2002, Revue d'Etudes Interculturelles. Jouée notamment à la ferme du Bonheur à Nanterre, à l'Epée de bois (Cartoucherie...
 source: https://www.zaliasekai.net/article-26776866.html
 ---
 

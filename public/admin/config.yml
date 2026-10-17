@@ -45,11 +45,25 @@ collections:
         widget: string
         hint: "Titre de la page (ex. « L'auteure »)."
 
+      - name: lead
+        label: "Chapeau (affiché sous le titre)"
+        widget: markdown
+        required: false
+        minimal: true
+        buttons: [bold, italic, quote]
+        editor_components: []
+        hint: >
+          Court paragraphe d'introduction, affiché en italique sous le titre.
+          Laisser vide = aucun chapeau. N'a AUCUN effet sur Google.
+
       - name: description
-        label: "Description SEO"
+        label: "Description Google (invisible sur la page)"
         widget: text
         required: false
-        hint: "Pour Google et réseaux sociaux. Ne s'affiche PAS sur la page."
+        hint: >
+          Le résumé que Google affiche dans ses résultats. 150 à 160 caractères.
+          Ne s'affiche JAMAIS sur la page. À ne pas confondre avec le chapeau
+          ci-dessus : vider ce champ fait disparaître le site des résultats.
 
       - name: heroImage
         label: "Image (héro)"
@@ -184,15 +198,28 @@ collections:
         required: false
         hint: "Facultatif. Ex. : 2swt5PT8a5U (l'identifiant après ?v= dans l'URL YouTube)."
 
-      # --- Chapeau ---
-      - name: description
-        label: "Chapeau (résumé en tête)"
+      # --- Chapeau : VISIBLE sur la page, sans effet sur Google ---
+      - name: lead
+        label: "Chapeau (affiché sous le titre)"
         widget: markdown
         required: false
         minimal: true
         buttons: [bold, italic, quote]
         editor_components: []
-        hint: "Court paragraphe d'introduction, affiché en italique sous le titre."
+        hint: >
+          Court paragraphe d'introduction, affiché en italique sous le titre.
+          Laisser vide = aucun chapeau. N'a AUCUN effet sur Google.
+
+      # --- Description SEO : INVISIBLE sur la page, sert à Google ---
+      - name: description
+        label: "Description Google (invisible sur la page)"
+        widget: text
+        required: false
+        hint: >
+          Le résumé que Google affiche dans ses résultats, et l'aperçu lors d'un
+          partage sur les réseaux. 150 à 160 caractères. Ne s'affiche JAMAIS sur
+          la page. À ne pas confondre avec le chapeau ci-dessus : vider ce champ
+          fait disparaître le texte des résultats de recherche.
 
       # --- Corps du texte ---
       - name: body

@@ -9,7 +9,12 @@ const blog = defineCollection({
 	schema: ({ image }) =>
 		z.object({
 			title: z.string(),
-			description: z.string(),
+			// Description SEO : sert UNIQUEMENT à la balise <meta name="description">
+			// (Google, partages sur les réseaux). Jamais affichée sur la page.
+			description: z.string().optional().default(''),
+			// Chapeau : court paragraphe affiché en italique sous le titre.
+			// Markdown restreint (gras, italique, citation). Ne va PAS dans le SEO.
+			lead: z.string().optional().default(''),
 			// Transform string to Date object
 			pubDate: z.coerce.date(),
 			// Afficher ou non la date sur l'article (par défaut : affichée)
@@ -26,7 +31,7 @@ const blog = defineCollection({
 			video: z.string().optional(),
 			// Numéro de la revue NADA associée : la couverture (héro) devient un
 			// lien vers le PDF `public/nada/nada-<n>.pdf` (lecture + téléchargement).
-			nada: z.coerce.number().optional(),
+			nada: z.coerce.number().nullish().transform((v) => v ?? undefined),
 			// Emplacement dans le menu latéral (rubrique Théâtre uniquement).
 			//   group  = intitulé du sous-menu de 1er niveau (ex. « En Attendant
 			//            l'algérie ») ; vide = item de 1er niveau (comme Guelma/Selma).
@@ -51,7 +56,9 @@ const pages = defineCollection({
 	schema: ({ image }) =>
 		z.object({
 			title: z.string(),
-			description: z.string().optional(),
+			// Idem collection « blog » : description = SEO seul, lead = chapeau visible.
+			description: z.string().optional().default(''),
+			lead: z.string().optional().default(''),
 			heroImage: z.union([image(), z.string()]).optional(),
 			updatedDate: z.coerce.date().optional(),
 		}),

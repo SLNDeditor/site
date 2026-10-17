@@ -1,6 +1,7 @@
 ---
 title: "Algériennes surexposées"
 description: "1960 : guerre d’Algérie, camps de regroupement et contrôle de la population. L’armée française dévoile les femmes algériennes pour les photos d’identité. Clandestinement, Marc Garanger, appelé anti-militariste, réalise des portraits, dans un cadre officieux...."
+lead: "1960 : guerre d’Algérie, camps de regroupement et contrôle de la population. L’armée française dévoile les femmes algériennes pour les photos d’identité. Clandestinement, Marc Garanger, appelé anti-militariste, réalise des portraits, dans un cadre officieux...."
 pubDate: 2025-08-16
 category: essai
 heroImage: "./images/ob_b41bf2_couv2.jpg"

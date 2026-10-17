@@ -1,6 +1,7 @@
 ---
 title: "Conférence-débat"
 description: "Conférence-débat autour de l'ouvrage « Algériennes surexposées. Marc Garanger dans la guerre d'Algérie », le 28 novembre 2025 à l'Université Lumière Lyon 2, organisée par l'ISERL."
+lead: "Conférence-débat autour de l'ouvrage « Algériennes surexposées. Marc Garanger dans la guerre d'Algérie », le 28 novembre 2025 à l'Université Lumière Lyon 2, organisée par l'ISERL."
 pubDate: 2025-11-28
 category: interventions
 source: https://www.univ-lyon2.fr/recherche/agenda-scientifique/conference-zaliasekai

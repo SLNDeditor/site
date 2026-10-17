@@ -1,6 +1,7 @@
 ---
 title: "Guelma / Selma, une prosopopée entre Kateb Yacine et Martin Luther King"
 description: "¬ NADA n°46. Revue imprimée sur papier journal 28,9 x 38 cm\nZalia Sékaï rend hommage à Kateb Yacine et Martin Luther King. L’auteure évoque deux moments clefs pour les deux activistes : pour Kateb Yacine, le massacre de Guelma en algérie le 8 mai 1945..."
+lead: "¬ NADA n°46. Revue imprimée sur papier journal 28,9 x 38 cm\nZalia Sékaï rend hommage à Kateb Yacine et Martin Luther King. L’auteure évoque deux moments clefs pour les deux activistes : pour Kateb Yacine, le massacre de Guelma en algérie le 8 mai 1945..."
 pubDate: 2019-05-17
 category: theatre
 menu:

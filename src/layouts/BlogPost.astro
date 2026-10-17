@@ -9,10 +9,28 @@ import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/Header.astro';
 import FootnotesTooltips from '../components/FootnotesTooltips.astro';
 import { CATEGORY_LABEL, CURATED_ARTICLES, CURATED_VIDEOS, getPostsBySlugs, getTheatreTree } from '../lib/categories';
+import { renderInlineMarkdown } from '../lib/inline-markdown';
+import { SITE_DESCRIPTION } from '../consts';
 
 type Props = CollectionEntry<'blog'>['data'] & { id?: string };
 
-const { title, description, pubDate, showDate, updatedDate, heroImage, category, id, video, nada } = Astro.props;
+const { title, description, lead, pubDate, showDate, updatedDate, heroImage, category, id, video, nada } =
+	Astro.props;
+// « description » = SEO seul (balise meta). « lead » = chapeau visible sous le
+// titre, saisi en markdown restreint. Les deux sont indépendants : vider le
+// chapeau ne doit plus effacer la description Google.
+const leadHtml = await renderInlineMarkdown(lead);
+// Filet de sécurité : plus jamais de <meta name="description" content="">.
+// Si la description SEO est vide, on retombe sur le chapeau en texte brut,
+// puis sur la description du site.
+const metaDescription =
+	description?.trim() ||
+	leadHtml
+		.replace(/<[^>]+>/g, ' ')
+		.replace(/\s+/g, ' ')
+		.trim()
+		.slice(0, 160) ||
+	SITE_DESCRIPTION;
 // Les films de la sélection « Vidéos » affichent la liste des vidéos dans le menu
 // de gauche (et non la rubrique d'origine, ex. Essai).
 const isVideo = id ? CURATED_VIDEOS.includes(id) : false;
@@ -28,7 +46,7 @@ const hasAside = isVideo || isArticle || (category ? category in CATEGORY_LABEL 
 
 <html lang="fr">
 	<head>
-		<BaseHead title={title} description={description} />
+		<BaseHead title={title} description={metaDescription} />
 	</head>
 	<body>
 		<Header />
@@ -70,7 +88,7 @@ const hasAside = isVideo || isArticle || (category ? category in CATEGORY_LABEL 
 							</p>
 						)}
 						<h1>{title}</h1>
-						{description && <p class="lead">{description}</p>}
+						{leadHtml && <div class="lead" set:html={leadHtml} />}
 					</div>
 				</header>
 
@@ -152,6 +170,13 @@ const hasAside = isVideo || isArticle || (category ? category in CATEGORY_LABEL 
 				color: rgb(var(--muted));
 				font-size: 1.05rem;
 				margin: 0;
+			}
+			/* le chapeau est rendu en markdown : il arrive sous forme de <p>/<blockquote> */
+			.lead :global(> :first-child) {
+				margin-top: 0;
+			}
+			.lead :global(> :last-child) {
+				margin-bottom: 0;
 			}
 
 			/* Lecture classique en scroll */

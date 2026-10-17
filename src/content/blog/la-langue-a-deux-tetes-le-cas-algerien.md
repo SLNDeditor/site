@@ -7,7 +7,8 @@ nada: null
 pubDate: 1997-01-02
 showDate: true
 video: ''
-description: ''
+description: 'Les difficultés de transcription de l''oral dans le passage à l''écrit, à travers le théâtre populaire de Kateb Yacine. Article publié dans AWAL n° 15, 1997.'
+lead: ''
 source: https://www.zaliasekai.net/article-26351742.html
 ---
 

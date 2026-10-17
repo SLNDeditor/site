@@ -1,6 +1,7 @@
 ---
 title: "Marc Garanger, photographe de l'Algérie en guerre et au-delà"
 description: "histoirecoloniale.net · Christian Phéline · 15 octobre 2025"
+lead: "histoirecoloniale.net · Christian Phéline · 15 octobre 2025"
 pubDate: 2025-10-15
 category: revue-de-presse
 showDate: false

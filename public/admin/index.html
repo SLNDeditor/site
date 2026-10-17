@@ -3,11 +3,35 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="robots" content="noindex" />
+		<meta name="robots" content="noindex, nofollow" />
 		<title>Administration — zalia sékaï</title>
 	</head>
 	<body>
-		<!-- Sveltia CMS : éditeur en ligne façon WordPress, publie sur GitHub -->
-		<script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js"></script>
+		<!-- Sveltia CMS : éditeur en ligne façon WordPress, publie sur GitHub.
+
+		     ⚠️ LA VERSION EST ÉPINGLÉE, NE PAS LA REMETTRE EN « latest ».
+		     Sveltia est en 0.x et publie plusieurs versions par semaine (743 à ce
+		     jour). Sans numéro de version, Zalia recevait une version différente
+		     et non testée à chaque ouverture de /admin — cause probable des
+		     « l'admin ne marche plus » inexpliqués.
+
+		     0.221.4 est la version avec laquelle les dernières publications ont
+		     abouti (26-27 septembre 2026).
+
+		     POUR METTRE À JOUR, délibérément et en testant :
+		       1) choisir la version sur https://www.npmjs.com/package/@sveltia/cms
+		       2) calculer son empreinte :
+		          curl -s https://unpkg.com/@sveltia/cms@X.Y.Z/dist/sveltia-cms.js \
+		            | openssl dgst -sha384 -binary | openssl base64 -A
+		       3) remplacer le numéro ET l'attribut integrity ci-dessous
+		       4) tester une publication avant de laisser Zalia s'en servir
+		     (Si integrity ne correspond pas au fichier, le navigateur refuse de
+		      charger le script : l'admin reste blanche. C'est voulu — ça protège
+		      le token GitHub d'un script CDN altéré.) -->
+		<script
+			src="https://unpkg.com/@sveltia/cms@0.221.4/dist/sveltia-cms.js"
+			integrity="sha384-QAQzGwQRNWlCXEzHZ3+vg02kLIopQVLbS271gmQWo8QQtCKfi8Hwt4pamrnFyj24"
+			crossorigin="anonymous"
+		></script>
 	</body>
 </html>
