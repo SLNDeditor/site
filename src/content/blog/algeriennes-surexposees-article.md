@@ -12,8 +12,6 @@ lead: "ALGERIENNES SUREXPOSEES (Article publié dans AWAL 2008, n° 37 sous le t
 source: https://www.zaliasekai.net/article-25215010.html
 ---
 
-Cet article se fonde sur l'ouvrage de Marc Garanger, _Femmes algériennes 1960_, Contrejour, Biarritz, 1982
-
 **Résumé**
 
 **En 1960, pour les besoins de l’administration coloniale, Marc Garanger photographie des femmes algériennes, les contraignant à se dévoiler. En déterminant le contexte socioculturel et historique de ces photos prises pendant la guerre de Libération, la question du statut des femmes est posée. Mais la question du statut des femmes n’a été rendue visible qu’une fois la violence coloniale rendue elle-même visible. En effet, l’acte photographique viole les principes établis par la pratique locale relatifs à l’identité collective et à la non-mixité de l’espace féminin et masculin. Cette transgression des pratiques culturelles par les colons met en cause la structure de l’honneur, honneur basé sur la domination masculine et la soumission des femmes. À l’aliénation exercée par les hommes s’ajoute celle du pouvoir colonialiste.** 
