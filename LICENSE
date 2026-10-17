@@ -1,0 +1,108 @@
+CONDITIONS D'UTILISATION — dépôt « zalia sékaï »
+================================================
+
+Ce dépôt réunit deux choses de nature différente : une œuvre littéraire et le
+programme qui la met en ligne. Elles ne relèvent pas des mêmes droits.
+
+
+1. LES TEXTES — tous droits réservés à Zalia Sékaï
+--------------------------------------------------
+
+Les textes publiés dans ce dépôt (répertoires `src/content/`, revues en PDF
+dans `public/nada/`, enregistrement sonore dans `public/audio/`) sont l'œuvre
+de **Zalia Sékaï**, qui en est seule titulaire des droits.
+
+    © Zalia Sékaï. Tous droits réservés.
+
+Conformément à ce que le site indique, et à cela seulement :
+
+    « Vous pouvez librement télécharger, citer mes textes,
+      à condition d'en indiquer les sources. »
+
+La citation est donc autorisée, à la condition expresse d'indiquer l'auteure
+et la source. Tout le reste demeure soumis à son autorisation écrite et
+préalable : reproduction intégrale ou substantielle, republication sur un
+autre support, traduction, adaptation, représentation, exploitation
+commerciale, ainsi que toute utilisation pour l'entraînement de systèmes
+d'apprentissage automatique.
+
+Le droit moral de l'auteure — droit au nom et au respect de l'intégrité de
+l'œuvre — est perpétuel, inaliénable et imprescriptible.
+
+Le fait que ce dépôt soit hébergé sous le compte « SLNDeditor » et consultable
+publiquement sur GitHub n'emporte **aucune cession de droits** sur ces œuvres.
+La consultation et la duplication (« fork ») permises par les conditions
+d'utilisation de GitHub ne confèrent aucun droit de republication.
+
+Certains de ces textes ont d'abord paru ailleurs — notamment dans AWAL,
+Études et documents berbères (Edisud), Passerelles, UBU scènes d'Europe, la
+revue NADA et aux éditions du Cygne. Les droits attachés à ces éditions
+relèvent des accords passés avec leurs éditeurs.
+
+
+2. LES DOCUMENTS DE TIERS — droits de leurs titulaires
+-------------------------------------------------------
+
+Le dépôt reproduit, à des fins d'illustration critique et documentaire, des
+documents dont Zalia Sékaï n'est pas l'auteure : photographies de tiers,
+coupures et articles de presse, affiches et documents d'exposition, couvertures
+d'ouvrages, portraits photographiques de l'auteure.
+
+Ces documents restent la propriété de leurs auteurs ou ayants droit respectifs
+et ne sont couverts par aucune des autorisations ci-dessus. Toute réutilisation
+suppose de s'adresser directement à eux.
+
+Les images `src/assets/blog-placeholder-*.jpg` proviennent du gabarit de départ
+d'Astro et ne sont l'œuvre d'aucune des parties nommées ici.
+
+
+3. LE PROGRAMME — licence MIT
+------------------------------
+
+Le code du site — composants et gabarits `.astro`, feuilles de style,
+configuration, scripts — est distribué selon la licence MIT :
+
+    Copyright (c) 2026 Laurent Marissal
+
+    Permission is hereby granted, free of charge, to any person obtaining a
+    copy of this software and associated documentation files (the "Software"),
+    to deal in the Software without restriction, including without limitation
+    the rights to use, copy, modify, merge, publish, distribute, sublicense,
+    and/or sell copies of the Software, and to permit persons to whom the
+    Software is furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+    FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+    DEALINGS IN THE SOFTWARE.
+
+Cette licence MIT ne porte que sur le programme. Elle ne s'étend ni aux textes
+(section 1) ni aux documents de tiers (section 2).
+
+
+-------------------------------------------------------------------------------
+SUMMARY IN ENGLISH
+
+This repository contains a literary work and the program that publishes it.
+They are NOT under the same terms.
+
+* Texts, PDFs and audio (`src/content/`, `public/nada/`, `public/audio/`)
+  are © Zalia Sékaï, ALL RIGHTS RESERVED. Quoting is allowed provided the
+  author and source are credited. Reproduction, republication, translation,
+  adaptation, commercial use and use as machine-learning training data all
+  require her prior written permission. Public visibility on GitHub, and the
+  right to view and fork granted by GitHub's Terms of Service, convey no
+  further rights whatsoever.
+
+* Third-party material (press clippings, photographs by others, posters,
+  book covers) belongs to its respective rights holders and is reproduced
+  here for critical and documentary purposes only.
+
+* The site's source code is MIT-licensed, © 2026 Laurent Marissal. The MIT
+  licence covers the code ONLY.

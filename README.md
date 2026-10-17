@@ -5,16 +5,26 @@ Code source du site de l'écrivaine **zalia sékaï** : <https://zaliasekai.netl
 Essais, théâtre, récits et vidéos autour de l'exil, de l'Algérie, de la
 colonisation et de l'œuvre de Kateb Yacine.
 
-## Droits sur les textes
+## Droits
 
-Les textes, images et enregistrements publiés ici sont l'œuvre de zalia sékaï.
-Le site en précise les conditions d'usage :
+**Les textes sont l'œuvre de Zalia Sékaï, qui en est seule titulaire des
+droits. © Zalia Sékaï, tous droits réservés.** La citation est autorisée à
+condition d'indiquer l'auteure et la source — c'est tout ce qu'autorise le
+site :
 
 > Vous pouvez librement télécharger, citer mes textes,
 > à condition d'en indiquer les sources.
 
-Le dépôt est public pour des raisons techniques d'hébergement ; cela ne vaut
-pas cession de droits sur les œuvres qu'il contient.
+Reproduction intégrale, republication, traduction, adaptation, exploitation
+commerciale et usage comme données d'entraînement supposent son autorisation
+écrite préalable. Le dépôt est public pour des raisons techniques
+d'hébergement : **cela n'emporte aucune cession de droits.**
+
+Le code du site est distribué séparément sous licence MIT. Certaines images
+(coupures de presse, photographies de tiers, affiches) appartiennent à leurs
+auteurs respectifs.
+
+👉 Le détail, section par section, est dans [`LICENSE`](LICENSE).
 
 ## Comment le site est publié
 
