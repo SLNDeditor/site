@@ -21,6 +21,13 @@ arrière** : ce contenu est la référence.
 | en ligne → local (`git pull`) | **oui, toujours** — et c'est par là qu'on commence |
 | local → en ligne | **seulement sur demande explicite de Laurent**, dans la session |
 
+La règle ne gêne **jamais** Zalia : publier depuis `/admin/`, c'est justement
+le sens autorisé (admin → `origin/main` → Netlify). Elle ne contraint que le
+**dépôt local**, qui n'a pas à repousser par-dessus elle. Si une publication
+n'apparaît pas en ligne, ce n'est donc pas la règle qui bloque : c'est la
+reconstruction Netlify qui a échoué — voir `PUBLIER.md`, « Si ça ne marche
+vraiment pas ».
+
 ### Au début de CHAQUE session de travail
 
 Avant de lire ou de modifier quoi que ce soit :

@@ -47,10 +47,14 @@ L'arbre du menu Théâtre est reconstruit à partir de ces champs
 
 - **Téléversées depuis le CMS** → rangées dans `public/blog-media/`, écrites en
   chemin absolu `/blog-media/nom.jpg`. Fonctionne pour l'image de héro **et**
-  pour les images insérées dans le corps du texte.
+  pour les images insérées dans le corps du texte. Côté schéma, un chemin
+  commençant par `/` est reconnu comme fichier de `public/` **avant** d'être
+  proposé à l'optimiseur d'Astro : sans cet ordre, la reconstruction s'arrête
+  sur `ImageNotFound` et le site entier se gèle (c'est arrivé le 18/10/2026 —
+  voir `PUBLIER.md`, et le commentaire dans `src/content.config.ts`).
 - **Anciennes images de héro** (`./images/…`, ajoutées à la main) : toujours
   optimisées par Astro, continuent de fonctionner. Les deux conventions
-  cohabitent (schéma `heroImage: z.union([image(), z.string()])`).
+  cohabitent (schéma `heroImage` dans `src/content.config.ts`).
 
 ## Tester en local (sans GitHub)
 

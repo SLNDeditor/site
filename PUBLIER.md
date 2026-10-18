@@ -46,9 +46,17 @@ Dans l'ordre :
    apparaissent sur <https://github.com/SLNDeditor/site/commits/main>.
    Si le texte y est, c'est que le site est simplement en train de se
    reconstruire — attendre.
-3. **Si le texte n'y est pas** : le jeton GitHub ne fonctionne plus.
+3. **Si le texte y est mais que le site ne bouge pas au bout de dix
+   minutes** : la reconstruction a **échoué**. L'admin ne peut pas le savoir —
+   il a fait son travail en écrivant sur GitHub, la suite se passe ailleurs, et
+   il affichera « publié » quoi qu'il arrive. Le journal est sur
+   <https://app.netlify.com/sites/zaliasekai/deploys> : le dernier déploiement
+   en rouge (*Failed*) donne la raison en clair, souvent en une seule ligne.
+   Transmettre cette ligne à Laurent. **Le texte n'est pas perdu** : il est sur
+   GitHub, il s'affichera dès la reconstruction suivante.
+4. **Si le texte n'y est pas** : le jeton GitHub ne fonctionne plus.
    Se reconnecter sur `/admin/` avec un jeton neuf (voir `ADMIN.md`).
-4. **Si la page `/admin/` reste blanche** : voir `ADMIN.md`, section
+5. **Si la page `/admin/` reste blanche** : voir `ADMIN.md`, section
    « Si l'admin ne s'ouvre plus ».
 
 ## Les erreurs déjà rencontrées
@@ -63,3 +71,14 @@ site ne bougeait pas.
 **À ne jamais refaire** : pas de `Co-Authored-By:` dans les messages de commit
 de ce dépôt. La solution durable est de rendre le dépôt public — la limite de
 contributeurs ne s'applique qu'aux dépôts privés (voir `ADMIN.md`).
+
+**Une image de héro téléversée depuis l'admin arrêtait la reconstruction.**
+Le 18/10/2026, la première image de héro envoyée depuis le CMS (sur
+« Algériennes surexposées (article) ») a fait échouer la construction sur
+`ImageNotFound` : l'image était bien en ligne et bien enregistrée, mais Astro
+la cherchait à la racine du projet au lieu de `public/`. Résultat exactement
+semblable au cas précédent — l'admin disait « publié », le site ne bougeait
+plus, et pas seulement sur cet article : **une reconstruction qui échoue gèle
+le site entier**. Corrigé dans `src/content.config.ts` (un chemin commençant
+par `/` est désormais reconnu comme fichier de `public/` avant toute tentative
+d'optimisation). Les images téléversées depuis l'admin fonctionnent.

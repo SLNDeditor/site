@@ -1,6 +1,19 @@
-import { defineCollection } from 'astro:content';
+import { defineCollection, type SchemaContext } from 'astro:content';
 import { glob } from 'astro/loaders';
 import { z } from 'astro/zod';
+
+// Héro : les deux conventions cohabitent, mais elles ne se valident pas de la
+// même façon.
+//   « /blog-media/… » : fichier de `public/`, téléversé depuis le CMS. Il doit
+//     rester une **chaîne**. `image()` accepte la valeur à la validation puis
+//     cherche le fichier à la racine du projet (pas dans `public/`) : la
+//     construction s'arrête alors sur `ImageNotFound`, l'admin affiche
+//     « publié » et le site en ligne ne bouge plus. D'où le test de chemin
+//     absolu **avant** `image()` — un `z.union` retient la première branche qui
+//     valide.
+//   « ./images/… » : image locale, optimisée par Astro (convention historique).
+const heroImage = (image: SchemaContext['image']) =>
+	z.union([z.string().startsWith('/'), image(), z.string()]).optional();
 
 const blog = defineCollection({
 	// Load Markdown and MDX files in the `src/content/blog/` directory.
@@ -20,10 +33,9 @@ const blog = defineCollection({
 			// Afficher ou non la date sur l'article (par défaut : affichée)
 			showDate: z.boolean().optional().default(true),
 			updatedDate: z.coerce.date().optional(),
-			// Soit une image locale optimisée (chemin relatif « ./images/… »,
-			// convention historique), soit un chemin absolu vers /public
-			// (« /blog-media/… », images téléversées depuis le CMS).
-			heroImage: z.union([image(), z.string()]).optional(),
+			// Voir `heroImage` plus haut : image locale optimisée
+			// (« ./images/… ») ou chemin absolu vers /public (« /blog-media/… »).
+			heroImage: heroImage(image),
 			// Rubrique : essai | theatre | recit | actualites | interventions |
 			// revue-de-presse | article | videos | page
 			category: z.string().optional(),
@@ -59,7 +71,7 @@ const pages = defineCollection({
 			// Idem collection « blog » : description = SEO seul, lead = chapeau visible.
 			description: z.string().optional().default(''),
 			lead: z.string().optional().default(''),
-			heroImage: z.union([image(), z.string()]).optional(),
+			heroImage: heroImage(image),
 			updatedDate: z.coerce.date().optional(),
 		}),
 });
