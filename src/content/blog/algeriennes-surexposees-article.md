@@ -2,7 +2,7 @@
 title: Algériennes surexposées (article)
 category: article
 menu: null
-heroImage: /blog-media/3916B814-0FA2-4F09-B736-37F22FC94D80.jpg
+heroImage: /blog-media/FA284703.jpg
 nada: null
 pubDate: 2008-11-27
 showDate: true
