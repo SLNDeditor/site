@@ -1,14 +1,16 @@
 ---
-title: "Autopsie d'un exil algérien ou Lux Beauté à la rose"
-description: "Une auto-fiction parue aux éditions du Cygne, collection Traces, 2010 : La narratrice est une Parisienne. Ses parents, arrivés de Kabylie dans les années 1960 et confrontés aux réalités de l’exil, l’imprègnent de leurs souffrances et humiliations. Une..."
-lead: "Une auto-fiction parue aux éditions du Cygne, collection Traces, 2010 : La narratrice est une Parisienne. Ses parents, arrivés de Kabylie dans les années 1960 et confrontés aux réalités de l’exil, l’imprègnent de leurs souffrances et humiliations. Une..."
-pubDate: 2010-01-09
+title: Autopsie d'un exil algérien ou Lux Beauté à la rose
 category: recit
-heroImage: "./images/zalia_sekai-2.jpg"
+menu: null
+heroImage: ./images/zalia_sekai-2.jpg
+nada: null
+pubDate: 2010-01-09
+showDate: true
+video: ''
+lead: Une auto-fiction parue aux éditions du Cygne, collection Traces, 2010.
+description: 'Une auto-fiction parue aux éditions du Cygne, collection Traces, 2010 : La narratrice est une Parisienne. Ses parents, arrivés de Kabylie dans les années 1960 et confrontés aux réalités de l’exil, l’imprègnent de leurs souffrances et humiliations. Une...'
 source: https://www.zaliasekai.net/article-autopsie-d-un-exil-algerien-chapitre-4-43044660.html
 ---
-
-Une auto-fiction parue aux éditions du Cygne, collection Traces, 2010 :
 
 **La narratrice est une Parisienne.**
 
@@ -34,4 +36,4 @@ Une chose semblait certaine, leur passé ne pouvait s’apprendre. Il s’oublia
 
 ..............................................................................................................................................................................................................
 
-Pour commander l'ouvrage en ligne **[rendez-vous ici](http://www.editionsducygne.com/editions-du-cygne-autopsie-exil-algerien.html)**
+Pour commander l'ouvrage en ligne [**rendez-vous ici**](http://www.editionsducygne.com/editions-du-cygne-autopsie-exil-algerien.html)
