@@ -2,7 +2,7 @@
 title: L'algérie marche dans nos rêves
 category: article
 menu: null
-heroImage: ''
+heroImage: /blog-media/pasted-image-1792756496920.png
 nada: null
 pubDate: 2011-02-12
 showDate: true
