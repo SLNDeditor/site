@@ -1,17 +1,16 @@
 ---
-title: "L'algérie marche dans nos rêves"
-description: "Cet article a été publié en 2003 dans la revue Passerelles n° 25. Il reste profondément d'actualité. À l'aube de l'année 2003, Année de l'Algérie, et 40 ans après la Libération, le peuple algérien s'interroge sur sa propre libération. Parce qu'une nation..."
-lead: "Cet article a été publié en 2003 dans la revue Passerelles n° 25. Il reste profondément d'actualité. À l'aube de l'année 2003, Année de l'Algérie, et 40 ans après la Libération, le peuple algérien s'interroge sur sa propre libération. Parce qu'une nation..."
-pubDate: 2011-02-12
+title: L'algérie marche dans nos rêves
 category: article
+menu: null
+heroImage: ''
+nada: null
+pubDate: 2011-02-12
+showDate: true
+video: ''
+lead: Cet article a été publié en 2003 dans la revue Passerelles n° 25. Il reste profondément d'actualité. À l'aube de l'année 2003, Année de l'Algérie, et 40 ans après la Libération, le peuple algérien s'interroge sur sa propre libération. Parce qu'une nation...
+description: Cet article a été publié en 2003 dans la revue Passerelles n° 25. Il reste profondément d'actualité. À l'aube de l'année 2003, Année de l'Algérie, et 40 ans après la Libération, le peuple algérien s'interroge sur sa propre libération. Parce qu'une nation...
 source: https://www.zaliasekai.net/article-l-algerie-marche-dans-nos-reves-67010036.html
 ---
-
-**Cet article a été publié en 2003 dans la revue _Passerelles_ n° 25.**
-
-**Il reste profondément d'actualité.**
-
- 
 
 **À l'aube de l'année 2003,**
 
@@ -27,7 +26,7 @@ source: https://www.zaliasekai.net/article-l-algerie-marche-dans-nos-reves-67010
 
 **Un projet d’État-nation incertain**
 
-**La Libération a posé la question de la construction de la nation, de son existence. 40 ans après, le peuple algérien s'interroge sur sa propre libération, sur les espoirs portés par cette indépendance, dans l'attente d'une nation [\[1\]](#_ftn1) pleine et entière, représentative de tous.**
+**La Libération a posé la question de la construction de la nation, de son existence. 40 ans après, le peuple algérien s'interroge sur sa propre libération, sur les espoirs portés par cette indépendance, dans l'attente d'une nation** [**[1]**](#_ftn1) **pleine et entière, représentative de tous.**
 
 **L'instabilité du projet d'État-nation trouve son origine dès la guerre de libération.**
 
@@ -39,7 +38,7 @@ source: https://www.zaliasekai.net/article-l-algerie-marche-dans-nos-reves-67010
 
 **Par conséquent, la libération qui aurait dû s’affirmer en tant que _décharge de servitude_ (Littré), n’a finalement abouti qu’à une libération de forme (départ du colonisateur et libération du pays) et non de fond (libération du peuple algérien par la participation de l'ensemble de la population aux affaires du pays). En d’autres termes, ce pays demeure aliéné par les conflits de pouvoir. L’Algérie est indépendante mais pas pour autant libérée. _La prison se reproduit et chaque libération la porte à nouveau en germe._ (Kateb Yacine).**
 
-**\*Un autre élément a contribué à l'instabilité du projet d'État-nation durant la guerre : la difficulté des Algériens de se penser en tant que nation. Pourquoi ? Le sentiment national est loin de rencontrer l'adhésion de l’ensemble de la population parce que la paysannerie algérienne reste attachée à ses valeurs et ses particularités locales comme le font remarquer les historiens Benjamin Stora[\[2\]](#_ftn2) et Mohammed Harbi [\[3\]](#_ftn3). L'Algérie étant un État tribal, l'idée d'une nation unifiée s'est par conséquent imposée par la violence et la contrainte. Les sanctions infligées par le FLN à la population algérienne ne suivant pas à la lettre ses consignes sont assez révélatrices (nez coupé,…). Déjà en 1843, Abd El Kader, émir algérien, n’échoua-t-il pas dans son entreprise d’unification des forces du pays contre le colonisateur ?**
+**\*Un autre élément a contribué à l'instabilité du projet d'État-nation durant la guerre : la difficulté des Algériens de se penser en tant que nation. Pourquoi ? Le sentiment national est loin de rencontrer l'adhésion de l’ensemble de la population parce que la paysannerie algérienne reste attachée à ses valeurs et ses particularités locales comme le font remarquer les historiens Benjamin Stora**[**[2]**](#_ftn2) **et Mohammed Harbi** [**[3]**](#_ftn3)**. L'Algérie étant un État tribal, l'idée d'une nation unifiée s'est par conséquent imposée par la violence et la contrainte. Les sanctions infligées par le FLN à la population algérienne ne suivant pas à la lettre ses consignes sont assez révélatrices (nez coupé,…). Déjà en 1843, Abd El Kader, émir algérien, n’échoua-t-il pas dans son entreprise d’unification des forces du pays contre le colonisateur ?**
 
 **Par ailleurs, une interrogation mérite d'être posée : une fois la guerre engagée, la société rurale n'a-t-elle pas exprimé dans la violence de la guerre, la violence sociale qu'elle subissait (de par les inégalités, la misère sociale et l'humiliation) ? Encore un élément qui semble montrer que la population n'a pas été véritablement guidée par la perspective d'une construction nationale.**
 
@@ -55,15 +54,15 @@ source: https://www.zaliasekai.net/article-l-algerie-marche-dans-nos-reves-67010
 
 **Une fois l’indépendance acquise, les autorités algériennes s'enlisent dans des conflits de pouvoir, sans jamais tenir compte des aspirations de son peuple. Et aujourd’hui, les Algériens vivent dans un État de non-droit, où les droits les plus fondamentaux sont bafoués : droit à l’alimentation, au travail, au logement, à la santé, à l’éducation, à l’information, à l’expression, à la justice, à la sécurité, bref droit à la dignité humaine, à la dignité d’un peuple.**
 
-**_L’État manque à ses devoirs_ les plus élémentaires en dépit des ressources naturelles du pays et de la rente pétrolière. 20 milliards de $ de réserves entreposées dans des banques étrangères ne servent pas à l’investissement en Algérie mais au monde extérieur [\[4\]](#_ftn4).**
+**_L’État manque à ses devoirs_ les plus élémentaires en dépit des ressources naturelles du pays et de la rente pétrolière. 20 milliards de $ de réserves entreposées dans des banques étrangères ne servent pas à l’investissement en Algérie mais au monde extérieur** [**[4]**](#_ftn4)**.**
 
-**Sous la pression du FMI, l'État est contraint de réduire drastiquement les dépenses publiques dans des secteurs essentiels (logements, santé, éducation,…). Dans ces circonstances, comment survivre lorsque 23 % [\[5\]](#_ftn5) de la population vit en deçà du seuil de pauvreté c’est-à-dire avec un revenu quotidien inférieur à 80 dinars (soit 1 $) quand on sait que le litre de lait est à 27 dinars, les fruits entre 80 et 150 dinars le kilo, la viande à plus de 500 dinars le kilo (et 47 % de la population vit dans la précarité). À cela s’ajoutent les pénuries d’eau. Le constat est sans appel : une famille sur 5 souffre de malnutrition.**
+**Sous la pression du FMI, l'État est contraint de réduire drastiquement les dépenses publiques dans des secteurs essentiels (logements, santé, éducation,…). Dans ces circonstances, comment survivre lorsque 23 %** [**[5]**](#_ftn5) **de la population vit en deçà du seuil de pauvreté c’est-à-dire avec un revenu quotidien inférieur à 80 dinars (soit 1 $) quand on sait que le litre de lait est à 27 dinars, les fruits entre 80 et 150 dinars le kilo, la viande à plus de 500 dinars le kilo (et 47 % de la population vit dans la précarité). À cela s’ajoutent les pénuries d’eau. Le constat est sans appel : une famille sur 5 souffre de malnutrition.**
 
 **Comment survivre quand les logements sont surpeuplés et exigus, quand les Algériens sont contraints d’habiter les cimetières, problème accentué après les intempéries dévastatrices de novembre 2001. Que dire de l’environnement, de l’eau pour partie non traitée, des décharges de plein air ( les usines de traitement des déchets étant inexistantes), …**
 
 **Et ces malades qui doivent apporter avec eux le nécessaire pour être hospitalisés . Des maladies jadis éradiquées refont surface : typhoïde, choléra,…sans parler de la pénurie de médicaments et de leur prix élevé, de la mortalité maternelle importante, de la mort de bébés à la suite de vaccination...**
 
-**Quant au système éducatif, le niveau d’instruction de la société algérienne est très faible, 3 % seulement des Algériens sont bacheliers, insuffisance due aux abandons, exclusions et à l’échec scolaire. La durée moyenne de scolarité est de 5,48 années alors qu’en France elle est de 19,7 années. Le système éducatif est inadapté : système bureaucratique, médiocre formation des formateurs (50 % du corps enseignant ne sont pas titulaires du bac.). La politique d’arabisation autoritaire et sauvage (menée depuis 62 et confortée depuis) a largement contribué à la détérioration de la qualité de l’enseignement. En effet, cette politique dont l’objet est de marginaliser les autres langues et parlers du pays (berbère, français, arabe dialectal qui sont pourtant les plus parlés) et d’instaurer la langue coranique a apporté une vision tronquée de l’histoire en niant l’histoire préislamique notamment et véhiculé les ferments de l’islamisme. L’éducation n’assume plus ses fonctions d’émancipation de la pensée mais de cristallisation des valeurs religieuses. Pourtant _On ne peut cacher indéfiniment à un peuple son histoire. Il finit par la connaître et l’écrire lui-même._[\[6\]](#_ftn6) Les cours sont parfois dispensés dans le froid, le noir, et dans des locaux sans portes. Le système éducatif n’offre aucune perspective sinon le chômage qui touche environ 40 % de la population active.**
+**Quant au système éducatif, le niveau d’instruction de la société algérienne est très faible, 3 % seulement des Algériens sont bacheliers, insuffisance due aux abandons, exclusions et à l’échec scolaire. La durée moyenne de scolarité est de 5,48 années alors qu’en France elle est de 19,7 années. Le système éducatif est inadapté : système bureaucratique, médiocre formation des formateurs (50 % du corps enseignant ne sont pas titulaires du bac.). La politique d’arabisation autoritaire et sauvage (menée depuis 62 et confortée depuis) a largement contribué à la détérioration de la qualité de l’enseignement. En effet, cette politique dont l’objet est de marginaliser les autres langues et parlers du pays (berbère, français, arabe dialectal qui sont pourtant les plus parlés) et d’instaurer la langue coranique a apporté une vision tronquée de l’histoire en niant l’histoire préislamique notamment et véhiculé les ferments de l’islamisme. L’éducation n’assume plus ses fonctions d’émancipation de la pensée mais de cristallisation des valeurs religieuses. Pourtant _On ne peut cacher indéfiniment à un peuple son histoire. Il finit par la connaître et l’écrire lui-même._**[**[6]**](#_ftn6) **Les cours sont parfois dispensés dans le froid, le noir, et dans des locaux sans portes. Le système éducatif n’offre aucune perspective sinon le chômage qui touche environ 40 % de la population active.**
 
 **Et que penser de la justice lorsque la concorde civile du président Bouteflika du 13 juillet 1999 a permis de gracier les combattants islamistes armés qui déposaient leurs armes et se présentaient aux autorités. Certains auraient d'ailleurs repris le maquis. Cette loi a exonéré les repentis des poursuites pénales. Cette impunité légalisée (ajoutée à l'impunité  au quotidien, faute de procès à la suite d'actes de tortures, arrestations arbitraires, exécutions, disparitions,…) entretient un sentiment de rancœur profond et de décrédibilisation vis-à-vis des autorités et de la justice qui n'assure pas son devoir d'impartialité.**
 
@@ -91,17 +90,17 @@ source: https://www.zaliasekai.net/article-l-algerie-marche-dans-nos-reves-67010
 
 **La confiscation de la parole s’exprime aussi à travers le trucage des élections. Les récentes élections législatives du 30 mai 2002 boycottées par une partie de la population et caractérisées par un taux d’abstention record depuis l’indépendance ( autour de 47,49 % ) donne gagnant le FLN ancien parti unique…**
 
-**_Non-prise en charge des revendications de la société__._ La confiscation de la parole s’accompagne de l’illégalité de la contestation. Le 18 avril 2001, un jeune lycéen trouve la mort dans une brigade de gendarmerie en Kabylie. C’est le début des révoltes qui vont s’étendre à l’ensemble du pays jusqu’au Sahara à Djanet le 12 janvier 2002 dont les revendications vont dépasser le cadre régionaliste dans lequel on voudrait l’y assoir. Aux cris de “ Pouvoir assassin ” “ Vous ne pouvez pas nous tuer, nous sommes déjà morts. ”, “ Pas de pardon ”, “ Non à la hogra (mépris) ”, les manifestants, durement réprimés, réclament un État de droit et moins de mépris (hogra).On compte une centaine de morts et des milliers de blessés.**
+**_Non-prise en charge des revendications de la société._ La confiscation de la parole s’accompagne de l’illégalité de la contestation. Le 18 avril 2001, un jeune lycéen trouve la mort dans une brigade de gendarmerie en Kabylie. C’est le début des révoltes qui vont s’étendre à l’ensemble du pays jusqu’au Sahara à Djanet le 12 janvier 2002 dont les revendications vont dépasser le cadre régionaliste dans lequel on voudrait l’y assoir. Aux cris de “ Pouvoir assassin ” “ Vous ne pouvez pas nous tuer, nous sommes déjà morts. ”, “ Pas de pardon ”, “ Non à la hogra (mépris) ”, les manifestants, durement réprimés, réclament un État de droit et moins de mépris (hogra).On compte une centaine de morts et des milliers de blessés.**
 
 **Une plate-forme de revendications en 15 points a vu le jour : la plate-forme d’El Kseur. Mais aucune issue à la crise n’a encore été trouvée, si ce n’est la reconnaissance constitutionnelle du tamazigh comme langue nationale, intervenue à quelques mois des élections législatives du 30 mai 2002. La colère de la population et la répression se poursuivent.**
 
-**_Le civisme devient honteuse soumission. Le refus de servir est un devoir sacré, le respect du vrai. Quand l’armée est utilisée comme instrument de domination, l’armée est en révolte contre la démocratie.[\[7\]](#_ftn7)_ : Voilà le sentiment qui domine aujourd’hui dans une partie du pays, le rôle de l’armée étant prépondérant.**
+**_Le civisme devient honteuse soumission. Le refus de servir est un devoir sacré, le respect du vrai. Quand l’armée est utilisée comme instrument de domination, l’armée est en révolte contre la démocratie.**[**[7]**](#_ftn7)**_ : Voilà le sentiment qui domine aujourd’hui dans une partie du pays, le rôle de l’armée étant prépondérant.**
 
-**Le refus de prise en charge des revendications de la société implique une violation des Pactes et Conventions internationaux qui constituent une protection de la population algérienne.[\[8\]](#_ftn8)  D'autant plus que les conventions internationales priment sur le droit interne en Algérie.**
+**Le refus de prise en charge des revendications de la société implique une violation des Pactes et Conventions internationaux qui constituent une protection de la population algérienne.**[**[8]**](#_ftn8)  **D'autant plus que les conventions internationales priment sur le droit interne en Algérie.**
 
 **_L’Algérie est un enjeu politique et financier qui justifie toutes les abjections possibles contre le peuple algérien._ Enjeu financier d’une part. La hausse du prix du pétrole a permis de dégager un excédent budgétaire, 540 milliards de dinars soit 6,7 milliards de dollars fin juin 2001 et la dette extérieure ne cesse de diminuer depuis 96. Mais le niveau de vie des Algériens est au plus bas. Cet argent est détourné et mis dans des banques étrangères au service d'une minorité alors que dans le même temps, tout est importé. L’agriculture algérienne n’assure que 25 % environ des besoins de la population. La surface agricole, déjà réduite, a baissé de plus de 40 % en 30 ans, laissant la part belle à la spéculation immobilière.**
 
-**Dans le même ordre d’idées, l’année 2003 est l’Année de l’Algérie. Pour ces animations culturelles en France , le gouvernement algérien va débloquer 185 millions de dinars soit  2,6 millions d’euros. Une année supposée apporter au public français des éléments de compréhension de la culture algérienne et réhabiliter la culture algérienne. Comment réhabiliter la culture algérienne quand la liberté d’expression est empêchée ? Quand la majorité des programmations pour 2003 ne rendent pas visibles les vrais problèmes en se noyant dans le folklore et les divertissements. Le 18 avril 2003, alors que l'on commémorera les révoltes , on continuera en France à fêter l'Algérie…_"Quand il y une date à célébrer, on sort les drapeaux, on nous sort nous aussi, et puis quand la date est passée, on nous remet dans les placards comme les drapeaux et les banderoles." [\[9\]](#_ftn9)_**
+**Dans le même ordre d’idées, l’année 2003 est l’Année de l’Algérie. Pour ces animations culturelles en France , le gouvernement algérien va débloquer 185 millions de dinars soit  2,6 millions d’euros. Une année supposée apporter au public français des éléments de compréhension de la culture algérienne et réhabiliter la culture algérienne. Comment réhabiliter la culture algérienne quand la liberté d’expression est empêchée ? Quand la majorité des programmations pour 2003 ne rendent pas visibles les vrais problèmes en se noyant dans le folklore et les divertissements. Le 18 avril 2003, alors que l'on commémorera les révoltes , on continuera en France à fêter l'Algérie…_"Quand il y une date à célébrer, on sort les drapeaux, on nous sort nous aussi, et puis quand la date est passée, on nous remet dans les placards comme les drapeaux et les banderoles."** [**[9]**](#_ftn9)**_**
 
 **Enjeu politique d’autre part où généraux et islamistes, généraux et généraux, se disputent le pays en le mettant à feu et à sang, se renvoyant dos à dos la responsabilité.**
 
@@ -113,7 +112,7 @@ source: https://www.zaliasekai.net/article-l-algerie-marche-dans-nos-reves-67010
 
 **Sur le plan politique, l’affaire Nezzar est assez éloquente et révélatrice du système de fonctionnement du pays. Général à la retraite, Khaled Nezzar se rend en France le 25 avril 2001 pour promouvoir son livre. Au cours de sa conférence-débat au Centre culturel algérien, il apprend que le parquet de Paris est instruit d’une plainte pour torture. Au titre de la Convention internationale contre la torture de 1984, la France est tenue de traduire en justice la personne incriminée. Khaled Nezzar met fin à sa conférence et regagne précipitamment Alger sans crainte d’être arrêté. Les autorités algériennes et françaises font valoir que Khaled Nezzar est en mission officielle et bénéficie donc de l’immunité, alors qu’il était à Paris pour la promotion de son livre…**
 
-**François Gèze, dans un article intitulé  _Françalgérie : sang, intox et corruption [\[10\]](#_ftn10)_, apporte des éléments de compréhension quant à la passivité des différents gouvernements français face au terrorisme, à la corruption,… en Algérie. Ainsi, pour que la France n'enlève pas son soutien au régime despotique algérien, les services algériens déploient tous les moyens (y compris les attentats) pour arriver à ses fins.**
+**François Gèze, dans un article intitulé  _Françalgérie : sang, intox et corruption** [**[10]**](#_ftn10)**_, apporte des éléments de compréhension quant à la passivité des différents gouvernements français face au terrorisme, à la corruption,… en Algérie. Ainsi, pour que la France n'enlève pas son soutien au régime despotique algérien, les services algériens déploient tous les moyens (y compris les attentats) pour arriver à ses fins.**
 
 **Par ailleurs, il s'interroge légitimement sur l'inexistence d'une commission d’enquête internationale à ce jour alors que aucune véritable enquête nationale n’est engagée, que la désinformation de l'opinion est à son comble et que les crimes restent impunis. Le peuple algérien n’est-il pas en droit d’exiger cette commission internationale face à l’incapacité des autorités algériennes de rétablir la justice ? En réalité, il semblerait que les autorités algériennes font pression sur le gouvernement français pour que celui-ci empêche (au sein de l'ONU) la création d'une commission d'enquête internationale  en Algérie.**
 
@@ -139,30 +138,28 @@ source: https://www.zaliasekai.net/article-l-algerie-marche-dans-nos-reves-67010
 
 **Mais il faut continuer d'une part de dénoncer et ouvrir les débats pour soutenir les revendications pour un État de droit et un État pour tous, pour une libération pleine et entière. Et d'autre part, essayer par-delà les résistances de dépasser les contestations corporatistes et communautaires (femmes, syndicats, presse, Kabyles, partis politiques,…) en associant la pluralité des revendications.**
 
-**_La cause du peuple algérien est la cause de tous les hommes libres_.[\[11\]](#_ftn11)**
+**_La cause du peuple algérien est la cause de tous les hommes libres_.**[**[11]**](#_ftn11)
 
- 
+* \* \*
 
-* * *
+[**[1]**](#_ftnref1) **Nation vient du latin _nascere_, naître**
 
-**[\[1\]](#_ftnref1) Nation vient du latin _nascere_, naître**
+[**[2]**](#_ftnref2) **Politis, 14 mars 2002, Accepter le côté sombre de l'Histoire**
 
-**[\[2\]](#_ftnref2) Politis, 14 mars 2002, Accepter le côté sombre de l'Histoire**
+[**[3]**](#_ftnref3) **Le Monde diplomatique, juillet 2002, Et la violence vint à l'Algérie**
 
-**[\[3\]](#_ftnref3) Le Monde diplomatique, juillet 2002, Et la violence vint à l'Algérie**
+[**[4]**](#_ftnref4) **Le Monde, 8 février 2002**
 
-**[\[4\]](#_ftnref4) Le Monde, 8 février 2002**
+[**[5]**](#_ftnref5) **Les chiffres cités dans cet article sont tirés du rapport de la FIDH (Fédération internationale des ligues des droits de l’homme) n° 319 de novembre 2001**
 
-**[\[5\]](#_ftnref5) Les chiffres cités dans cet article sont tirés du rapport de la FIDH (Fédération internationale des ligues des droits de l’homme) n° 319 de novembre 2001**
+[**[6]**](#_ftnref6) **Ferhat Abbas, La Nuit coloniale, éd. Julliard , 1962**
 
-**[\[6\]](#_ftnref6) Ferhat Abbas, La Nuit coloniale, éd. Julliard , 1962**
+[**[7]**](#_ftnref7) **Manifeste des 121 publié le 06 septembre 1960 revendique pour les soldats “ le droit à l’insurrection ”**
 
-**[\[7\]](#_ftnref7) Manifeste des 121 publié le 06 septembre 1960 revendique pour les soldats “ le droit à l’insurrection ”**
+[**[8]**](#_ftnref8) **Pacte international relatif aux droits civils et politiques, Pacte international relatif aux droits économiques, sociaux et culturels, Convention contre la torture, Convention pour l'élimination de toutes les formes de discrimination à l'égard des femmes, Convention pour l'élimination de la discrimination raciale, Convention relative aux droits de l'enfant, Charte africaine des droits de l'homme et des peuples**
 
-**[\[8\]](#_ftnref8) Pacte international relatif aux droits civils et politiques, Pacte international relatif aux droits économiques, sociaux et culturels, Convention contre la torture, Convention pour l'élimination de toutes les formes de discrimination à l'égard des femmes, Convention pour l'élimination de la discrimination raciale, Convention relative aux droits de l'enfant, Charte africaine des droits de l'homme et des peuples**
+[**[9]**](#_ftnref9) **Zhor Zerrari, Actes de la table ronde sur "La participation de la femme algérienne dans la lutte de libération nationale" in Cahiers maghrébins, université d'Oran, juin 1988. Cité dans Algérie le livre noir Amnesty International, Fédération internationale des ligues des droits de l'homme, Human Rights Watch, Reporters sans frontières, La découverte, 1997, p. 104**          
 
-**[\[9\]](#_ftnref9) Zhor Zerrari, Actes de la table ronde sur "La participation de la femme algérienne dans la lutte de libération nationale" in Cahiers maghrébins, université d'Oran, juin 1988. Cité dans Algérie le livre noir Amnesty International, Fédération internationale des ligues des droits de l'homme, Human Rights Watch, Reporters sans frontières, La découverte, 1997, p. 104**          
+[**[10]**](#_ftnref10) **Mouvements, n° 21-22, 16 mai 2002**
 
-**[\[10\]](#_ftnref10) Mouvements, n° 21-22, 16 mai 2002**
-
-**[\[11\]](#_ftnref11) Manifeste des 121**
+[**[11]**](#_ftnref11) **Manifeste des 121**
