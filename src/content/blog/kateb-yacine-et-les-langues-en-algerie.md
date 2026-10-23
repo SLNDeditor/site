@@ -7,14 +7,13 @@ nada: null
 pubDate: 2002-12-28
 showDate: true
 video: ''
-lead: ''
+lead: |-
+  **Revalorisation des langues populaires algériennes à travers le théâtre**
+
+  _Article publié dans Études et documents berbères n° 17, 1999, La boîte à documents, Edisud_
 description: Comment le théâtre de Kateb Yacine revalorise les langues populaires algériennes et rompt avec la diglossie. Études et documents berbères n° 17, 1999.
 source: https://www.zaliasekai.net/article-25896676.html
 ---
-
-**Revalorisation des langues populaires algériennes à travers le théâtre**
-
-_Article publié dans Études et documents berbères n° 17, 1999, La boîte à documents, Edisud_
 
 **Résumé**  
 
