@@ -2,13 +2,13 @@
 title: Kateb Yacine et les langues en Algérie
 category: article
 menu: null
-heroImage: ''
+heroImage: /blog-media/1 image_1489059_20230311_ob_f69e27_kateb-yacine.jpg
 nada: null
 pubDate: 2002-12-28
 showDate: true
 video: ''
-description: 'Comment le théâtre de Kateb Yacine revalorise les langues populaires algériennes et rompt avec la diglossie. Études et documents berbères n° 17, 1999.'
 lead: ''
+description: Comment le théâtre de Kateb Yacine revalorise les langues populaires algériennes et rompt avec la diglossie. Études et documents berbères n° 17, 1999.
 source: https://www.zaliasekai.net/article-25896676.html
 ---
 
