@@ -89,7 +89,7 @@ function rehypeFootnotesCustom() {
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://zaliasekai.netlify.app',
+	site: 'https://zaliasekai.vercel.app',
 	integrations: [mdx(), sitemap()],
 	markdown: {
 		remarkPlugins: [remarkFootnotes],
