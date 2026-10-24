@@ -1,6 +1,6 @@
 # zalia sékaï — site
 
-Code source du site de l'écrivaine **zalia sékaï** : <https://zaliasekai.netlify.app>
+Code source du site de l'écrivaine **zalia sékaï** : <https://zaliasekai.vercel.app>
 
 Essais, théâtre, récits et vidéos autour de l'exil, de l'Algérie, de la
 colonisation et de l'œuvre de Kateb Yacine.

@@ -4,7 +4,7 @@
 
 **Ce qui est en ligne fait foi. On ne l'écrase jamais.**
 
-Zalia publie ses textes depuis <https://zaliasekai.netlify.app/admin/>. Chaque
+Zalia publie ses textes depuis <https://zaliasekai.vercel.app/admin/>. Chaque
 publication écrit directement sur `origin/main`, puis Netlify reconstruit le
 site. Une fois un texte enregistré en ligne, **il n'y a pas de retour en
 arrière** : ce contenu est la référence.

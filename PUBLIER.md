@@ -4,7 +4,7 @@
 
 **Il n'y a rien à faire d'autre qu'écrire et cliquer « Publier ».**
 
-1. Aller sur <https://zaliasekai.netlify.app/admin/>
+1. Aller sur <https://zaliasekai.vercel.app/admin/>
 2. Se connecter : **« Se connecter avec un jeton d'accès »**, coller le jeton
    (une seule fois — le navigateur s'en souvient ensuite)
 3. Écrire ou modifier un texte
