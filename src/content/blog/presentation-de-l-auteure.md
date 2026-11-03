@@ -7,8 +7,8 @@ nada: null
 pubDate: 2006-12-04
 showDate: true
 video: ''
-description: Zalia SEKAÏ Juriste Auteure d'articles de recherche, d'articles journalistiques, de pièces de théâtre, de clips vidéo, de romans. J'explore différents moyens d'expression dans le dessein d'interroger les multiples formes de domination. J'interroge, entre...
 lead: Zalia SEKAÏ Juriste Auteure d'articles de recherche, d'articles journalistiques, de pièces de théâtre, de clips vidéo, de romans. J'explore différents moyens d'expression dans le dessein d'interroger les multiples formes de domination. J'interroge, entre...
+description: Zalia SEKAÏ Juriste Auteure d'articles de recherche, d'articles journalistiques, de pièces de théâtre, de clips vidéo, de romans. J'explore différents moyens d'expression dans le dessein d'interroger les multiples formes de domination. J'interroge, entre...
 source: https://www.zaliasekai.net/article-presentation-de-l-auteure-121430264.html
 ---
 
@@ -28,3 +28,8 @@ source: https://www.zaliasekai.net/article-presentation-de-l-auteure-121430264.h
         **- les systèmes de domination des étrangers...**
 
 -   **Vous pouvez librement télécharger, citer mes textes, à condition d'en indiquer les sources.**
+- **Vous pouvez me contacter à l'adresse suivante :**
+
+**zalia.sENLEV@outlook.fr**
+
+**(pour rendre active l'adresse enlever ENLEV)**
