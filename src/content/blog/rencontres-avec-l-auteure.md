@@ -7,9 +7,7 @@ nada: null
 pubDate: 2021-10-17
 showDate: true
 video: ''
-lead: |-
-  RENCONTRE AU SALON DE LA POÉSIE A PARIS le vendredi 22 octobre 2021
-  RENCONTRE AVEC L'AUTEURE 5 le samedi 3 décembre 2011
+lead: ''
 description: |-
   RENCONTRE AU SALON DE LA POÉSIE A PARIS le vendredi 22 octobre 2021
   RENCONTRE AVEC L'AUTEURE 5 le samedi 3 décembre 2011 J'ai été ravie que mon ouvrage, Lux Beauté à la rose , Autopsie d'un exil algérien, ait été présenté à l'occasion du salon Menil Livres...
