@@ -26,12 +26,11 @@ source: https://www.zaliasekai.net/article-rencontres-avec-l-auteure-116152027.h
 
 _\*\*![menil_livre.jpg](./images/menil_livre.jpg)  
 
-
 **_Lux Beauté à la rose, Autopsie d'un exil algérien,_**
 
 **à l'occasion du salon Menil Livres** 2 rue d'Eupatoria 75020 Paris
 
-16 h « Écrire l’autre rive » avec : Mohamed Benchicou,  
+« Écrire l’autre rive » avec : Mohamed Benchicou,  
 Arezki Metref, Marie Joëlle Rupp, Nourredine Saadi, Leïla  
 Sebbar, Zalia Sekaï.  
 
@@ -55,11 +54,9 @@ ACB Paris 37bis rue des Maronites 75020 Paris
 
 **Salon international du livre de la ville de l’Haÿ-Les-Roses**
 
-Dans le cadre de l’Initiative 2010 Année de l’Afrique en France
+dans le cadre de l’Initiative 2010 Année de l’Afrique en France, Année Voyage en Francophonie
 
-Année Voyage en Francophonie
-
-**A l'occasion du cinquantenaire des indépendances africaines**
+**à l'occasion du cinquantenaire des indépendances africaines**
 
 **RENCONTRE AVEC L'AUTEURE 2** 
 
@@ -87,6 +84,6 @@ _Le même jour Antoine Moreau vernissait son intervention_ sur le mur saint mart
 
 ![zalia sekai](./images/zalia_sekai.jpg)
 
-Le livre est disponible à la librairie  Les Lettres du Temps 19, rue Campo-Formio 75013 Paris
+Librairie  Les Lettres du Temps 19, rue Campo-Formio 75013 Paris
 
 ![librairie.jpg](./images/librairie.jpg)
