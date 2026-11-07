@@ -1,5 +1,5 @@
 ---
-title: Rencontres avec l'auteure
+title: Quelques rencontres avec l'auteure
 category: actualites
 menu: null
 heroImage: ./images/ob_64f052_carton-sekai-oct-61-1.jpg
