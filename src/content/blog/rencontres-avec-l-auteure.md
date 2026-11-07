@@ -86,21 +86,9 @@ Année Voyage en Francophonie
 
 **_le 5 juin 2010_**
 
-**Le 5 juin 2010 à partir de 16h30**
+Le mur saint martin, les éditions du Cygne et Zalia Sékaï étaient présents au **mursaintmartin/Snax'kfé**  180, rue saint-martin 75002 Paris
 
-Le mur saint martin, les éditions du Cygne et Zalia Sékaï
-
-étaient présents au
-
-**mursaintmartin/Snax'kfé**
-
-  180, rue saint-martin 75002 Paris
-
-Zalia a pu signer son ouvrage _autopsie d'un exil algérien_
-
-_Lux beauté à la rose le même jour Antoine Moreau vernissait son intervention_
-
-sur le mur saint martin [voir ici](http://lemursaintmartin.over-blog.com/).  
+_Le même jour Antoine Moreau vernissait son intervention_ sur le mur saint martin [voir ici](http://lemursaintmartin.over-blog.com/)
 
 **RENCONTRE AVEC L'AUTEURE 1** 
 
