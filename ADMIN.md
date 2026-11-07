@@ -3,25 +3,64 @@
 Éditeur en ligne façon WordPress pour ajouter / modifier les articles.
 Fichiers : `public/admin/index.html` (la page) et `public/admin/config.yml` (les champs).
 
-## Principe (comme WordPress)
+## Principe : la barre latérale suit les rubriques du site
 
-**Un seul endroit** : la collection « Articles ». On y écrit tous les textes.
-La liste se replie **par rubrique** (bouton « Grouper par » → Rubrique).
-⚠️ Si la liste se vide après avoir activé le groupement, retirer le bloc
-`view_groups` dans `config.yml`.
+Depuis le 7/11/2026, la colonne de gauche de l'admin liste **une entrée par
+rubrique** :
+
+```
+Tous les textes   ← la liste complète, repliée par rubrique
+Essai
+Théâtre
+Récit
+Actualités
+Interventions
+Revue de presse
+Articles (sélection)
+Vidéos (sélection)
+Hors menu
+Pages             ← autre dossier : « L'auteure »
+```
+
+Avant, tout était dans une seule liste « Articles », 37 textes les uns à la
+suite des autres, toutes rubriques mêlées. Le repli par rubrique existait déjà
+mais il fallait l'activer à la main, à chaque visite, dans le menu « Grouper
+par » — personne ne le faisait. C'était un défaut d'écriture de `config.yml` :
+`view_groups` y était une simple liste, forme qui ne permet pas de valeur par
+défaut. Il est désormais écrit `view_groups: { default: …, groups: [ … ] }`,
+et le repli s'applique tout seul.
+
+**Ce ne sont pas des dossiers.** Les neuf listes de textes pointent toutes vers
+`src/content/blog` ; chacune est une **vue filtrée** sur le champ *Rubrique*
+(`filter: { field: category, value: … }`). Un texte n'est jamais copié ni
+déplacé sur le disque.
+
+- **Changer un texte de rubrique** : modifier son champ *Rubrique*, publier. Il
+  quitte sa liste et apparaît dans l'autre.
+- **« Tous les textes » n'a pas de filtre** : c'est le filet de sécurité. Un
+  texte dont la rubrique serait vide ou inattendue n'apparaîtrait dans aucune
+  liste filtrée, mais apparaîtrait là. Rien ne peut devenir introuvable.
+- **Le formulaire est identique dans toutes les listes** (mêmes champs, même
+  ordre), pour qu'un texte s'édite de la même façon où qu'on l'ouvre et
+  qu'aucun champ ne se perde en passant de l'une à l'autre. C'est vérifié
+  automatiquement par `npm run verifier`.
+
+Le fichier `config.yml` utilise des **ancres YAML** (`&champ_titre`,
+`*champ_titre`…) pour ne décrire les champs qu'une seule fois. Modifier un
+champ à l'endroit de son ancre le modifie dans les dix listes.
 
 ## Champs d'un article
 
 | champ | rôle |
 |---|---|
 | **Titre** | grand titre en haut de l'article |
-| **Rubrique** | liste déroulante : Essai · Théâtre · Récit · Actualités · Interventions · Revue de presse · Articles (sélection) · Vidéos (sélection) · Page. Commande le menu et la barre latérale. |
+| **Rubrique** | liste déroulante : Essai · Théâtre · Récit · Actualités · Interventions · Revue de presse · Articles (sélection) · Vidéos (sélection) · Hors menu. Commande le menu du site, la barre latérale, **et** la liste de l'admin où l'on retrouve le texte. Les deux sélections (« Articles », « Vidéos ») n'avaient aucun effet avant le 7/11/2026 : les pages `/articles` et `/videos` lisaient une liste figée dans le code. Elles obéissent maintenant à ce champ ; le code ne fixe plus que l'**ordre** (`src/lib/categories.ts`). |
 | **Emplacement (menu Théâtre)** | bloc **replié**, à ouvrir **uniquement pour la rubrique Théâtre** (voir ci-dessous) |
 | **Image (héro)** | facultative |
 | **Numéro de revue NADA** | facultatif — si renseigné, la couverture devient un lien vers `public/nada/nada-<n>.pdf` (lecture + téléchargement, sans restriction) |
 | **Date** + **Afficher la date** | |
 | **Vidéo YouTube** | identifiant, facultatif |
-| **Chapeau** | résumé en italique sous le titre — **visible**, aucun effet sur Google |
+| **Chapeau** | résumé en italique sous le titre — **visible**, aucun effet sur Google. Vidé ici, il disparaît **partout** : page du texte *et* page de la rubrique (ce n'était pas le cas avant le 7/11/2026, voir `PUBLIER.md`). |
 | **Description Google** | résumé affiché par Google et dans les aperçus de partage — **invisible** sur la page |
 | **Corps du texte** | éditeur riche ; **bouton image** pour insérer une image n'importe où dans le texte |
 

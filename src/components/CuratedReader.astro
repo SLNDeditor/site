@@ -1,8 +1,7 @@
 ---
 import type { CollectionEntry } from 'astro:content';
-import { Image } from 'astro:assets';
 import CategoryAside from './CategoryAside.astro';
-import FormattedDate from './FormattedDate.astro';
+import PostHero from './PostHero.astro';
 
 interface Props {
 	title: string;
@@ -19,25 +18,8 @@ const featured = posts[0];
 	<section class="reader-main">
 		{
 			featured ? (
-				<article class:list={['post-hero', { 'no-cover': !featured.data.heroImage }]}>
-					{featured.data.heroImage && (
-						<a class="cover" href={`/blog/${featured.id}/`}>
-							{typeof featured.data.heroImage === 'string' ? (
-								<img src={featured.data.heroImage} alt={featured.data.title} loading="lazy" />
-							) : (
-								<Image src={featured.data.heroImage} alt={featured.data.title} widths={[400, 800]} sizes="(max-width: 860px) 90vw, 40vw" />
-							)}
-						</a>
-					)}
-					<div class="post-info">
-						{featured.data.showDate !== false && (
-							<p class="date">
-								<FormattedDate date={featured.data.pubDate} />
-							</p>
-						)}
-						<h1>{featured.data.title}</h1>
-						{featured.data.description && <p class="lead">{featured.data.description}</p>}
-					</div>
+				<article>
+					<PostHero post={featured} href={`/blog/${featured.id}/`} />
 				</article>
 			) : (
 				<div class="empty-cat">
@@ -60,32 +42,7 @@ const featured = posts[0];
 		padding: 3rem 1.5rem;
 	}
 	.reader-main { min-width: 0; }
-	.post-hero {
-		display: grid;
-		grid-template-columns: 1.05fr 0.95fr;
-		gap: 2.5rem;
-		align-items: center;
-	}
-	.post-hero.no-cover { grid-template-columns: 1fr; }
-	.post-hero.no-cover .post-info { max-width: 40rem; }
-	.cover :global(img) {
-		width: 100%;
-		height: auto;
-	}
-	.date {
-		font-family: var(--font-heading);
-		font-size: 0.85rem;
-		letter-spacing: 0.04em;
-		color: rgb(var(--muted));
-		margin: 0 0 0.6em 0;
-	}
-	.post-info h1 { margin: 0 0 0.5em 0; line-height: 1.1; }
-	.lead {
-		font-style: italic;
-		color: rgb(var(--muted));
-		font-size: 1.05rem;
-		margin: 0 0 1.5em 0;
-	}
+	/* Le héro (couverture, date, titre, chapeau) est rendu par PostHero.astro. */
 	.empty-cat { padding-top: 1rem; }
 
 	@media (max-width: 860px) {
@@ -94,6 +51,5 @@ const featured = posts[0];
 			gap: 0;
 			padding: 2rem 1.25rem;
 		}
-		.post-hero { grid-template-columns: 1fr; gap: 1.5rem; }
 	}
 </style>

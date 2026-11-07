@@ -3,10 +3,11 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import CuratedReader from '../components/CuratedReader.astro';
-import { getPostsBySlugs, CURATED_ARTICLES } from '../lib/categories';
+import { getCuratedPosts, CURATED_ARTICLES } from '../lib/categories';
 import { SITE_TITLE } from '../consts';
 
-const posts = await getPostsBySlugs(CURATED_ARTICLES);
+// Appartenance = champ « Rubrique » de l'admin ; CURATED_ARTICLES ne fixe que l'ordre.
+const posts = await getCuratedPosts('article', CURATED_ARTICLES);
 ---
 
 <html lang="fr">

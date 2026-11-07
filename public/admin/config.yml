@@ -1,8 +1,9 @@
 # --- Configuration Sveltia CMS (éditeur en ligne façon WordPress) ---
 #
-# Connexion : sur /admin/, Zalia clique « Sign In with Token » et colle son
-# token GitHub personnel (généré avec accès en lecture/écriture sur ce seul
-# dépôt) — ce token fait office de mot de passe. Pas de serveur OAuth requis.
+# Connexion : sur /admin/, Zalia clique « Se connecter avec un jeton d'accès »
+# et colle son jeton GitHub personnel (généré avec accès en lecture/écriture
+# sur ce seul dépôt) — ce jeton fait office de mot de passe. Pas de serveur
+# OAuth requis.
 
 backend:
   name: github
@@ -23,15 +24,473 @@ backend:
 media_folder: "/public/blog-media"
 public_folder: "/blog-media"
 
+# =============================================================================
+# ORGANISATION DE LA BARRE LATÉRALE
+#
+# Avant le 7/11/2026, tous les textes étaient dans une seule liste « Articles »,
+# les uns à la suite des autres, toutes rubriques mêlées : pour retrouver un
+# texte il fallait le chercher à l'œil parmi 37.
+#
+# Désormais la barre latérale suit les rubriques du site :
+#
+#   Tous les textes      ← liste complète, repliée par rubrique (filet de
+#                          sécurité : rien ne peut s'y cacher, et c'est ici
+#                          qu'on déplace un texte d'une rubrique à l'autre)
+#   Essai
+#   Théâtre
+#   Récit
+#   Actualités
+#   Interventions
+#   Revue de presse
+#   Articles (sélection)
+#   Vidéos (sélection)
+#   Hors menu
+#   Pages
+#
+# Chaque rubrique est une vue filtrée du MÊME dossier (src/content/blog) : il
+# n'y a pas de copie, pas de déplacement de fichier. Un texte apparaît dans la
+# rubrique que désigne son champ « Rubrique », et nulle part ailleurs.
+#
+# CHANGER LA RUBRIQUE D'UN TEXTE : modifier son champ « Rubrique » puis
+# publier. Le texte quitte sa liste et apparaît dans la nouvelle. Si on ne le
+# retrouve pas, il est forcément dans « Tous les textes ».
+#
+# Le formulaire d'édition est VOLONTAIREMENT identique dans toutes les listes
+# (mêmes champs, même ordre) : un texte s'édite de la même façon où qu'on
+# l'ouvre, et aucun champ ne peut être perdu en passant d'une liste à l'autre.
+# =============================================================================
+
 collections:
   # =========================================================================
-  # Pages statiques (L'auteure, etc.)
+  # 1. TOUS LES TEXTES — liste complète, repliée par rubrique.
+  #    C'est le filet de sécurité : un texte dont la rubrique est vide ou
+  #    inattendue n'apparaît dans aucune liste filtrée, mais apparaît ici.
+  # =========================================================================
+  - name: articles
+    label: "Tous les textes"
+    label_singular: "Texte"
+    description: >
+      La liste complète, repliée par rubrique. C'est ici qu'on déplace un texte
+      d'une rubrique à l'autre, et ici qu'on retrouve un texte introuvable
+      ailleurs.
+    folder: "src/content/blog"
+    create: true
+    delete: true
+    extension: md
+    format: frontmatter
+    slug: "{{slug}}"
+    # Repli par rubrique APPLIQUÉ D'OFFICE à l'ouverture.
+    # La forme « groups: + default: » est indispensable : écrite en simple
+    # liste (`view_groups: [ {label, field} ]`), l'option existe mais reste à
+    # activer à la main à chaque visite via le menu « Grouper par » — ce que
+    # personne ne faisait, d'où la liste à plat.
+    # NB : les intitulés de groupes sont les valeurs brutes du champ
+    # (« revue-de-presse », « actualites »…) ; c'est Sveltia qui en décide.
+    # Les listes par rubrique ci-dessous donnent les intitulés en clair.
+    view_groups:
+      default: rubrique
+      groups:
+        - name: rubrique
+          label: "Rubrique"
+          field: category
+    sortable_fields: [pubDate, title, category]
+    fields:
+      - &champ_titre
+        name: title
+        label: "Titre"
+        widget: string
+        hint: "Grand titre affiché en haut du texte."
+
+      - name: category
+        label: "Rubrique"
+        widget: select
+        default: essai
+        hint: >
+          Commande l'endroit du site où le texte apparaît — et la liste de
+          gauche dans laquelle on le retrouvera ici. Changer cette valeur
+          déplace le texte d'une rubrique à l'autre.
+        options: &options_rubriques
+          - { label: "Essai", value: essai }
+          - { label: "Théâtre", value: theatre }
+          - { label: "Récit", value: recit }
+          - { label: "Actualités", value: actualites }
+          - { label: "Interventions", value: interventions }
+          - { label: "Revue de presse", value: revue-de-presse }
+          - { label: "Articles (sélection mise en avant)", value: article }
+          - { label: "Vidéos (sélection)", value: videos }
+          - { label: "Hors menu", value: page }
+
+      # --- Sous-menu : replié, à ne remplir que pour la rubrique Théâtre ---
+      - &champ_menu
+        name: menu
+        label: "Emplacement (menu Théâtre)"
+        widget: object
+        collapsed: true
+        required: false
+        hint: >
+          À remplir UNIQUEMENT pour la rubrique « Théâtre ». Sinon, laisser
+          fermé.
+        fields:
+          - name: group
+            label: "Sous-menu"
+            widget: string
+            required: false
+            hint: >
+              Nom du sous-menu de 1er niveau (sous-menu existant : « En Attendant
+              l'algérie »). Taper un nom inédit crée un nouveau sous-menu.
+              Laisser vide = le texte est lui-même un item de 1er niveau.
+          - name: order
+            label: "Ordre dans le menu"
+            widget: number
+            required: false
+            value_type: int
+            min: 0
+            hint: "Petit nombre = plus haut. Vide = à la fin."
+          - name: parent
+            label: "Rattaché au texte (identifiant)"
+            widget: string
+            required: false
+            hint: >
+              Facultatif, pour imbriquer SOUS un autre texte. Mettre son
+              identifiant, ex. « principe-des-interventions ».
+          - name: label
+            label: "Libellé court (menu)"
+            widget: string
+            required: false
+            hint: "Facultatif. Texte affiché dans la barre latérale si le titre est trop long."
+
+      # --- Héro ---
+      - &champ_hero
+        name: heroImage
+        label: "Image (héro)"
+        widget: image
+        required: false
+        hint: "Facultatif. Image de couverture affichée à côté du titre."
+
+      - &champ_nada
+        name: nada
+        label: "Numéro de revue NADA"
+        widget: number
+        required: false
+        value_type: int
+        min: 1
+        hint: >
+          Facultatif. Si renseigné, la couverture (héro) devient un lien vers le
+          PDF de ce numéro (lecture + téléchargement). Le PDF doit exister dans
+          public/nada/nada-<n>.pdf.
+
+      - &champ_date
+        name: pubDate
+        label: "Date"
+        widget: datetime
+        format: "YYYY-MM-DD"
+        date_format: "DD/MM/YYYY"
+        time_format: false
+
+      - &champ_afficher_date
+        name: showDate
+        label: "Afficher la date"
+        widget: boolean
+        default: true
+        hint: "Décocher pour masquer la date sur le texte."
+
+      - &champ_video
+        name: video
+        label: "Vidéo YouTube (identifiant)"
+        widget: string
+        required: false
+        hint: "Facultatif. Ex. : 2swt5PT8a5U (l'identifiant après ?v= dans l'URL YouTube)."
+
+      # --- Chapeau : VISIBLE sur la page, sans effet sur Google ---
+      - &champ_chapeau
+        name: lead
+        label: "Chapeau (affiché sous le titre)"
+        widget: markdown
+        required: false
+        minimal: true
+        buttons: [bold, italic, quote]
+        editor_components: []
+        hint: >
+          Court paragraphe d'introduction, affiché en italique sous le titre.
+          VIDER CE CHAMP fait disparaître le chapeau partout : sur la page du
+          texte ET sur la page de la rubrique. N'a AUCUN effet sur Google.
+
+      # --- Description SEO : INVISIBLE sur la page, sert à Google ---
+      - &champ_description
+        name: description
+        label: "Description Google (invisible sur la page)"
+        widget: text
+        required: false
+        hint: >
+          Le résumé que Google affiche dans ses résultats, et l'aperçu lors d'un
+          partage sur les réseaux. 150 à 160 caractères. Ne s'affiche JAMAIS sur
+          la page. À ne pas confondre avec le chapeau ci-dessus : vider ce champ
+          fait disparaître le texte des résultats de recherche.
+
+      # --- Corps du texte ---
+      - &champ_corps
+        name: body
+        label: "Corps du texte"
+        widget: markdown
+        hint: "Le texte complet. Bouton image pour insérer une image où l'on veut."
+        buttons: [bold, italic, heading-two, heading-three, quote, bulleted-list, numbered-list, link]
+
+  # =========================================================================
+  # 2. UNE LISTE PAR RUBRIQUE — vues filtrées du même dossier.
+  #    `filter` ne cache pas les textes : il les répartit. Le formulaire est
+  #    le même partout (anchors YAML *champ_… ci-dessus) ; seule la valeur par
+  #    défaut de « Rubrique » change, pour qu'un texte créé depuis une liste
+  #    atterrisse dans la bonne rubrique.
+  # =========================================================================
+  - name: rub-essai
+    label: "Essai"
+    label_singular: "Essai"
+    description: "Textes de la rubrique Essai (page /essai/)."
+    folder: "src/content/blog"
+    filter: { field: category, value: essai }
+    create: true
+    delete: true
+    extension: md
+    format: frontmatter
+    slug: "{{slug}}"
+    sortable_fields: [pubDate, title]
+    fields:
+      - *champ_titre
+      - { name: category, label: "Rubrique", widget: select, default: essai, options: *options_rubriques, hint: "Changer cette valeur déplace le texte dans une autre liste." }
+      - *champ_menu
+      - *champ_hero
+      - *champ_nada
+      - *champ_date
+      - *champ_afficher_date
+      - *champ_video
+      - *champ_chapeau
+      - *champ_description
+      - *champ_corps
+
+  - name: rub-theatre
+    label: "Théâtre"
+    label_singular: "Texte de théâtre"
+    description: >
+      Textes de la rubrique Théâtre (page /theatre/). C'est la seule rubrique
+      où le bloc « Emplacement (menu Théâtre) » sert : il commande
+      l'arborescence de la barre latérale du site.
+    folder: "src/content/blog"
+    filter: { field: category, value: theatre }
+    create: true
+    delete: true
+    extension: md
+    format: frontmatter
+    slug: "{{slug}}"
+    sortable_fields: [pubDate, title]
+    fields:
+      - *champ_titre
+      - { name: category, label: "Rubrique", widget: select, default: theatre, options: *options_rubriques, hint: "Changer cette valeur déplace le texte dans une autre liste." }
+      - *champ_menu
+      - *champ_hero
+      - *champ_nada
+      - *champ_date
+      - *champ_afficher_date
+      - *champ_video
+      - *champ_chapeau
+      - *champ_description
+      - *champ_corps
+
+  - name: rub-recit
+    label: "Récit"
+    label_singular: "Récit"
+    description: "Textes de la rubrique Récit (page /recit/)."
+    folder: "src/content/blog"
+    filter: { field: category, value: recit }
+    create: true
+    delete: true
+    extension: md
+    format: frontmatter
+    slug: "{{slug}}"
+    sortable_fields: [pubDate, title]
+    fields:
+      - *champ_titre
+      - { name: category, label: "Rubrique", widget: select, default: recit, options: *options_rubriques, hint: "Changer cette valeur déplace le texte dans une autre liste." }
+      - *champ_menu
+      - *champ_hero
+      - *champ_nada
+      - *champ_date
+      - *champ_afficher_date
+      - *champ_video
+      - *champ_chapeau
+      - *champ_description
+      - *champ_corps
+
+  - name: rub-actualites
+    label: "Actualités"
+    label_singular: "Actualité"
+    description: "Textes de la rubrique Actualités (page /actualites/)."
+    folder: "src/content/blog"
+    filter: { field: category, value: actualites }
+    create: true
+    delete: true
+    extension: md
+    format: frontmatter
+    slug: "{{slug}}"
+    sortable_fields: [pubDate, title]
+    fields:
+      - *champ_titre
+      - { name: category, label: "Rubrique", widget: select, default: actualites, options: *options_rubriques, hint: "Changer cette valeur déplace le texte dans une autre liste." }
+      - *champ_menu
+      - *champ_hero
+      - *champ_nada
+      - *champ_date
+      - *champ_afficher_date
+      - *champ_video
+      - *champ_chapeau
+      - *champ_description
+      - *champ_corps
+
+  - name: rub-interventions
+    label: "Interventions"
+    label_singular: "Intervention"
+    description: "Textes de la rubrique Interventions (page /interventions/)."
+    folder: "src/content/blog"
+    filter: { field: category, value: interventions }
+    create: true
+    delete: true
+    extension: md
+    format: frontmatter
+    slug: "{{slug}}"
+    sortable_fields: [pubDate, title]
+    fields:
+      - *champ_titre
+      - { name: category, label: "Rubrique", widget: select, default: interventions, options: *options_rubriques, hint: "Changer cette valeur déplace le texte dans une autre liste." }
+      - *champ_menu
+      - *champ_hero
+      - *champ_nada
+      - *champ_date
+      - *champ_afficher_date
+      - *champ_video
+      - *champ_chapeau
+      - *champ_description
+      - *champ_corps
+
+  - name: rub-revue-de-presse
+    label: "Revue de presse"
+    label_singular: "Article de presse"
+    description: "Textes de la rubrique Revue de presse (page /revue-de-presse/)."
+    folder: "src/content/blog"
+    filter: { field: category, value: revue-de-presse }
+    create: true
+    delete: true
+    extension: md
+    format: frontmatter
+    slug: "{{slug}}"
+    sortable_fields: [pubDate, title]
+    fields:
+      - *champ_titre
+      - { name: category, label: "Rubrique", widget: select, default: revue-de-presse, options: *options_rubriques, hint: "Changer cette valeur déplace le texte dans une autre liste." }
+      - *champ_menu
+      - *champ_hero
+      - *champ_nada
+      - *champ_date
+      - *champ_afficher_date
+      - *champ_video
+      - *champ_chapeau
+      - *champ_description
+      - *champ_corps
+
+  - name: rub-selection-articles
+    label: "Articles (sélection)"
+    label_singular: "Article de la sélection"
+    description: >
+      La sélection mise en avant sur la page /articles. Mettre un texte dans
+      cette rubrique l'y fait apparaître pour de bon (ce n'était pas le cas
+      avant le 7/11/2026). L'ordre d'affichage est fixé dans le code
+      (src/lib/categories.ts) ; un texte ajouté ici passe en fin de liste.
+    folder: "src/content/blog"
+    filter: { field: category, value: article }
+    create: true
+    delete: true
+    extension: md
+    format: frontmatter
+    slug: "{{slug}}"
+    sortable_fields: [pubDate, title]
+    fields:
+      - *champ_titre
+      - { name: category, label: "Rubrique", widget: select, default: article, options: *options_rubriques, hint: "Changer cette valeur déplace le texte dans une autre liste." }
+      - *champ_menu
+      - *champ_hero
+      - *champ_nada
+      - *champ_date
+      - *champ_afficher_date
+      - *champ_video
+      - *champ_chapeau
+      - *champ_description
+      - *champ_corps
+
+  - name: rub-selection-videos
+    label: "Vidéos (sélection)"
+    label_singular: "Vidéo de la sélection"
+    description: >
+      La sélection de la page /videos. Mettre un texte dans cette rubrique l'y
+      fait apparaître pour de bon (ce n'était pas le cas avant le 7/11/2026).
+      Renseigner aussi « Vidéo YouTube (identifiant) » pour que le lecteur
+      s'affiche en haut du texte.
+    folder: "src/content/blog"
+    filter: { field: category, value: videos }
+    create: true
+    delete: true
+    extension: md
+    format: frontmatter
+    slug: "{{slug}}"
+    sortable_fields: [pubDate, title]
+    fields:
+      - *champ_titre
+      - { name: category, label: "Rubrique", widget: select, default: videos, options: *options_rubriques, hint: "Changer cette valeur déplace le texte dans une autre liste." }
+      - *champ_menu
+      - *champ_hero
+      - *champ_nada
+      - *champ_date
+      - *champ_afficher_date
+      - *champ_video
+      - *champ_chapeau
+      - *champ_description
+      - *champ_corps
+
+  - name: rub-hors-menu
+    label: "Hors menu"
+    label_singular: "Texte hors menu"
+    description: >
+      Textes qui ont leur adresse (/blog/…) mais ne figurent dans aucune
+      rubrique du menu : avertissement, contact, présentation de l'auteure.
+      On y accède par un lien direct ou par le pied de page.
+    folder: "src/content/blog"
+    filter: { field: category, value: page }
+    create: true
+    delete: true
+    extension: md
+    format: frontmatter
+    slug: "{{slug}}"
+    sortable_fields: [pubDate, title]
+    fields:
+      - *champ_titre
+      - { name: category, label: "Rubrique", widget: select, default: page, options: *options_rubriques, hint: "Changer cette valeur déplace le texte dans une autre liste." }
+      - *champ_menu
+      - *champ_hero
+      - *champ_nada
+      - *champ_date
+      - *champ_afficher_date
+      - *champ_video
+      - *champ_chapeau
+      - *champ_description
+      - *champ_corps
+
+  # =========================================================================
+  # 3. PAGES STATIQUES (L'auteure)
+  #    Collection à part : un autre dossier (src/content/pages), pas de date,
+  #    pas de rubrique, une URL fixe (/about).
   # =========================================================================
   - name: pages
     label: "Pages"
     label_singular: "Page"
     description: >
-      Pages statiques du site (« L'auteure », etc.). Une URL fixe, pas de date,
+      Pages statiques du site (« L'auteure »). Une URL fixe, pas de date,
       pas de rubrique.
     folder: "src/content/pages"
     create: true
@@ -75,155 +534,4 @@ collections:
         label: "Contenu"
         widget: markdown
         hint: "Le texte complet de la page."
-        buttons: [bold, italic, heading-two, heading-three, quote, bulleted-list, numbered-list, link]
-
-  # =========================================================================
-  # UN SEUL endroit pour tous les articles (principe WordPress).
-  # La liste se replie par rubrique (bouton « Grouper par » → Rubrique).
-  # « Créer » → choisir la rubrique ; pour le théâtre, ouvrir « Emplacement
-  # (menu Théâtre) » et renseigner le sous-menu.
-  # =========================================================================
-  - name: articles
-    label: "Articles"
-    label_singular: "Article"
-    description: >
-      Tous les textes du site. Le champ « Rubrique » commande où l'article
-      apparaît dans le menu. Le titre apparaît ensuite tout seul dans la barre
-      latérale de la rubrique.
-    folder: "src/content/blog"
-    create: true
-    delete: true
-    extension: md
-    format: frontmatter
-    slug: "{{slug}}"
-    # Liste groupée par rubrique. NB : si la liste se vide après avoir activé
-    # « Grouper par », retirer ce bloc `view_groups`.
-    view_groups:
-      - { label: "Rubrique", field: category }
-    sortable_fields: [pubDate, title, category]
-    fields:
-      - name: title
-        label: "Titre"
-        widget: string
-        hint: "Grand titre affiché en haut de l'article."
-
-      - name: category
-        label: "Rubrique"
-        widget: select
-        default: essai
-        hint: "Où l'article apparaît dans le menu et la barre latérale."
-        options:
-          - { label: "Essai", value: essai }
-          - { label: "Théâtre", value: theatre }
-          - { label: "Récit", value: recit }
-          - { label: "Actualités", value: actualites }
-          - { label: "Interventions", value: interventions }
-          - { label: "Revue de presse", value: revue-de-presse }
-          - { label: "Articles (sélection mise en avant)", value: article }
-          - { label: "Vidéos (sélection)", value: videos }
-          - { label: "Page (hors menu)", value: page }
-
-      # --- Sous-menu : replié, à ne remplir que pour la rubrique Théâtre ---
-      - name: menu
-        label: "Emplacement (menu Théâtre)"
-        widget: object
-        collapsed: true
-        required: false
-        hint: >
-          À remplir UNIQUEMENT pour la rubrique « Théâtre ». Sinon, laisser
-          fermé.
-        fields:
-          - name: group
-            label: "Sous-menu"
-            widget: string
-            required: false
-            hint: >
-              Nom du sous-menu de 1er niveau (sous-menu existant : « En Attendant
-              l'algérie »). Taper un nom inédit crée un nouveau sous-menu.
-              Laisser vide = l'article est lui-même un item de 1er niveau.
-          - name: order
-            label: "Ordre dans le menu"
-            widget: number
-            required: false
-            value_type: int
-            min: 0
-            hint: "Petit nombre = plus haut. Vide = à la fin."
-          - name: parent
-            label: "Rattaché à l'article (identifiant)"
-            widget: string
-            required: false
-            hint: >
-              Facultatif, pour imbriquer SOUS un autre article. Mettre son
-              identifiant, ex. « principe-des-interventions ».
-          - name: label
-            label: "Libellé court (menu)"
-            widget: string
-            required: false
-            hint: "Facultatif. Texte affiché dans la barre latérale si le titre est trop long."
-
-      # --- Héro ---
-      - name: heroImage
-        label: "Image (héro)"
-        widget: image
-        required: false
-        hint: "Facultatif. Image de couverture affichée à côté du titre."
-
-      - name: nada
-        label: "Numéro de revue NADA"
-        widget: number
-        required: false
-        value_type: int
-        min: 1
-        hint: >
-          Facultatif. Si renseigné, la couverture (héro) devient un lien vers le
-          PDF de ce numéro (lecture + téléchargement). Le PDF doit exister dans
-          public/nada/nada-<n>.pdf.
-
-      - name: pubDate
-        label: "Date"
-        widget: datetime
-        format: "YYYY-MM-DD"
-        date_format: "DD/MM/YYYY"
-        time_format: false
-
-      - name: showDate
-        label: "Afficher la date"
-        widget: boolean
-        default: true
-        hint: "Décocher pour masquer la date sur l'article."
-
-      - name: video
-        label: "Vidéo YouTube (identifiant)"
-        widget: string
-        required: false
-        hint: "Facultatif. Ex. : 2swt5PT8a5U (l'identifiant après ?v= dans l'URL YouTube)."
-
-      # --- Chapeau : VISIBLE sur la page, sans effet sur Google ---
-      - name: lead
-        label: "Chapeau (affiché sous le titre)"
-        widget: markdown
-        required: false
-        minimal: true
-        buttons: [bold, italic, quote]
-        editor_components: []
-        hint: >
-          Court paragraphe d'introduction, affiché en italique sous le titre.
-          Laisser vide = aucun chapeau. N'a AUCUN effet sur Google.
-
-      # --- Description SEO : INVISIBLE sur la page, sert à Google ---
-      - name: description
-        label: "Description Google (invisible sur la page)"
-        widget: text
-        required: false
-        hint: >
-          Le résumé que Google affiche dans ses résultats, et l'aperçu lors d'un
-          partage sur les réseaux. 150 à 160 caractères. Ne s'affiche JAMAIS sur
-          la page. À ne pas confondre avec le chapeau ci-dessus : vider ce champ
-          fait disparaître le texte des résultats de recherche.
-
-      # --- Corps du texte ---
-      - name: body
-        label: "Corps du texte"
-        widget: markdown
-        hint: "Le texte complet. Bouton image pour insérer une image où l'on veut."
         buttons: [bold, italic, heading-two, heading-three, quote, bulleted-list, numbered-list, link]

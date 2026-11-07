@@ -18,6 +18,29 @@ de tableau de bord à ouvrir, pas de ligne de commande.
 > Netlify : c'est faux, et ce n'est plus nécessaire.** La publication
 > automatique a été réparée. Ces notes ont été supprimées.
 
+## Si un texte supprimé reste affiché
+
+**C'était un vrai bug du site, corrigé le 7 novembre 2026. Ce n'était pas une
+erreur de manipulation.**
+
+Vider le **Chapeau** d'un texte le faisait disparaître de la page du texte
+(`/blog/…`) — mais **pas** de la page de sa rubrique (`/actualites/`,
+`/essai/`…), qui continuait d'afficher l'ancien texte. En réalité la page de
+la rubrique n'affichait pas le chapeau du tout : elle affichait la
+**Description Google**, qui lui ressemble à l'écran. Vider le chapeau n'avait
+donc aucun effet sur elle.
+
+Le 7 novembre, Zalia a republié douze fois de suite « Quelques rencontres avec
+l'auteure » en voyant le texte revenir à chaque fois. Les trois endroits où un
+texte s'affiche en tête de page passent désormais par le **même** code
+(`src/components/PostHero.astro`), et un contrôle automatique (`npm run
+verifier`) échoue si l'écart se reforme.
+
+**Ce qui vaut maintenant** : ce qui est vidé dans l'admin disparaît partout,
+ce qui y est ajouté apparaît partout. S'il reste quelque chose à l'écran après
+deux ou trois minutes et un rechargement avec `Cmd-Maj-R`, ce n'est pas le
+chapeau — c'est le **corps du texte** qui commence par la même phrase.
+
 ## Les deux champs qu'on confond toujours
 
 | champ | où ça se voit | si on le vide |

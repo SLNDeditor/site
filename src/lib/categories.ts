@@ -36,7 +36,23 @@ export const NAV: NavItem[] = [
 	{ href: '/revue-de-presse', label: 'Revue de presse' },
 ];
 
-// Sélection « Articles » : essais mis en avant, dans cet ordre précis.
+// --- Sélections « Articles » et « Vidéos » -----------------------------------
+// Ces deux pages ne sont PAS des rubriques au sens de CATEGORIES : elles
+// n'ont pas de page /<rubrique>/ générée par [category].astro. Elles sont
+// pilotées par le champ « Rubrique » de l'admin, exactement comme les autres :
+//   • Rubrique = « Articles (sélection mise en avant) » → category: article
+//   • Rubrique = « Vidéos (sélection) »                 → category: videos
+//
+// POURQUOI CE COMMENTAIRE : jusqu'au 7/11/2026 ces deux pages lisaient
+// UNIQUEMENT les listes de slugs ci-dessous. Choisir « Articles (sélection
+// mise en avant) » dans l'admin n'avait donc aucun effet : le texte était
+// enregistré, publié, et n'apparaissait nulle part. Les listes ne servent plus
+// qu'à fixer l'ORDRE d'affichage ; l'appartenance vient du champ Rubrique.
+// Un texte tagué mais absent de la liste s'ajoute à la fin (du plus récent au
+// plus ancien). Un slug listé dont la rubrique a changé disparaît — c'est
+// voulu : l'admin fait foi.
+
+// Ordre d'affichage de la sélection « Articles ».
 export const CURATED_ARTICLES: string[] = [
 	'algeria-on-my-mind',
 	'kateb-yacine-martin-luther-king',
@@ -47,7 +63,7 @@ export const CURATED_ARTICLES: string[] = [
 	'la-langue-a-deux-tetes-le-cas-algerien',
 ];
 
-// Sélection « Vidéos » : les vidéos seront ajoutées ensuite dans chaque texte.
+// Ordre d'affichage de la sélection « Vidéos ».
 export const CURATED_VIDEOS: string[] = [
 	'french-dream-is-a-dream-3',
 	'french-dream-is-a-dream-2',
@@ -130,4 +146,18 @@ export async function getPostsBySlugs(slugs: string[]) {
 	const all = await getCollection('blog');
 	const byId = new Map(all.map((p) => [p.id, p]));
 	return slugs.map((s) => byId.get(s)).filter((p): p is NonNullable<typeof p> => Boolean(p));
+}
+
+// Textes d'une sélection : appartenance donnée par le champ « Rubrique » de
+// l'admin, ordre donné par la liste de slugs. Les textes tagués hors liste
+// viennent après, du plus récent au plus ancien.
+export async function getCuratedPosts(category: 'article' | 'videos', order: string[]) {
+	const posts = await getCollection('blog', (p) => p.data.category === category);
+	const rank = new Map(order.map((slug, i) => [slug, i]));
+	return posts.sort((a, b) => {
+		const ra = rank.get(a.id) ?? Number.POSITIVE_INFINITY;
+		const rb = rank.get(b.id) ?? Number.POSITIVE_INFINITY;
+		if (ra !== rb) return ra - rb;
+		return b.data.pubDate.valueOf() - a.data.pubDate.valueOf();
+	});
 }

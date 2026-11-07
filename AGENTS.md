@@ -69,6 +69,32 @@ Git et suspend toutes les reconstructions — l'admin continue alors d'afficher
 
 ---
 
+## Avant de pousser du code : `npm run verifier`
+
+```sh
+npm run verifier
+```
+
+Construit le site, puis contrôle que **ce que l'admin enregistre est bien ce
+que le site affiche** : le bloc « chapeau » ne contient que le champ *Chapeau*
+(jamais la *Description Google*), un chapeau vidé ne réapparaît nulle part,
+aucune page sans description Google, aucun lien imbriqué, et chaque texte
+apparaît dans exactement une liste de l'admin. Sort en erreur sinon.
+
+**Pourquoi** : le 7/11/2026, deux gabarits de page affichaient la *Description
+Google* à la place du *Chapeau*. Zalia a vidé le chapeau de « Quelques
+rencontres avec l'auteure » et republié **douze fois** en voyant le texte
+revenir sur `/actualites/`. Rien ne signalait l'écart : la construction
+réussissait, l'admin affichait « publié ». Le script est là pour que ce genre
+d'écart soit bruyant.
+
+Le héro (couverture, date, titre, chapeau) est rendu par
+**`src/components/PostHero.astro`** et par lui seul — `BlogPost.astro`,
+`[category].astro` et `CuratedReader.astro` l'appellent. Ne pas recopier ce
+bloc ailleurs : c'est la recopie qui avait créé l'écart.
+
+---
+
 ## Development
 
 When starting the dev server, use background mode:

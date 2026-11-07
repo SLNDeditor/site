@@ -1,0 +1,132 @@
+---
+// Héro d'un texte : couverture, date, titre, chapeau.
+//
+// SOURCE UNIQUE pour les trois endroits où un texte s'affiche en tête de page :
+//   • /blog/<slug>/   (BlogPost.astro)
+//   • /<rubrique>/    ([category].astro — le texte le plus récent de la rubrique)
+//   • /articles, /videos (CuratedReader.astro — la sélection)
+//
+// POURQUOI UN SEUL COMPOSANT : ces trois gabarits recopiaient le même héro
+// chacun de son côté. Le 7/11/2026, on a découvert que deux d'entre eux
+// affichaient encore la **description Google** à la place du **chapeau** :
+// Zalia vidait le chapeau d'un texte, la page de l'article obéissait, la page
+// de la rubrique continuait d'afficher l'ancien texte. Elle a republié douze
+// fois de suite le même article avant qu'on comprenne. Tant que le héro est
+// rendu ici et nulle part ailleurs, l'écart ne peut plus se reformer.
+//
+// RÈGLE : « description » ne s'affiche JAMAIS. Elle ne sert qu'à la balise
+// <meta name="description"> (Google, aperçus de partage). Le texte visible
+// sous le titre est « lead ».
+import type { CollectionEntry } from 'astro:content';
+import HeroCover from './HeroCover.astro';
+import FormattedDate from './FormattedDate.astro';
+import { renderInlineMarkdown } from '../lib/inline-markdown';
+
+interface Props {
+	post: CollectionEntry<'blog'> | CollectionEntry<'pages'>;
+	// Rend la couverture et le titre cliquables (listes « Articles » / « Vidéos »).
+	href?: string;
+	// Page sans barre latérale : une seule colonne, centrée.
+	centered?: boolean;
+}
+const { post, href, centered = false } = Astro.props;
+const d = post.data as Record<string, any>;
+
+const heroImage = d.heroImage;
+const title: string = d.title;
+// Quand un numéro de revue est renseigné, HeroCover fait DÉJÀ de la couverture
+// un lien vers le PDF. L'envelopper en plus dans un lien vers l'article
+// donnerait deux <a> imbriqués — HTML invalide, que les navigateurs défont
+// n'importe comment. Dans ce cas le PDF gagne, et c'est le titre qui porte le
+// lien vers l'article.
+const coverIsLinked = Boolean(href) && !d.nada;
+// Le chapeau est saisi en markdown restreint dans le CMS (gras, italique,
+// citation) ; il vit dans le frontmatter, donc Astro ne le rend pas seul.
+const leadHtml = await renderInlineMarkdown(d.lead);
+---
+
+<div class:list={['post-hero', { 'no-cover': !heroImage, centered }]}>
+	{
+		heroImage &&
+			(coverIsLinked ? (
+				<a class="cover-link" href={href}>
+					<HeroCover image={heroImage} alt={title} />
+				</a>
+			) : (
+				<HeroCover image={heroImage} alt={title} nada={d.nada} />
+			))
+	}
+	<div class="post-info">
+		{d.pubDate && d.showDate !== false && (
+			<p class="date">
+				<FormattedDate date={d.pubDate} />
+				{d.updatedDate && (
+					<span class="upd"> · mis à jour le <FormattedDate date={d.updatedDate} /></span>
+				)}
+			</p>
+		)}
+		<h1>{href ? <a class="title-link" href={href}>{title}</a> : title}</h1>
+		{/* Chapeau uniquement. Vidé dans l'admin = disparu de la page. */}
+		{leadHtml && <div class="lead" set:html={leadHtml} />}
+	</div>
+</div>
+
+<style>
+	.post-hero {
+		display: grid;
+		grid-template-columns: 1.05fr 0.95fr;
+		gap: 2.5rem;
+		align-items: center;
+	}
+	.post-hero.no-cover {
+		grid-template-columns: 1fr;
+	}
+	.post-hero.centered {
+		grid-template-columns: 1fr;
+		text-align: center;
+	}
+	.post-hero.no-cover .post-info {
+		max-width: 40rem;
+	}
+	.cover-link {
+		display: block;
+	}
+	.date {
+		font-family: var(--font-heading);
+		font-size: 0.85rem;
+		letter-spacing: 0.04em;
+		color: rgb(var(--muted));
+		margin: 0 0 0.6em 0;
+	}
+	.post-info h1 {
+		margin: 0 0 0.5em 0;
+		line-height: 1.1;
+	}
+	.title-link {
+		color: inherit;
+		text-decoration: none;
+	}
+	.title-link:hover {
+		text-decoration: underline;
+	}
+	.lead {
+		font-style: italic;
+		color: rgb(var(--muted));
+		font-size: 1.05rem;
+		margin: 0;
+	}
+	/* le chapeau arrive en markdown rendu : <p> / <blockquote> */
+	.lead :global(> :first-child) {
+		margin-top: 0;
+	}
+	.lead :global(> :last-child) {
+		margin-bottom: 0;
+	}
+
+	@media (max-width: 860px) {
+		.post-hero {
+			grid-template-columns: 1fr;
+			gap: 1.5rem;
+		}
+	}
+</style>

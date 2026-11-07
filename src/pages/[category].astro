@@ -3,12 +3,12 @@ import { getCollection, render } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
 import CategoryAside from '../components/CategoryAside.astro';
 import TheatreAside from '../components/TheatreAside.astro';
-import HeroCover from '../components/HeroCover.astro';
+import PostHero from '../components/PostHero.astro';
 import Footer from '../components/Footer.astro';
-import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/Header.astro';
+import FootnotesTooltips from '../components/FootnotesTooltips.astro';
 import { CATEGORIES, CATEGORY_LABEL, getPostsByCategory, getTheatreTree, flattenTheatre } from '../lib/categories';
-import { SITE_TITLE } from '../consts';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 
 export async function getStaticPaths() {
 	return CATEGORIES.map((c) => ({ params: { category: c.slug } }));
@@ -31,11 +31,15 @@ if (category === 'theatre') {
 	featured = posts[0];
 }
 const { Content } = featured ? await render(featured) : { Content: null };
+// La page-rubrique affiche un vrai texte : sa description Google est celle de
+// ce texte, pas un libellé fabriqué. (Avant : « Actualités — textes de … ».)
+const metaDescription =
+	featured?.data.description?.trim() || `${label} — textes de ${SITE_TITLE}.` || SITE_DESCRIPTION;
 ---
 
 <html lang="fr">
 	<head>
-		<BaseHead title={`${label} — ${SITE_TITLE}`} description={`${label} — textes de ${SITE_TITLE}.`} />
+		<BaseHead title={`${label} — ${SITE_TITLE}`} description={metaDescription} />
 	</head>
 	<body>
 		<Header />
@@ -52,23 +56,25 @@ const { Content } = featured ? await render(featured) : { Content: null };
 				{
 					featured ? (
 						<>
-							<article class:list={['post-hero', { 'no-cover': !featured.data.heroImage }]}>
-								{featured.data.heroImage && (
-									<HeroCover image={featured.data.heroImage} alt={featured.data.title} nada={featured.data.nada} />
-								)}
-								<div class="post-info">
-									{featured.data.showDate !== false && (
-										<p class="date">
-											<FormattedDate date={featured.data.pubDate} />
-										</p>
-									)}
-									<h1>{featured.data.title}</h1>
-									{featured.data.description && <p class="lead">{featured.data.description}</p>}
+							{featured.data.video && (
+								<div class="video-embed">
+									<iframe
+										src={`https://www.youtube-nocookie.com/embed/${featured.data.video}`}
+										title={featured.data.title}
+										loading="lazy"
+										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+										referrerpolicy="strict-origin-when-cross-origin"
+										allowfullscreen
+									/>
 								</div>
+							)}
+							<article>
+								<PostHero post={featured} />
 							</article>
 							<div class="prose">
 								<Content />
 							</div>
+							<FootnotesTooltips />
 						</>
 					) : (
 						<div class="empty-cat">
@@ -92,35 +98,20 @@ const { Content } = featured ? await render(featured) : { Content: null };
 				padding: 3rem 1.5rem;
 			}
 			.reader-main { min-width: 0; }
-			.post-hero {
-				display: grid;
-				grid-template-columns: 1.05fr 0.95fr;
-				gap: 2.5rem;
-				align-items: center;
-			}
-			.post-hero.no-cover {
-				grid-template-columns: 1fr;
-			}
-			.post-hero.no-cover .post-info {
-				max-width: 40rem;
-			}
-			.cover :global(img) {
+			/* Lecteur vidéo responsive 16:9 (même réglage que BlogPost.astro) */
+			.video-embed {
+				position: relative;
+				aspect-ratio: 16 / 9;
 				width: 100%;
-				height: auto;
+				margin-bottom: 2.5rem;
+				background: #000;
 			}
-			.date {
-				font-family: var(--font-heading);
-				font-size: 0.85rem;
-				letter-spacing: 0.04em;
-				color: rgb(var(--muted));
-				margin: 0 0 0.6em 0;
-			}
-			.post-info h1 { margin: 0 0 0.5em 0; line-height: 1.1; }
-			.lead {
-				font-style: italic;
-				color: rgb(var(--muted));
-				font-size: 1.05rem;
-				margin: 0 0 1.5em 0;
+			.video-embed iframe {
+				position: absolute;
+				inset: 0;
+				width: 100%;
+				height: 100%;
+				border: 0;
 			}
 			.prose {
 				max-width: 42rem;
@@ -140,7 +131,6 @@ const { Content } = featured ? await render(featured) : { Content: null };
 					gap: 0;
 					padding: 2rem 1.25rem;
 				}
-				.post-hero { grid-template-columns: 1fr; gap: 1.5rem; }
 			}
 		</style>
 	</body>
