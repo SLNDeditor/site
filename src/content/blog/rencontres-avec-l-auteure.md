@@ -57,9 +57,7 @@ Le mur saint martin, les éditions du Cygne et Zalia Sékaï étaient présents 
 ![sekai8.jpg](./images/sekai8.jpg)
 
 ![sekai4](./images/sekai4.jpg) 
-
- ![stylos005.gif](./images/stylos005.gif)
-
+ 
 ![zalia sekai](./images/zalia_sekai.jpg)
 
 Librairie  Les Lettres du Temps 19, rue Campo-Formio 75013 Paris
