@@ -1,7 +1,7 @@
 ---
 title: L'auteure
-description: 'Zalia sékaï, juriste et chercheuse indépendante : articles de recherche, théâtre, récits et clips vidéo autour de l''exil, de l''Algérie et de la colonisation.'
 lead: ''
+description: "Zalia sékaï, juriste et chercheuse indépendante : articles de recherche, théâtre, récits et clips vidéo autour de l'exil, de l'Algérie et de la colonisation."
 heroImage: ''
 ---
 
@@ -19,3 +19,9 @@ heroImage: ''
     - les systèmes de domination des étrangers...
 
 **Vous pouvez librement télécharger, citer mes textes, à condition d'en indiquer les sources.**
+
+**Vous pouvez me contacter à l'adresse suivante :**
+
+zalia.sENLEV@outlook.fr
+
+(pour rendre l'adresse active enlever ENLEV)
