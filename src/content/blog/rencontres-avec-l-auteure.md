@@ -14,57 +14,39 @@ description: |-
 source: https://www.zaliasekai.net/article-rencontres-avec-l-auteure-116152027.html
 ---
 
-**RENCONTRE AU SALON DE LA POÉSIE A PARIS**
+**RENCONTRE AU SALON DE LA POÉSIE A PARIS _le vendredi 22 octobre 2021_**
 
-**_le vendredi 22 octobre 2021_**
+**RENCONTRE AVEC L'AUTEURE** **_le samedi 3 décembre 2011_**
 
-**RENCONTRE AVEC L'AUTEURE** 
+![menil_livre.jpg](./images/menil_livre.jpg)  
 
-**_le samedi 3 décembre 2011_**
-
-_\*\*![menil_livre.jpg](./images/menil_livre.jpg)  
-
-**_Lux Beauté à la rose, Autopsie d'un exil algérien,_**
-
-**à l'occasion du salon Menil Livres** 2 rue d'Eupatoria 75020 Paris
+**_Lux Beauté à la rose, Autopsie d'un exil algérien,_ à l'occasion du salon Menil Livres** 2 rue d'Eupatoria 75020 Paris
 
 « Écrire l’autre rive » avec : Mohamed Benchicou,  
 Arezki Metref, Marie Joëlle Rupp, Nourredine Saadi, Leïla  
 Sebbar, Zalia Sekaï.  
 
-**RENCONTRE AVEC L'AUTEURE** 
+**RENCONTRE AVEC L'AUTEURE** **_le mercredi 3 novembre 2010_**
 
-**_le mercredi 3 novembre 2010_**
-
-**Présentation de "Autopsie d'un exil algérien"**
-
-**dans le cadre d'une SOIRÉE "ÉCRITURE DE LA TRAGÉDIE EN EXIL"**
+**Présentation de "Autopsie d'un exil algérien" dans le cadre d'une SOIRÉE "ÉCRITURE DE LA TRAGÉDIE EN EXIL"**
 
 **Ont également été présents Lorent Idir et Fadéla Hebbadj**
 
 ACB Paris 37bis rue des Maronites 75020 Paris
 
-**RENCONTRE AVEC L'AUTEURE** 
-
-**_le samedi 2 octobre 2010_**
+**RENCONTRE AVEC L'AUTEURE** **_le samedi 2 octobre 2010_**
 
 ![LAHAYE.jpg](./images/LAHAYE.jpg)
 
-**Salon international du livre de la ville de l’Haÿ-Les-Roses**
-
-dans le cadre de l’Initiative 2010 Année de l’Afrique en France, Année Voyage en Francophonie
+**Salon international du livre de la ville de l’Haÿ-Les-Roses** dans le cadre de l’Initiative 2010 Année de l’Afrique en France, Année Voyage en Francophonie
 
 **à l'occasion du cinquantenaire des indépendances africaines**
 
-**RENCONTRE AVEC L'AUTEURE** 
-
-**_le 5 juin 2010_**
+**RENCONTRE AVEC L'AUTEURE** **_le 5 juin 2010_**
 
 Le mur saint martin, les éditions du Cygne et Zalia Sékaï étaient présents au **mursaintmartin/Snax'kfé**  180, rue Saint-Martin 75002 Paris. Le même jour Antoine Moreau vernissait son intervention sur le mur saint martin [voir ici](http://lemursaintmartin.over-blog.com/)
 
-**RENCONTRE AVEC L'AUTEURE**
-
-**_le samedi 10 avril 2010_**
+**RENCONTRE AVEC L'AUTEURE _le samedi 10 avril 2010_**
 
 ![sekai3.jpg](./images/sekai3.jpg)
 
