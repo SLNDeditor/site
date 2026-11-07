@@ -18,7 +18,7 @@ source: https://www.zaliasekai.net/article-rencontres-avec-l-auteure-116152027.h
 
 **_le vendredi 22 octobre 2021_**
 
-**RENCONTRE AVEC L'AUTEURE 5**
+**RENCONTRE AVEC L'AUTEURE** 
 
 **_le samedi 3 décembre 2011_**
 
@@ -32,7 +32,7 @@ _\*\*![menil_livre.jpg](./images/menil_livre.jpg)
 Arezki Metref, Marie Joëlle Rupp, Nourredine Saadi, Leïla  
 Sebbar, Zalia Sekaï.  
 
-**RENCONTRE AVEC L'AUTEURE 4**
+**RENCONTRE AVEC L'AUTEURE** 
 
 **_le mercredi 3 novembre 2010_**
 
@@ -44,7 +44,7 @@ Sebbar, Zalia Sekaï.
 
 ACB Paris 37bis rue des Maronites 75020 Paris
 
-**RENCONTRE AVEC L'AUTEURE 3**
+**RENCONTRE AVEC L'AUTEURE** 
 
 **_le samedi 2 octobre 2010_**
 
@@ -56,7 +56,7 @@ dans le cadre de l’Initiative 2010 Année de l’Afrique en France, Année Voy
 
 **à l'occasion du cinquantenaire des indépendances africaines**
 
-**RENCONTRE AVEC L'AUTEURE 2** 
+**RENCONTRE AVEC L'AUTEURE** 
 
 **_le 5 juin 2010_**
 
@@ -64,7 +64,7 @@ Le mur saint martin, les éditions du Cygne et Zalia Sékaï étaient présents 
 
 _Le même jour Antoine Moreau vernissait son intervention_ sur le mur saint martin [voir ici](http://lemursaintmartin.over-blog.com/)
 
-**RENCONTRE AVEC L'AUTEURE 1** 
+**RENCONTRE AVEC L'AUTEURE**
 
 **_le samedi 10 avril 2010_**
 
