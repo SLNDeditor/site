@@ -60,9 +60,7 @@ dans le cadre de l’Initiative 2010 Année de l’Afrique en France, Année Voy
 
 **_le 5 juin 2010_**
 
-Le mur saint martin, les éditions du Cygne et Zalia Sékaï étaient présents au **mursaintmartin/Snax'kfé**  180, rue saint-martin 75002 Paris
-
-_Le même jour Antoine Moreau vernissait son intervention_ sur le mur saint martin [voir ici](http://lemursaintmartin.over-blog.com/)
+Le mur saint martin, les éditions du Cygne et Zalia Sékaï étaient présents au **mursaintmartin/Snax'kfé**  180, rue Saint-Martin 75002 Paris. Le même jour Antoine Moreau vernissait son intervention sur le mur saint martin [voir ici](http://lemursaintmartin.over-blog.com/)
 
 **RENCONTRE AVEC L'AUTEURE**
 
