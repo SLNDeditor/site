@@ -48,8 +48,6 @@ Le mur saint martin, les éditions du Cygne et Zalia Sékaï étaient présents 
 
 **RENCONTRE AVEC L'AUTEURE _le samedi 10 avril 2010_**
 
-![sekai3.jpg](./images/sekai3.jpg)
-
 ![sekai10.jpg](./images/sekai10.jpg)
 
 ![sekai9.jpg](./images/sekai9.jpg)
@@ -57,7 +55,7 @@ Le mur saint martin, les éditions du Cygne et Zalia Sékaï étaient présents 
 ![sekai8.jpg](./images/sekai8.jpg)
 
 ![sekai4](./images/sekai4.jpg) 
- 
+
 ![zalia sekai](./images/zalia_sekai.jpg)
 
 Librairie  Les Lettres du Temps 19, rue Campo-Formio 75013 Paris
