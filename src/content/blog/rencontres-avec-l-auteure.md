@@ -25,19 +25,13 @@ source: https://www.zaliasekai.net/article-rencontres-avec-l-auteure-116152027.h
 **_le samedi 3 décembre 2011_**
 
 _\*\*![menil_livre.jpg](./images/menil_livre.jpg)  
-\*\*_
 
-**J'ai été ravie que mon ouvrage,** 
 
 **_Lux Beauté à la rose, Autopsie d'un exil algérien,_**
 
-**à l'occasion du salon Menil Livres**
+**à l'occasion du salon Menil Livres** 2 rue d'Eupatoria 75020 Paris
 
-2 rue d'Eupatoria
-
-75020 Paris
-
-16 h « Ecrire l’autre rive » avec : Mohamed Benchicou,  
+16 h « Écrire l’autre rive » avec : Mohamed Benchicou,  
 Arezki Metref, Marie Joëlle Rupp, Nourredine Saadi, Leïla  
 Sebbar, Zalia Sekaï.  
 
@@ -51,12 +45,7 @@ Sebbar, Zalia Sekaï.
 
 **Ont également été présents Lorent Idir et Fadéla Hebbadj**
 
-mercredi 3 novembre 2010 à 19 heures
-
-ACB Paris  
-37bis rue des Maronites
-
-75020 Paris
+ACB Paris 37bis rue des Maronites 75020 Paris
 
 **RENCONTRE AVEC L'AUTEURE 3**
 
@@ -64,23 +53,13 @@ ACB Paris
 
 ![LAHAYE.jpg](./images/LAHAYE.jpg)
 
-**Salon international du livre**
+**Salon international du livre de la ville de l’Haÿ-Les-Roses**
 
-**de la ville de l’Haÿ-Les-Roses**
-
-(du 1-3 octobre 2010),
-
-Dans le cadre de
-
-l’Initiative 2010 Année de l’Afrique en France_
+Dans le cadre de l’Initiative 2010 Année de l’Afrique en France
 
 Année Voyage en Francophonie
 
-**A l'occasion du cinquantenaire**
-
-**des indépendances africaines**
-
-**samedi 2 octobre 2010, de 14h à 17h**
+**A l'occasion du cinquantenaire des indépendances africaines**
 
 **RENCONTRE AVEC L'AUTEURE 2** 
 
