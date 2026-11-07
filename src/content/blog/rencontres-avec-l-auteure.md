@@ -94,20 +94,13 @@ Le mur saint martin, les éditions du Cygne et Zalia Sékaï
 
 **mursaintmartin/Snax'kfé**
 
-  180, rue saint-martin
+  180, rue saint-martin 75002 Paris
 
-75002 Paris
+Zalia a pu signer son ouvrage _autopsie d'un exil algérien_
 
-Zalia a pu signer son ouvrage
-
-_autopsie d'un exil algérien_
-
-_Lux beauté à la rose_
-
-_le même jour Antoine Moreau vernissait son intervention_
+_Lux beauté à la rose le même jour Antoine Moreau vernissait son intervention_
 
 sur le mur saint martin [voir ici](http://lemursaintmartin.over-blog.com/).  
-
 
 **RENCONTRE AVEC L'AUTEURE 1** 
 
@@ -123,20 +116,10 @@ sur le mur saint martin [voir ici](http://lemursaintmartin.over-blog.com/).
 
 ![sekai4](./images/sekai4.jpg) 
 
-  
-
-
  ![stylos005.gif](./images/stylos005.gif)
 
 ![zalia sekai](./images/zalia_sekai.jpg)
 
-**Le livre est disponible**
-
-**à la librairie**
-
-  Les Lettres du Temps
+Le livre est disponible à la librairie  Les Lettres du Temps 19, rue Campo-Formio 75013 Paris
 
 ![librairie.jpg](./images/librairie.jpg)
-
-**19, rue Campo-Formio**  
-75013 Paris
