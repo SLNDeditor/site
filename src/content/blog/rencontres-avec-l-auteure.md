@@ -1,10 +1,18 @@
 ---
-title: "Rencontres avec l'auteure"
-description: "RENCONTRE AU SALON DE LA POÉSIE A PARIS le vendredi 22 octobre 2021\nRENCONTRE AVEC L'AUTEURE 5 le samedi 3 décembre 2011 J'ai été ravie que mon ouvrage, Lux Beauté à la rose , Autopsie d'un exil algérien, ait été présenté à l'occasion du salon Menil Livres..."
-lead: "RENCONTRE AU SALON DE LA POÉSIE A PARIS le vendredi 22 octobre 2021\nRENCONTRE AVEC L'AUTEURE 5 le samedi 3 décembre 2011 J'ai été ravie que mon ouvrage, Lux Beauté à la rose , Autopsie d'un exil algérien, ait été présenté à l'occasion du salon Menil Livres..."
-pubDate: 2021-10-17
+title: Rencontres avec l'auteure
 category: actualites
-heroImage: "./images/ob_64f052_carton-sekai-oct-61-1.jpg"
+menu: null
+heroImage: ./images/ob_64f052_carton-sekai-oct-61-1.jpg
+nada: null
+pubDate: 2021-10-17
+showDate: true
+video: ''
+lead: |-
+  RENCONTRE AU SALON DE LA POÉSIE A PARIS le vendredi 22 octobre 2021
+  RENCONTRE AVEC L'AUTEURE 5 le samedi 3 décembre 2011
+description: |-
+  RENCONTRE AU SALON DE LA POÉSIE A PARIS le vendredi 22 octobre 2021
+  RENCONTRE AVEC L'AUTEURE 5 le samedi 3 décembre 2011 J'ai été ravie que mon ouvrage, Lux Beauté à la rose , Autopsie d'un exil algérien, ait été présenté à l'occasion du salon Menil Livres...
 source: https://www.zaliasekai.net/article-rencontres-avec-l-auteure-116152027.html
 ---
 
@@ -14,63 +22,45 @@ source: https://www.zaliasekai.net/article-rencontres-avec-l-auteure-116152027.h
 
 **RENCONTRE AVEC L'AUTEURE 5**
 
-_**le samedi 3 décembre 2011**_
+**_le samedi 3 décembre 2011_**
 
-_**![menil\_livre.jpg](./images/menil_livre.jpg)  
-**_
+_\*\*![menil_livre.jpg](./images/menil_livre.jpg)  
+\*\*_
 
 **J'ai été ravie que mon ouvrage,** 
 
-_**Lux Beauté à la rose****, Autopsie d'un exil algérien,**_
-
-  **ait été présenté  
-**
+**_Lux Beauté à la rose, Autopsie d'un exil algérien,_**
 
 **à l'occasion du salon Menil Livres**
-
-samedi 3 décembre à partir de 15 heures
 
 2 rue d'Eupatoria
 
 75020 Paris
 
-(métro Ménilmontant)
-
-  
 16 h « Ecrire l’autre rive » avec : Mohamed Benchicou,  
 Arezki Metref, Marie Joëlle Rupp, Nourredine Saadi, Leïla  
 Sebbar, Zalia Sekaï.  
 
-* * *
-
 **RENCONTRE AVEC L'AUTEURE 4**
 
-_**le mercredi 3 novembre 2010**_
+**_le mercredi 3 novembre 2010_**
 
-**J'ai été heureuse de vous accueillir**
+**Présentation de "Autopsie d'un exil algérien"**
 
-**à une présentation de mon ouvrage "Autopsie d'un exil algérien"**
-
-**dans le cadre d'une SOIREE "ECRITURE DE LA TRAGEDIE EN EXIL"**
+**dans le cadre d'une SOIRÉE "ÉCRITURE DE LA TRAGÉDIE EN EXIL"**
 
 **Ont également été présents Lorent Idir et Fadéla Hebbadj**
 
 mercredi 3 novembre 2010 à 19 heures
 
-**ACB Paris  
-**37bis rue des Maronites
+ACB Paris  
+37bis rue des Maronites
 
 75020 Paris
 
-tel: 0143582325
-
-  
-
-* * *
-
 **RENCONTRE AVEC L'AUTEURE 3**
 
-_**le samedi 2 octobre 2010**_
+**_le samedi 2 octobre 2010_**
 
 ![LAHAYE.jpg](./images/LAHAYE.jpg)
 
@@ -82,7 +72,7 @@ _**le samedi 2 octobre 2010**_
 
 Dans le cadre de
 
-l’_Initiative 2010 Année de l’Afrique en France_
+l’Initiative 2010 Année de l’Afrique en France_
 
 Année Voyage en Francophonie
 
@@ -90,15 +80,11 @@ Année Voyage en Francophonie
 
 **des indépendances africaines**
 
-Vous avez pu rencontrer Zalia Sékaï  
-
 **samedi 2 octobre 2010, de 14h à 17h**
-
-* * *
 
 **RENCONTRE AVEC L'AUTEURE 2** 
 
-_**le 5 juin 2010**_
+**_le 5 juin 2010_**
 
 **Le 5 juin 2010 à partir de 16h30**
 
@@ -120,20 +106,14 @@ _Lux beauté à la rose_
 
 _le même jour Antoine Moreau vernissait son intervention_
 
-_sur le mur saint martin [voir ici](http://lemursaintmartin.over-blog.com/).  
-_
+sur le mur saint martin [voir ici](http://lemursaintmartin.over-blog.com/).  
 
-* * *
 
 **RENCONTRE AVEC L'AUTEURE 1** 
 
-_**le samedi 10 avril 2010**_
+**_le samedi 10 avril 2010_**
 
- 
-
- 
-
-**![sekai3.jpg](./images/sekai3.jpg)**
+![sekai3.jpg](./images/sekai3.jpg)
 
 ![sekai10.jpg](./images/sekai10.jpg)
 
@@ -143,17 +123,8 @@ _**le samedi 10 avril 2010**_
 
 ![sekai4](./images/sekai4.jpg) 
 
-**  
-Une séance signatures-dédicaces**
+  
 
-**a eu lieu**
-
-**le samedi 10 avril 2010**
-
-**à la librairie**
-
-**Les lettre du temps  
-**
 
  ![stylos005.gif](./images/stylos005.gif)
 
@@ -169,6 +140,3 @@ Une séance signatures-dédicaces**
 
 **19, rue Campo-Formio**  
 75013 Paris
-
-M° ligne 5 : Campo-Formio  
-ou ligne 6 : Nationale
