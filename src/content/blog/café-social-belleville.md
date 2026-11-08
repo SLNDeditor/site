@@ -11,8 +11,8 @@ lead: ''
 description: ''
 ---
 
-Soirée d'évènement autour des photographies de Marc Garanger pendant la guerre d'Algérie
+Soirée d'évènement autour des photographies de Marc Garanger pendant la guerre d'Algérie.
 
 Exposition suivie de la présentation du livre de **Zalia Sékaï, "Algériennes surexposées, Marc Garanger dans la guerre d'Algérie"** 
 
-ainsi que de la projection du film documentaire _"**Sur les traces des camps de regroupement"**_**, de Saïd Oulmi**
+ainsi que de la projection du film documentaire _"**Sur les traces des camps de regroupement"**_**, de Saïd Oulmi.**
