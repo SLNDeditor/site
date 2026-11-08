@@ -10,13 +10,13 @@ video: ''
 lead: ''
 description: |-
   RENCONTRE AU SALON DE LA POÉSIE A PARIS le vendredi 22 octobre 2021
-  RENCONTRE AVEC L'AUTEURE 5 le samedi 3 décembre 2011 J'ai été ravie que mon ouvrage, Lux Beauté à la rose , Autopsie d'un exil algérien, ait été présenté à l'occasion du salon Menil Livres...
+  RENCONTRE le samedi 3 décembre 2011 J'ai été ravie que mon ouvrage, Lux Beauté à la rose , Autopsie d'un exil algérien, ait été présenté à l'occasion du salon Menil Livres...
 source: https://www.zaliasekai.net/article-rencontres-avec-l-auteure-116152027.html
 ---
 
-**RENCONTRE AU SALON DE LA POÉSIE A PARIS _le vendredi 22 octobre 2021_**
+**RENCONTRE au salon de la poésie à Paris _le vendredi 22 octobre 2021_**
 
-**RENCONTRE AVEC L'AUTEURE** au salon du livre Menil Livres **_le samedi 3 décembre 2011_**
+**RENCONTRE** **au salon du livre Menil Livres** **_le samedi 3 décembre 2011_**
 
 ![menil_livre.jpg](./images/menil_livre.jpg)  
 
@@ -26,7 +26,7 @@ source: https://www.zaliasekai.net/article-rencontres-avec-l-auteure-116152027.h
 Arezki Metref, Marie Joëlle Rupp, Nourredine Saadi, Leïla  
 Sebbar, Zalia Sekaï.  
 
-**RENCONTRE AVEC L'AUTEURE** **_le mercredi 3 novembre 2010_**
+**RENCONTRE** **_le mercredi 3 novembre 2010_**
 
 **Présentation de "Autopsie d'un exil algérien" dans le cadre d'une SOIRÉE "ÉCRITURE DE LA TRAGÉDIE EN EXIL"**
 
@@ -34,7 +34,7 @@ Sebbar, Zalia Sekaï.
 
 ACB Paris 37bis rue des Maronites 75020 Paris
 
-**RENCONTRE AVEC L'AUTEURE** **_le samedi 2 octobre 2010_**
+**RENCONTRE _le samedi 2 octobre 2010_**
 
 ![LAHAYE.jpg](./images/LAHAYE.jpg)
 
@@ -42,11 +42,11 @@ ACB Paris 37bis rue des Maronites 75020 Paris
 
 **à l'occasion du cinquantenaire des indépendances africaines**
 
-**RENCONTRE AVEC L'AUTEURE** **_le 5 juin 2010_**
+**RENCONTRE** **_le 5 juin 2010_**
 
 Le mur saint martin, les éditions du Cygne et Zalia Sékaï étaient présents au **mursaintmartin/Snax'kfé**  180, rue Saint-Martin 75002 Paris. Le même jour Antoine Moreau vernissait son intervention sur le mur saint martin [voir ici](http://lemursaintmartin.over-blog.com/)
 
-**RENCONTRE AVEC L'AUTEURE _le samedi 10 avril 2010_**
+**RENCONTRE _le samedi 10 avril 2010_**
 
 ![sekai10.jpg](./images/sekai10.jpg)
 
