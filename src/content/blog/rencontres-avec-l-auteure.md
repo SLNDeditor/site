@@ -16,7 +16,7 @@ source: https://www.zaliasekai.net/article-rencontres-avec-l-auteure-116152027.h
 
 **RENCONTRE AU SALON DE LA POÉSIE A PARIS _le vendredi 22 octobre 2021_**
 
-**RENCONTRE AVEC L'AUTEURE** **_le samedi 3 décembre 2011_**
+**RENCONTRE AVEC L'AUTEURE** au salon du livre Menil Livres **_le samedi 3 décembre 2011_**
 
 ![menil_livre.jpg](./images/menil_livre.jpg)  
 
