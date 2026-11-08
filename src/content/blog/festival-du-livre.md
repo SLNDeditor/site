@@ -11,4 +11,4 @@ lead: ''
 description: ''
 ---
 
-Présentation de l'ouvrage et débat.
+Table ronde : Présentation de l'ouvrage et débat.
