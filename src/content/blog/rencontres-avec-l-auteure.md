@@ -26,13 +26,9 @@ source: https://www.zaliasekai.net/article-rencontres-avec-l-auteure-116152027.h
 Arezki Metref, Marie Joëlle Rupp, Nourredine Saadi, Leïla  
 Sebbar, Zalia Sekaï.  
 
-**RENCONTRE** **_le mercredi 3 novembre 2010_**
+**RENCONTRE** **_le mercredi 3 novembre 2010 à l'_**ACB Paris 37bis rue des Maronites 75020 Paris
 
-**Présentation de "Autopsie d'un exil algérien" dans le cadre d'une SOIRÉE "ÉCRITURE DE LA TRAGÉDIE EN EXIL"**
-
-**Ont également été présents Lorent Idir et Fadéla Hebbadj**
-
-ACB Paris 37bis rue des Maronites 75020 Paris
+**Présentation de "Autopsie d'un exil algérien" dans le cadre d'une SOIRÉE "ÉCRITURE DE LA TRAGÉDIE EN EXIL".** Ont également été présents Lorent Idir et Fadéla Hebbadj
 
 **RENCONTRE _le samedi 2 octobre 2010_**
 
@@ -44,7 +40,7 @@ ACB Paris 37bis rue des Maronites 75020 Paris
 
 **RENCONTRE** **_le 5 juin 2010_**
 
-Le mur saint martin, les éditions du Cygne et Zalia Sékaï étaient présents au **mursaintmartin/Snax'kfé**  180, rue Saint-Martin 75002 Paris. Le même jour Antoine Moreau vernissait son intervention sur le mur saint martin [voir ici](http://lemursaintmartin.over-blog.com/)
+Le mur saint martin, les éditions du Cygne et Zalia Sékaï étaient présents au **mursaintmartin/Snax'kfé** 180, rue Saint-Martin 75002 Paris. Le même jour Antoine Moreau vernissait son intervention sur le mur saint martin [voir ici](http://lemursaintmartin.over-blog.com/)
 
 **RENCONTRE _le samedi 10 avril 2010_**
 
