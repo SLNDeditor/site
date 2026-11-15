@@ -14,26 +14,21 @@ description: |-
 source: https://www.zaliasekai.net/article-rencontres-avec-l-auteure-116152027.html
 ---
 
-**RENCONTRE au salon de la poésie à Paris _le vendredi 22 octobre 2021_**
+**RENCONTRE** au salon de la poésie à Paris _le 22 octobre 2021_
 
-  
-**RENCONTRE** _le mercredi 3 novembre 2010 à l'ACB Paris 37bis rue des Maronites 75020 Paris
+**RENCONTRE**  à l'ACB Paris 37bis rue des Maronites 75020 Paris _le 3 novembre 2010_
 
-**Présentation de "Autopsie d'un exil algérien" dans le cadre d'une SOIRÉE "ÉCRITURE DE LA TRAGÉDIE EN EXIL".** Ont également été présents Lorent Idir et Fadéla Hebbadj
-
-**RENCONTRE _le samedi 2 octobre 2010_**
+**RENCONTRE** _le 2 octobre 2010_
 
 ![LAHAYE.jpg](./images/LAHAYE.jpg)
 
-**Salon international du livre de la ville de l’Haÿ-Les-Roses** dans le cadre de l’Initiative 2010 Année de l’Afrique en France, Année Voyage en Francophonie
+**Salon international du livre de la ville de l’Haÿ-Les-Roses** dans le cadre de l’Initiative 2010 Année de l’Afrique en France, Année Voyage en Francophonie à l'occasion du cinquantenaire des indépendances africaines
 
-**à l'occasion du cinquantenaire des indépendances africaines**
-
-**RENCONTRE** **_le 5 juin 2010_**
+**RENCONTRE** _le 5 juin 2010 
 
 Le mur saint martin, les éditions du Cygne et Zalia Sékaï étaient présents au **mursaintmartin/Snax'kfé** 180, rue Saint-Martin 75002 Paris. Le même jour Antoine Moreau vernissait son intervention sur le mur saint martin [voir ici](http://lemursaintmartin.over-blog.com/)
 
-**RENCONTRE _le samedi 10 avril 2010_**
+**RENCONTRE** _le 10 avril 2010_
 
 ![sekai10.jpg](./images/sekai10.jpg)
 
