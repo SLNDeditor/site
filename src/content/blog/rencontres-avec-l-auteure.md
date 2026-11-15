@@ -20,13 +20,7 @@ source: https://www.zaliasekai.net/article-rencontres-avec-l-auteure-116152027.h
 
 ![menil_livre.jpg](./images/menil_livre.jpg)  
 
-**_Lux Beauté à la rose, Autopsie d'un exil algérien,_ à l'occasion du salon Menil Livres** 2 rue d'Eupatoria 75020 Paris
-
-« Écrire l’autre rive » avec : Mohamed Benchicou,  
-Arezki Metref, Marie Joëlle Rupp, Nourredine Saadi, Leïla  
-Sebbar, Zalia Sekaï.  
-
-**RENCONTRE** **_le mercredi 3 novembre 2010 à l'_**ACB Paris 37bis rue des Maronites 75020 Paris
+**RENCONTRE** _le mercredi 3 novembre 2010 à l'_\*\*ACB Paris 37bis rue des Maronites 75020 Paris
 
 **Présentation de "Autopsie d'un exil algérien" dans le cadre d'une SOIRÉE "ÉCRITURE DE LA TRAGÉDIE EN EXIL".** Ont également été présents Lorent Idir et Fadéla Hebbadj
 
