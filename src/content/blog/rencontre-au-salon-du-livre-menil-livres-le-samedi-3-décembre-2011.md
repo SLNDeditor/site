@@ -2,7 +2,7 @@
 title: Salon du livre Menil Livres
 category: interventions
 menu: null
-heroImage: ''
+heroImage: /blog-media/pasted-image-1794733603620.png
 nada: null
 pubDate: 2011-12-01
 showDate: true
