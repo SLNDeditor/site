@@ -1,5 +1,5 @@
 ---
-title: Salon du livre Menil Livres le samedi 3 décembre 2011
+title: Salon du livre Menil Livres
 category: interventions
 menu: null
 heroImage: ''
@@ -7,7 +7,7 @@ nada: null
 pubDate: 2011-12-01
 showDate: true
 video: ''
-lead: ''
+lead: le samedi 3 décembre 2011
 description: ''
 ---
 
