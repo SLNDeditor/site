@@ -16,11 +16,8 @@ source: https://www.zaliasekai.net/article-rencontres-avec-l-auteure-116152027.h
 
 **RENCONTRE au salon de la poésie à Paris _le vendredi 22 octobre 2021_**
 
-**RENCONTRE** **au salon du livre Menil Livres** **_le samedi 3 décembre 2011_**
-
-![menil_livre.jpg](./images/menil_livre.jpg)  
-
-**RENCONTRE** _le mercredi 3 novembre 2010 à l'_\*\*ACB Paris 37bis rue des Maronites 75020 Paris
+  
+**RENCONTRE** _le mercredi 3 novembre 2010 à l'ACB Paris 37bis rue des Maronites 75020 Paris
 
 **Présentation de "Autopsie d'un exil algérien" dans le cadre d'une SOIRÉE "ÉCRITURE DE LA TRAGÉDIE EN EXIL".** Ont également été présents Lorent Idir et Fadéla Hebbadj
 
