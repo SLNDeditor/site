@@ -24,7 +24,7 @@ source: https://www.zaliasekai.net/article-rencontres-avec-l-auteure-116152027.h
 
 **Salon international du livre de la ville de l’Haÿ-Les-Roses** dans le cadre de l’Initiative 2010 Année de l’Afrique en France, Année Voyage en Francophonie à l'occasion du cinquantenaire des indépendances africaines
 
-**RENCONTRE** le 5 juin 2010 au Mur saint martin. Les éditions du Cygne et Zalia Sékaï étaient présents au **mursaintmartin/Snax'kfé** 180, rue Saint-Martin 75002 Paris. Le même jour Antoine Moreau vernissait son intervention sur le mur saint martin [voir ici](http://lemursaintmartin.over-blog.com/)
+**RENCONTRE** _le 5 juin 2010_ au Mur saint martin. Les éditions du Cygne et Zalia Sékaï étaient présents au **mursaintmartin/Snax'kfé** 180, rue Saint-Martin 75002 Paris. Le même jour Antoine Moreau vernissait son intervention sur le mur saint martin [voir ici](http://lemursaintmartin.over-blog.com/)
 
 **RENCONTRE** _le 10 avril 2010_ à la Librairie Les Lettres du Temps 19, rue Campo-Formio 75013 Paris
 
