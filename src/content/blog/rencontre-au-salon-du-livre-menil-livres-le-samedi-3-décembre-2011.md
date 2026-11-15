@@ -1,5 +1,5 @@
 ---
-title: RENCONTRE au salon du livre Menil Livres le samedi 3 décembre 2011
+title: Salon du livre Menil Livres le samedi 3 décembre 2011
 category: interventions
 menu: null
 heroImage: ''
