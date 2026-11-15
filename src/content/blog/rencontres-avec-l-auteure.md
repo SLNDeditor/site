@@ -26,7 +26,7 @@ source: https://www.zaliasekai.net/article-rencontres-avec-l-auteure-116152027.h
 
 **RENCONTRE** le 5 juin 2010 au Mur saint martin. Les éditions du Cygne et Zalia Sékaï étaient présents au **mursaintmartin/Snax'kfé** 180, rue Saint-Martin 75002 Paris. Le même jour Antoine Moreau vernissait son intervention sur le mur saint martin [voir ici](http://lemursaintmartin.over-blog.com/)
 
-**RENCONTRE** _le 10 avril 2010_
+**RENCONTRE** _le 10 avril 2010_ à la Librairie Les Lettres du Temps 19, rue Campo-Formio 75013 Paris
 
 ![sekai10.jpg](./images/sekai10.jpg)
 
@@ -37,7 +37,5 @@ source: https://www.zaliasekai.net/article-rencontres-avec-l-auteure-116152027.h
 ![sekai4](./images/sekai4.jpg) 
 
 ![zalia sekai](./images/zalia_sekai.jpg)
-
-Librairie  Les Lettres du Temps 19, rue Campo-Formio 75013 Paris
 
 ![librairie.jpg](./images/librairie.jpg)
